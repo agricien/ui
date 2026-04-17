@@ -282,4 +282,9 @@ def main(page: ft.Page):
     # Iniciar render
     load_ui()
 
-ft.app(target=main)
+if __name__ == "__main__":
+    import os
+    # Puerto dinámico asignado por el servidor de la Nube (ej. Render.com), si falla usa 8080 en PC normal
+    port = int(os.environ.get("PORT", 8080))
+    # Arranca Flet como un servidor de backend puro asíncrono
+    ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=port, host="0.0.0.0")
