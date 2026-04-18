@@ -58,8 +58,18 @@
             text-align: center;
         }
         .filter-btn {
-            border-radius: 25px;
-            margin: 0 5px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        .detect-link {
+            transition: opacity 0.2s;
+        }
+        .detect-link:hover {
+            opacity: 0.7;
+            text-decoration: underline !important;
+        }
+        #nav-brand .detect-link {
+            color: inherit;
         }
         .modal-content {
             border: none;
@@ -153,9 +163,8 @@
                     const bracketRegex = /\[([^\]]+?)\s*:\s*([^\]\s]+?)\]/g;
                     if (bracketRegex.test(text)) {
                         return text.replace(bracketRegex, (match, label, url) => {
-                            // Limpiar comillas si el usuario las puso dentro de los corchetes
                             const cleanUrl = url.replace(/["']/g, "");
-                            return `<a href="${cleanUrl}" target="_blank" class="text-primary text-decoration-none">${label.trim()}</a>`;
+                            return `<a href="${cleanUrl}" target="_blank" class="detect-link text-decoration-none">${label.trim()}</a>`;
                         });
                     }
 
@@ -163,18 +172,20 @@
                     const labeledUrlRegex = /([a-zA-Z0-9ñáéíóúÁÉÍÓÚ\s]+)\s*:\s*["']?(https?:\/\/[^\s"'<>\(\)]+)["']?/g;
                     if (labeledUrlRegex.test(text)) {
                         return text.replace(labeledUrlRegex, (match, label, url) => {
-                            return `<a href="${url}" target="_blank" class="text-primary text-decoration-none">${label.trim()}</a>`;
+                            return `<a href="${url}" target="_blank" class="detect-link text-decoration-none">${label.trim()}</a>`;
                         });
                     }
 
                     // Patrón 3: URL sola (fallback total)
                     const urlRegex = /(https?:\/\/[^\s"'<>\(\)]+)/g;
-                    return text.replace(urlRegex, (url) => `<a href="${url}" target="_blank" class="text-primary text-decoration-none">${url}</a>`);
+                    return text.replace(urlRegex, (url) => `<a href="${url}" target="_blank" class="detect-link text-decoration-none text-primary">${url}</a>`);
                 };
 
                 // Actualizar Encabezado
                 if (data.header) {
-                    document.getElementById('nav-brand').innerHTML = `${linkify(data.header.brand_black)} <span class="text-primary">${linkify(data.header.brand_blue)}</span>`;
+                    const blackPart = linkify(data.header.brand_black);
+                    const bluePart = linkify(data.header.brand_blue);
+                    document.getElementById('nav-brand').innerHTML = `<span class="text-dark">${blackPart}</span> <span class="text-primary">${bluePart}</span>`;
                     document.getElementById('main-title').innerHTML = linkify(data.header.title);
                     document.getElementById('main-subtitle').innerHTML = linkify(data.header.subtitle);
                 }
