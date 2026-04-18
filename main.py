@@ -112,7 +112,7 @@ def main(page: ft.Page):
             leading=ft.Image(src=logo_url, width=40) if logo_url else ft.Icon(ft.icons.AGRICULTURE_ROUNDED, color=ft.colors.BLUE_800, size=30),
             leading_width=100,
             title=ft.Row([
-                ft.PopupMenuButton(content=ft.Text("Products ▼", weight=ft.FontWeight.BOLD_600, color=ft.colors.BLACK87), items=menu_ui_items),
+                ft.PopupMenuButton(content=ft.Text("Products ▼", weight=ft.FontWeight.W_600, color=ft.colors.BLACK87), items=menu_ui_items),
                 ft.TextButton("Partners", style=ft.ButtonStyle(color=ft.colors.BLACK87)),
                 ft.TextButton("Support", style=ft.ButtonStyle(color=ft.colors.BLACK87)),
             ], alignment=ft.MainAxisAlignment.CENTER),
