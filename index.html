@@ -165,10 +165,12 @@
                 return;
             }
 
-            news.forEach((item, index) => {
+            news.forEach((item) => {
+                // Usar el título como ID único para la búsqueda
+                const itemData = JSON.stringify(item).replace(/'/g, "&apos;");
                 const card = `
                     <div class="col-md-6 col-lg-4">
-                        <div class="card news-card" onclick="openArticle(${index})">
+                        <div class="card news-card" onclick='openArticleByTitle("${item.title.replace(/"/g, '&quot;')}")'>
                             <img src="${item.thumbnail}" class="card-img-top" alt="${item.title}" onerror="this.src='https://picsum.photos/400/250'">
                             <div class="card-body">
                                 <span class="category-badge">${item.category}</span>
@@ -188,14 +190,13 @@
             });
         }
 
-        function openArticle(index) {
-            const item = allNews[index];
+        function openArticleByTitle(title) {
+            const item = allNews.find(n => n.title === title);
             if (!item) return;
             
-            document.getElementById('articleModalLabel').innerText = item.title || "Detalle del Reporte";
+            document.getElementById('articleModalLabel').innerText = item.title;
             
-            // Defensivo: Si no hay content, usar summary, y si no hay nada, avisar.
-            let rawContent = item.content || item.summary || "No hay contenido disponible para esta sección.";
+            let rawContent = item.content || item.summary || "No hay contenido disponible.";
             const formattedContent = rawContent.replace(/\n/g, '<br>');
             
             document.getElementById('articleModalBody').innerHTML = `
