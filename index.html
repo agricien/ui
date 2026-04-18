@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Hub | Plataforma de Noticias Sin Distracciones</title>
+    <title>AgriCien Vision 2026 | El Nuevo Paradigma Agrario</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -60,13 +60,22 @@
             border-radius: 25px;
             margin: 0 5px;
         }
+        .modal-content {
+            border: none;
+            border-radius: 15px;
+        }
+        .modal-header {
+            border-bottom: 1px solid #f0f0f0;
+            background-color: #f8f9fa;
+            border-radius: 15px 15px 0 0;
+        }
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">NEWS<span class="text-primary">HUB</span></a>
+            <a class="navbar-brand fw-bold" href="#">AgriCien <span class="text-primary">Vision 2026</span></a>
             <div class="ms-auto" id="update-indicator">
                 <span class="badge bg-light text-dark border timestamp" id="last-update">Actualizado: Cargando...</span>
             </div>
@@ -74,13 +83,13 @@
     </nav>
 
     <header class="container">
-        <h1 class="display-4 fw-bold">Tu Diario Digital</h1>
-        <p class="lead text-muted">Agregador de noticias premium, libre de distracciones.</p>
+        <h1 class="display-4 fw-bold text-dark">El Trópico Seco 2026</h1>
+        <p class="lead text-muted">Gestión Integral del Capital Hídrico y Regeneración Basada en Evidencia.</p>
         <div class="mt-4" id="category-filters">
-            <button class="btn btn-primary filter-btn px-4" onclick="filterNews('Todos')">Todos</button>
-            <button class="btn btn-outline-secondary filter-btn px-4" onclick="filterNews('Tecnología')">Tecnología</button>
-            <button class="btn btn-outline-secondary filter-btn px-4" onclick="filterNews('Noticias')">Noticias</button>
-            <button class="btn btn-outline-secondary filter-btn px-4" onclick="filterNews('Agricultura')">Agricultura</button>
+            <button class="btn btn-primary filter-btn px-4" onclick="filterNews('Todos')">Resumen</button>
+            <button class="btn btn-outline-secondary filter-btn px-4" onclick="filterNews('Hidrología')">Agua/Capital</button>
+            <button class="btn btn-outline-secondary filter-btn px-4" onclick="filterNews('Evidencia')">Evidencia/Data</button>
+            <button class="btn btn-outline-secondary filter-btn px-4" onclick="filterNews('Estrategia')">Estrategia</button>
         </div>
     </header>
 
@@ -89,18 +98,38 @@
             <!-- News items will be injected here -->
             <div class="text-center py-5">
                 <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Cargando noticias...</span>
+                    <span class="visually-hidden">Cargando reporte...</span>
                 </div>
             </div>
         </div>
     </main>
 
+    <!-- Modal para Lectura de Reporte -->
+    <div class="modal fade" id="articleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="articleModalLabel">Título del Artículo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4" id="articleModalBody">
+                    <!-- Contenido dinámico -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="bg-white py-5 mt-5 border-top">
         <div class="container text-center text-muted">
-            <p>&copy; 2026 News Hub | Impulsado por GitHub Actions</p>
-            <p><small>Inspirado en vanalmsick/news_platform</small></p>
+            <p>&copy; 2026 AgriCien Precision | Liderazgo de Pensamiento</p>
+            <p><small>Basado en el estudio: "El Nuevo Paradigma Agrario del Trópico Seco"</small></p>
         </div>
     </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
         let allNews = [];
@@ -131,11 +160,11 @@
             container.innerHTML = '';
 
             if (news.length === 0) {
-                container.innerHTML = '<p class="text-center w-100">No hay noticias disponibles en este momento.</p>';
+                container.innerHTML = '<p class="text-center w-100">No hay secciones disponibles.</p>';
                 return;
             }
 
-            news.forEach(item => {
+            news.forEach((item, index) => {
                 const card = `
                     <div class="col-md-6 col-lg-4">
                         <div class="card news-card">
@@ -146,7 +175,7 @@
                                 <p class="card-text text-muted small">${item.summary}</p>
                                 <div class="d-flex justify-content-between align-items-center mt-3">
                                     <span class="timestamp">${item.published}</span>
-                                    <a href="${item.link}" target="_blank" class="btn btn-outline-primary btn-sm">Leer más</a>
+                                    <button onclick="openArticle(${index})" class="btn btn-outline-primary btn-sm">Leer Reporte</button>
                                 </div>
                             </div>
                         </div>
@@ -154,6 +183,24 @@
                 `;
                 container.insertAdjacentHTML('beforeend', card);
             });
+        }
+
+        function openArticle(index) {
+            const item = allNews[index];
+            document.getElementById('articleModalLabel').innerText = item.title;
+            // Preservar saltos de línea del reporte técnico
+            const formattedContent = item.content.replace(/\n/g, '<br>');
+            document.getElementById('articleModalBody').innerHTML = `
+                <div class="text-center mb-4">
+                    <img src="${item.thumbnail}" class="img-fluid rounded" style="max-height: 300px; width: 100%; object-fit: cover;">
+                </div>
+                <p class="lead fw-bold text-primary mb-3">${item.category}</p>
+                <div class="article-text" style="line-height: 1.8; color: #333;">
+                    ${formattedContent}
+                </div>
+            `;
+            const myModal = new bootstrap.Modal(document.getElementById('articleModal'));
+            myModal.show();
         }
 
         function filterNews(category) {

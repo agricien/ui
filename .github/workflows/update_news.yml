@@ -1,10 +1,11 @@
 name: Actualizar Noticias Automatizado
 
 on:
-  schedule:
-    # Corre cada 6 horas
-    - cron: '0 */6 * * *'
-  workflow_dispatch: # Permite correrlo manualmente desde GitHub
+  # schedule:
+  #   - cron: '0 */6 * * *'
+  # workflow_dispatch: 
+  push:
+    branches: [ "never_run" ] # Solo corre en una rama inexistente para desactivarlo
 
 jobs:
   build:
