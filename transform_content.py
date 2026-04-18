@@ -56,11 +56,20 @@ def transform_excel_to_json(source, output_json):
         return
 
     try:
-        # Leer Excel
-        df = pd.read_excel(source)
+        # Leer todas las hojas
+        sheets = pd.read_excel(source, sheet_name=None)
+        
+        # Procesar hoja de Noticias (anteriormente Sheet1)
+        df = sheets.get('Noticias', sheets.get('Sheet1', pd.DataFrame()))
+        if df.empty:
+            print("Error: No se encontró la hoja de Noticias.")
+            return
+
+        # Invertir el orden (inferiores primero)
+        df = df.iloc[::-1]
         
         # Mapeo de columnas requeridas
-        required_cols = ['Tema', 'Sub titulo', 'Titulo', 'Spanish', 'Original', 'Foto', 'Boton']
+        required_cols = ['Tema', 'Sub titulo', 'Titulo', 'Spanish', 'Original', 'Foto', 'Boton', 'Resumen']
         for col in required_cols:
             if col not in df.columns:
                 print(f"Advertencia: Falta la columna '{col}' en el Excel.")
@@ -88,7 +97,8 @@ def transform_excel_to_json(source, output_json):
                 "thumbnail": str(row['Foto']).strip(),
                 "button_text": btn_text,
                 "published": today,
-                "lang": detect_language(row['Original'])
+                "lang": detect_language(row['Original']),
+                "is_resumen": str(row['Resumen']).strip() == "1"
             }
             
             # Limpieza básica de URLs
@@ -97,12 +107,41 @@ def transform_excel_to_json(source, output_json):
 
             news_list.append(item)
 
+        # Procesar Encabezado
+        header_df = sheets.get('Encabezado', pd.DataFrame())
+        header_data = {}
+        if not header_df.empty:
+            row = header_df.iloc[0]
+            header_data = {
+                "title": str(row.get('Titulo', '')).strip(),
+                "subtitle": str(row.get('Subtitulo', '')).strip(),
+                "brand_black": str(row.get('Primera Linea Negra', '')).strip(),
+                "brand_blue": str(row.get('Primera Linea Azul', '')).strip()
+            }
+
+        # Procesar Pie de Página
+        footer_df = sheets.get('Pie de Página', pd.DataFrame())
+        footer_data = {}
+        if not footer_df.empty:
+            row = footer_df.iloc[0]
+            footer_data = {
+                "line1": str(row.get('Primera Linea', '')).strip(),
+                "line2": str(row.get('Segunda Linea', '')).strip()
+            }
+
+        # Construir salida final
+        final_data = {
+            "header": header_data,
+            "footer": footer_data,
+            "news": news_list
+        }
+
         # Guardar JSON
         os.makedirs(os.path.dirname(output_json), exist_ok=True)
         with open(output_json, "w", encoding="utf-8") as f:
-            json.dump(news_list, f, ensure_ascii=False, indent=2)
+            json.dump(final_data, f, ensure_ascii=False, indent=2)
             
-        print(f"Éxito: Se procesaron {len(news_list)} noticias a {output_json}")
+        print(f"Éxito: Se procesaron {len(news_list)} noticias y configuración a {output_json}")
 
     except Exception as e:
         print(f"Error durante la transformación: {str(e)}")

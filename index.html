@@ -76,7 +76,7 @@
 
     <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">AgriCien <span class="text-primary">Vision 2026</span></a>
+            <a class="navbar-brand fw-bold" href="#" id="nav-brand">Cargando...</a>
             <div class="ms-auto" id="update-indicator">
                 <span class="badge bg-light text-dark border timestamp" id="last-update">Actualizado: Cargando...</span>
             </div>
@@ -84,8 +84,8 @@
     </nav>
 
     <header class="container">
-        <h1 class="display-4 fw-bold text-dark">El Trópico Seco 2026</h1>
-        <p class="lead text-muted">Gestión Integral del Capital Hídrico y Regeneración Basada en Evidencia.</p>
+        <h1 class="display-4 fw-bold text-dark" id="main-title">Cargando...</h1>
+        <p class="lead text-muted" id="main-subtitle">Por favor espere.</p>
         <div class="mt-4" id="category-filters">
             <!-- Botones generados dinámicamente -->
             <div class="text-center py-2">
@@ -127,8 +127,8 @@
 
     <footer class="bg-white py-5 mt-5 border-top">
         <div class="container text-center text-muted">
-            <p>&copy; 2026 AgriCien Precision | Liderazgo de Pensamiento</p>
-            <p><small>Basado en el estudio: "El Nuevo Paradigma Agrario del Trópico Seco"</small></p>
+            <p id="footer-line1">&copy; 2026 AgriCien Precision</p>
+            <p><small id="footer-line2">Cargando información del estudio...</small></p>
         </div>
     </footer>
     <!-- Bootstrap JS -->
@@ -140,12 +140,27 @@
         async function loadNews() {
             try {
                 const response = await fetch('./data/news.json');
-                allNews = await response.json();
+                const data = await response.json();
                 
+                allNews = data.news || [];
+                
+                // Actualizar Encabezado
+                if (data.header) {
+                    document.getElementById('nav-brand').innerHTML = `${data.header.brand_black} <span class="text-primary">${data.header.brand_blue}</span>`;
+                    document.getElementById('main-title').innerText = data.header.title;
+                    document.getElementById('main-subtitle').innerText = data.header.subtitle;
+                }
+
+                // Actualizar Pie de Página
+                if (data.footer) {
+                    document.getElementById('footer-line1').innerText = data.footer.line1;
+                    document.getElementById('footer-line2').innerText = data.footer.line2;
+                }
+
                 document.getElementById('last-update').innerText = `Total: ${allNews.length} secciones`;
                 
-                renderCategories(allNews); // <--- Nueva función
-                renderNews(allNews);
+                renderCategories(allNews);
+                filterNews('Resumen'); // Cargar Resumen por defecto
             } catch (error) {
                 console.error('Error cargando noticias:', error);
                 document.getElementById('news-container').innerHTML = `<p class="text-center text-danger">Error al cargar datos.</p>`;
@@ -156,10 +171,10 @@
             const container = document.getElementById('category-filters');
             const categories = [...new Set(news.map(item => item.category))];
             
-            let html = `<button class="btn btn-primary filter-btn px-4" onclick="filterNews('Todos')">Resumen</button>`;
+            let html = `<button class="btn btn-primary filter-btn px-4" id="btn-resumen" onclick="filterNews('Resumen')">Resumen</button>`;
             
             categories.forEach(cat => {
-                if (!cat || cat === 'Resumen') return; // Evitar duplicar Resumen si ya existe como categoría
+                if (!cat || cat === 'Resumen') return;
                 html += `<button class="btn btn-outline-secondary filter-btn px-4" onclick="filterNews('${cat}')">${cat}</button>`;
             });
             
@@ -226,8 +241,7 @@
             // Estética de botones
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => {
-                const isMatch = (category === 'Todos' && btn.innerText === 'Resumen') || (btn.innerText === category);
-                if (isMatch) {
+                if (btn.innerText === category) {
                     btn.classList.add('btn-primary');
                     btn.classList.remove('btn-outline-secondary');
                 } else {
@@ -236,7 +250,10 @@
                 }
             });
 
-            if (category === 'Todos') {
+            if (category === 'Resumen') {
+                const filtered = allNews.filter(n => n.is_resumen);
+                renderNews(filtered);
+            } else if (category === 'Todos') {
                 renderNews(allNews);
             } else {
                 const filtered = allNews.filter(n => n.category === category);
