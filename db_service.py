@@ -96,15 +96,25 @@ def fetch_database():
         db = {table_name: [] for table_name in FORMS_MAPPING.keys()}
         
         for sheet_name, df in all_sheets_dict.items():
-            # Limpiar nombres de columnas (quitar espacios si los hay)
-            cols = [str(c).strip() for c in df.columns]
+            # Normalización agresiva: minúsculas, sin espacios y quitar paréntesis
+            cols = [str(c).lower().strip().split(" (")[0].replace(" ", "_") for c in df.columns]
             
             # Buscar a qué tabla pertenece esta hoja según sus columnas
             for table_name, config in FORMS_MAPPING.items():
-                target_fields = list(config["fields"].keys())
-                # Si la hoja contiene al menos los campos principales de la tabla
+                target_fields = [f.lower().strip().replace(" ", "_") for f in config["fields"].keys()]
+                # Si la hoja contiene los campos principales de la tabla
                 if all(field in cols for field in target_fields):
                     df = df.fillna("")
+                    # Convertimos los nombres de las columnas reales del DF a los nombres semánticos de nuestro mapping
+                    # para asegurar que el resto de la app funcione con las llaves consistentes.
+                    actual_cols = df.columns.tolist()
+                    mapping_correction = {}
+                    for i, normalized in enumerate(cols):
+                        for target in target_fields:
+                            if normalized == target:
+                                mapping_correction[actual_cols[i]] = target
+                    
+                    df = df.rename(columns=mapping_correction)
                     db[table_name] = df.to_dict(orient='records')
                     break 
                     

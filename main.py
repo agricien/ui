@@ -1,5 +1,6 @@
 import flet as ft
 import db_service
+import time
 
 def main(page: ft.Page):
     page.title = "PTx Displays - UI Framework"
@@ -20,12 +21,20 @@ def main(page: ft.Page):
             is_editor = e.control.value
             load_ui()
             
+        def manual_refresh(e):
+            nonlocal app_data
+            page.snack_bar = ft.SnackBar(ft.Text("Sincronizando con Google Sheets..."), open=True)
+            page.update()
+            app_data = db_service.fetch_database()
+            load_ui()
+
         editor_bar = ft.Container(
             padding=10, bgcolor=ft.colors.AMBER_100,
             content=ft.Row([
-                ft.Text("MODO ADMIN (Guardar Formulario en BD):", weight=ft.FontWeight.BOLD, color=ft.colors.RED_900),
+                ft.Text("MODO ADMIN:", weight=ft.FontWeight.BOLD, color=ft.colors.RED_900),
                 ft.Switch(value=is_editor, on_change=toggle_editor, active_color=ft.colors.RED_700),
-                ft.Text(" Los iconos '+ y engranaje' te permiten autollenar los Forms usando API e insertar a Sheet.", color=ft.colors.GREY_700, size=12)
+                ft.IconButton(ft.icons.REFRESH, on_click=manual_refresh, tooltip="Sincronizar Datos Ahora"),
+                ft.Text(" Los iconos '+ y engranaje' te permiten autollenar los Forms.", color=ft.colors.GREY_700, size=12)
             ], alignment=ft.MainAxisAlignment.CENTER)
         )
         page.add(editor_bar)
@@ -48,7 +57,10 @@ def main(page: ft.Page):
                 # ¡Magia! Inyectar HTTP POST al link original de tu Form
                 success = db_service.post_to_google_form(table_name, payload)
                 if success:
-                    # Si sube, recargamos base de datos original (pandas .xlsx export)
+                    page.snack_bar = ft.SnackBar(ft.Text("Enviado. Esperando 3s por Google Sheets..."), open=True)
+                    page.update()
+                    # Espera para que Google Sheets procese el form
+                    time.sleep(3)
                     nonlocal app_data
                     app_data = db_service.fetch_database()
                     load_ui()
@@ -139,7 +151,20 @@ def main(page: ft.Page):
                     ft.Container(height=10),
                     ft.ElevatedButton(text=str(hero_data.get("boton_primario_texto", "Find a Dealer")), style=ft.ButtonStyle(bgcolor=ft.colors.BLUE_600, color=ft.colors.WHITE, padding=20))
                 ], width=600, alignment=ft.MainAxisAlignment.CENTER),
-                ft.Container(content=ft.Image(src=str(hero_data.get("imagen_url", "https://picsum.photos/600/400")), border_radius=10, width=600, height=400, fit=ft.ImageFit.COVER), alignment=ft.alignment.center)
+                ft.Container(
+                    content=ft.Image(
+                        src=str(hero_data.get("imagen_url", "https://picsum.photos/600/400")), 
+                        border_radius=10, width=600, height=400, fit=ft.ImageFit.COVER,
+                        error_content=ft.Container(
+                            content=ft.Column([
+                                ft.Icon(ft.icons.BROKEN_IMAGE, size=50, color=ft.colors.GREY_400),
+                                ft.Text("Error de carga (URL/CORS)", color=ft.colors.GREY_400)
+                            ], alignment=ft.MainAxisAlignment.CENTER, horizontal_alignment=ft.CrossAxisAlignment.CENTER),
+                            width=600, height=400, bgcolor=ft.colors.GREY_100, border_radius=10
+                        )
+                    ), 
+                    alignment=ft.alignment.center
+                )
             ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN, wrap=True)
         )
 
@@ -162,9 +187,14 @@ def main(page: ft.Page):
         else:
             for idx, ben in enumerate(bens_data):
                 img_src = str(ben.get("imagen_url", ""))
-                try: # Validar extension si existe, o ignora
-                    img_widget = ft.Image(src=img_src if img_src.startswith("http") else "https://picsum.photos/400/300", width=400, height=300, border_radius=10, fit=ft.ImageFit.COVER)
-                except: img_widget = ft.Container(width=400, height=300, bgcolor=ft.colors.GREY_300)
+                img_widget = ft.Image(
+                    src=img_src if img_src.startswith("http") else "https://picsum.photos/400/300", 
+                    width=400, height=300, border_radius=10, fit=ft.ImageFit.COVER,
+                    error_content=ft.Container(
+                        content=ft.Icon(ft.icons.BROKEN_IMAGE, color=ft.colors.GREY_300),
+                        width=400, height=300, bgcolor=ft.colors.GREY_100, border_radius=10
+                    )
+                )
                 
                 txt_widget = ft.Column([
                     ft.Text(str(ben.get("titulo_beneficio_individual", "")), size=24, weight=ft.FontWeight.BOLD),
@@ -221,7 +251,14 @@ def main(page: ft.Page):
         def product_card(data_row):
             img = str(data_row.get("imagen_url", "https://picsum.photos/300/200"))
             return ft.Card(content=ft.Container(padding=20, width=300, content=ft.Column([
-                ft.Image(src=img if img.startswith("http") else "https://picsum.photos/300/200", width=260, height=180, fit=ft.ImageFit.COVER, border_radius=5),
+                ft.Image(
+                    src=img if img.startswith("http") else "https://picsum.photos/300/200", 
+                    width=260, height=180, fit=ft.ImageFit.COVER, border_radius=5,
+                    error_content=ft.Container(
+                        content=ft.Icon(ft.icons.IMAGE_NOT_SUPPORTED, color=ft.colors.GREY_300),
+                        width=260, height=180, bgcolor=ft.colors.GREY_100, border_radius=5
+                    )
+                ),
                 ft.Text(str(data_row.get("nombre_producto", "")), size=20, weight=ft.FontWeight.BOLD),
                 ft.Text(str(data_row.get("descripcion_corta", "")), color=ft.colors.GREY_700),
                 ft.ElevatedButton(str(data_row.get("accion_texto", "Learn More")), style=ft.ButtonStyle(color=ft.colors.BLUE_700, bgcolor=ft.colors.BLUE_50))
