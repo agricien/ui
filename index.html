@@ -147,17 +147,27 @@
                 // Helper para convertir URLs en enlaces clicables
                 const linkify = (text) => {
                     if (!text) return "";
-                    // Patrón 1: Identificar "Etiqueta : URL" para ocultar el URL tras un texto
-                    // Excluimos símbolos como © o | de la etiqueta para que no se vuelvan parte del link
-                    const labeledUrlRegex = /([a-zA-Z0-9ñáéíóúÁÉÍÓÚ\s]+)\s*:\s*["']?(https?:\/\/[^\s"'<>\(\)]+)["']?/g;
                     
+                    // Patrón 1: Formato preciso [Etiqueta:URL]
+                    // Permite tener prefijo [Enlace:URL] sufijo
+                    const bracketRegex = /\[([^\]]+?)\s*:\s*([^\]\s]+?)\]/g;
+                    if (bracketRegex.test(text)) {
+                        return text.replace(bracketRegex, (match, label, url) => {
+                            // Limpiar comillas si el usuario las puso dentro de los corchetes
+                            const cleanUrl = url.replace(/["']/g, "");
+                            return `<a href="${cleanUrl}" target="_blank" class="text-primary text-decoration-none">${label.trim()}</a>`;
+                        });
+                    }
+
+                    // Patrón 2: Formato simple Etiqueta : URL (Legacy/Fallback)
+                    const labeledUrlRegex = /([a-zA-Z0-9ñáéíóúÁÉÍÓÚ\s]+)\s*:\s*["']?(https?:\/\/[^\s"'<>\(\)]+)["']?/g;
                     if (labeledUrlRegex.test(text)) {
                         return text.replace(labeledUrlRegex, (match, label, url) => {
                             return `<a href="${url}" target="_blank" class="text-primary text-decoration-none">${label.trim()}</a>`;
                         });
                     }
 
-                    // Patrón 2: URL sola (fallback)
+                    // Patrón 3: URL sola (fallback total)
                     const urlRegex = /(https?:\/\/[^\s"'<>\(\)]+)/g;
                     return text.replace(urlRegex, (url) => `<a href="${url}" target="_blank" class="text-primary text-decoration-none">${url}</a>`);
                 };
