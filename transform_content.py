@@ -60,7 +60,7 @@ def transform_excel_to_json(source, output_json):
         df = pd.read_excel(source)
         
         # Mapeo de columnas requeridas
-        required_cols = ['Tema', 'Sub titulo', 'Titulo', 'Spanish', 'Original', 'Foto']
+        required_cols = ['Tema', 'Sub titulo', 'Titulo', 'Spanish', 'Original', 'Foto', 'Boton']
         for col in required_cols:
             if col not in df.columns:
                 print(f"Advertencia: Falta la columna '{col}' en el Excel.")
@@ -73,6 +73,12 @@ def transform_excel_to_json(source, output_json):
             if pd.isna(row['Titulo']) or str(row['Titulo']).strip() == "":
                 continue
 
+            # Determinar texto del botón (Prioridad: Columna G "Boton")
+            btn_text = str(row['Boton']).strip()
+            if btn_text == "" or btn_text == "nan":
+                lang = detect_language(row['Original'])
+                btn_text = f"Ver Original [{lang}]"
+
             item = {
                 "category": str(row['Tema']).strip(),
                 "title": str(row['Titulo']).strip(),
@@ -80,6 +86,7 @@ def transform_excel_to_json(source, output_json):
                 "content": str(row['Spanish']).strip(),
                 "link": str(row['Original']).strip(),
                 "thumbnail": str(row['Foto']).strip(),
+                "button_text": btn_text,
                 "published": today,
                 "lang": detect_language(row['Original'])
             }
