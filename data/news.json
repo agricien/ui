@@ -97,5 +97,115 @@
     "button_text": "Original www.agrolatam.com/",
     "published": "2026-04-17",
     "lang": "Español"
+  },
+  {
+    "category": "Tecnología",
+    "title": "La digitalización del campo amenaza con ampliar la brecha global",
+    "summary": "Agricultura digital",
+    "content": "Un informe advierte que las grandes tecnológicas están transformando la agricultura mediante IA y datos, lo que podría aumentar la desigualdad entre agricultores.",
+    "link": "https://elpais.com/planeta-futuro/2026-02-25/la-digitalizacion-del-campo-por-las-tecnologicas-amenaza-con-agrandar-la-brecha-con-el-sur-global-segun-un-estudio.html",
+    "thumbnail": "https://imagenes.elpais.com/resizer/v2/https%3A%2F%2Fimagenes.elpais.com%2Fresizer%2F...jpg",
+    "button_text": "Original elpais.com",
+    "published": "2026-04-17",
+    "lang": "English"
+  },
+  {
+    "category": "Tecnología",
+    "title": "Tractores autónomos e IA revolucionan el agro",
+    "summary": "Agricultura en CES",
+    "content": "La feria CES muestra avances en maquinaria autónoma y sistemas inteligentes para detectar enfermedades en cultivos.",
+    "link": "https://elpais.com/us/branded/ces-consumer-electronics-show/2025-01-10/la-tecnologia-agricola-se-abre-paso-en-la-ces-de-tractores-autonomos-a-inteligencia-artificial-que-detecta-enfermades-en-los-cultivos.html",
+    "thumbnail": "https://imagenes.elpais.com/resizer/...jpg",
+    "button_text": "Original elpais.com",
+    "published": "2026-04-17",
+    "lang": "English"
+  },
+  {
+    "category": "Ambiente",
+    "title": "El cambio climático amenaza la producción agrícola global",
+    "summary": "Cambio climático",
+    "content": "Se proyecta una caída de hasta 20% en rendimientos agrícolas si continúan las emisiones actuales.",
+    "link": "https://elpais.com/economia/2025-07-28/el-cambio-climatico-amenaza-los-rendimientos-agricolas-y-la-alimentacion.html",
+    "thumbnail": "https://imagenes.elpais.com/resizer/...jpg",
+    "button_text": "Original elpais.com",
+    "published": "2026-04-17",
+    "lang": "English"
+  },
+  {
+    "category": "Ambiente",
+    "title": "La agricultura regenerativa gana protagonismo global",
+    "summary": "Agricultura regenerativa",
+    "content": "Empresas y agricultores impulsan prácticas sostenibles para mejorar suelos y reducir emisiones.",
+    "link": "https://elpais.com/sociedad/2025-07-09/regenerar-la-agricultura-con-vistas-al-futuro.html",
+    "thumbnail": "https://imagenes.elpais.com/resizer/...jpg",
+    "button_text": "Original elpais.com",
+    "published": "2026-04-17",
+    "lang": "English"
+  },
+  {
+    "category": "Inteligencia de Negocio",
+    "title": "CAF invertirá $8.500 millones en agricultura sostenible",
+    "summary": "Inversión agrícola",
+    "content": "La inversión busca fortalecer la seguridad alimentaria en América Latina.",
+    "link": "https://elpais.com/america-futura/2025-03-25/caf-invertira-8500-millones-de-dolares-para-impulsar-el-sector-agropecuario-en-america-latina-y-el-caribe.html",
+    "thumbnail": "https://imagenes.elpais.com/resizer/...jpg",
+    "button_text": "Original elpais.com",
+    "published": "2026-04-17",
+    "lang": "English"
+  },
+  {
+    "category": "Ambiente",
+    "title": "Mujeres lideran la agroecología en Asia",
+    "summary": "Agroecología",
+    "content": "Productoras impulsan modelos sostenibles y resilientes frente al cambio climático.",
+    "link": "https://elpais.com/noticias/medio-ambiente/",
+    "thumbnail": "https://imagenes.elpais.com/resizer/...jpg",
+    "button_text": "Original elpais.com",
+    "published": "2026-04-17",
+    "lang": "Español"
+  },
+  {
+    "category": "Tecnología",
+    "title": "La agricultura inteligente usa datos para enfrentar el clima",
+    "summary": "Big Data agrícola",
+    "content": "El uso de sensores y análisis predictivo permite mejorar la eficiencia productiva.",
+    "link": "https://elpais.com/elpais/2020/09/10/planeta_futuro/1599723844_846240.html",
+    "thumbnail": "https://imagenes.elpais.com/resizer/...jpg",
+    "button_text": "Original elpais.com",
+    "published": "2026-04-17",
+    "lang": "English"
+  },
+  {
+    "category": "Inteligencia de Negocio",
+    "title": "Agricultores son clave en el desarrollo sostenible",
+    "summary": "Seguridad alimentaria",
+    "content": "El sector agrícola es fundamental para garantizar seguridad alimentaria global.",
+    "link": "https://elpais.com/america-futura/2024-10-01/los-agricultores-son-las-piezas-medulares-del-nuevo-desarrollo.html",
+    "thumbnail": "https://imagenes.elpais.com/resizer/...jpg",
+    "button_text": "Original elpais.com",
+    "published": "2026-04-17",
+    "lang": "English"
+  },
+  {
+    "category": "Tecnología",
+    "title": "La expansión de la IA redefine industrias",
+    "summary": "IA global",
+    "content": "Grandes tecnológicas invierten en infraestructura y datos para liderar el mercado.",
+    "link": "https://elpais.com/tecnologia/2025-08-09/el-patio-trasero-de-la-ia-un-mapa-de-la-fiebre-del-oro-del-siglo-xxi.html",
+    "thumbnail": "https://imagenes.elpais.com/resizer/...jpg",
+    "button_text": "Original elpais.com",
+    "published": "2026-04-17",
+    "lang": "English"
+  },
+  {
+    "category": "Ambiente",
+    "title": "Los suelos son clave para la seguridad alimentaria",
+    "summary": "Suelos y sostenibilidad",
+    "content": "Expertos alertan sobre la degradación del suelo y su impacto en la producción.",
+    "link": "https://elpais.com/planeta-futuro/red-de-expertos/2022-12-03/una-agricultura-climaticamente-inteligente-para-resistir-a-las-turbulencias-economicas-y-sociales.html",
+    "thumbnail": "https://imagenes.elpais.com/resizer/...jpg",
+    "button_text": "Original elpais.com",
+    "published": "2026-04-17",
+    "lang": "English"
   }
 ]
