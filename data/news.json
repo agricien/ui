@@ -1,11 +1,81 @@
 [
   {
-    "category": "Resumen",
-    "title": "La Transformación Estructural de la Agricultura 2026",
-    "summary": "Transformación",
-    "content": "El sector agropecuario en América Latina, y específicamente en la región de Costa Rica y el corredor seco centroamericano, atraviesa en el año 2026 una de las transformaciones más profundas de su historia contemporánea. Esta transición no es meramente tecnológica, sino fundamentalmente conceptual. La convergencia de crisis geopolíticas que han desestabilizado el mercado global de insumos sintéticos, junto con una variabilidad climática que ha llevado el estrés hídrico a niveles críticos en regiones como Guanacaste, ha forzado a los productores y consultores técnicos a abandonar los modelos de agricultura extractiva en favor de sistemas regenerativos de alta precisión.",
-    "link": "https://elpais.com/noticias/agricultura/",
-    "thumbnail": "https://imagenes.elpais.com/resizer/v2/VFHJ424PKJDJFFOWJYZHWQGXBU.jpg?auth=357f083534d386b8e0e5c9160800870aa4794d879b65c3c5ff19986a5dce5ceb&width=1200",
+    "category": "Agricultura",
+    "title": "Soluciones de riego de precisión ganan protagonismo en América Latina",
+    "summary": "Riego de precisión ante escasez hídrica",
+    "content": "Las tendencias para 2026 se enfocan en la adopción de aspersores de alta precisión y monitoreo remoto para enfrentar el estrés hídrico extremo y la variabilidad climática.",
+    "link": "https://tierramarillano.cl/2026/04/16/soluciones-de-riego-de-precision-ganan-protagonismo-en-america-latina-ante-la-escasez-de-agua/",
+    "thumbnail": "https://tierramarillano.cl/wp-content/uploads/2026/04/Foto-1024x576.jpeg",
+    "published": "2026-04-17",
+    "lang": "English"
+  },
+  {
+    "category": "Tecnología",
+    "title": "Costa Rica fortalece agricultura de precisión con decreto sobre drones",
+    "summary": "Drones en la agricultura de precisión",
+    "content": "El reglamento para el uso de drones permite a los productores elevar la productividad, reducir costos operativos y minimizar el impacto ambiental mediante aplicaciones dirigidas.",
+    "link": "https://www.periodicomensaje.com/guanacaste/11290-costa-rica-fortalece-agricultura-de-precision-con-decreto-sobre-drones",
+    "thumbnail": "https://www.periodicomensaje.com/images/drones1.jpg",
+    "published": "2026-04-17",
+    "lang": "English"
+  },
+  {
+    "category": "Inteligencia de Negocio",
+    "title": "Alza de fertilizantes en abril 2026 impacta a Latinoamérica",
+    "summary": "Mercado global de fertilizantes",
+    "content": "El encarecimiento del nitrógeno y las tensiones en Medio Oriente han disparado los precios de la urea, impulsando el interés por alternativas biológicas y de precisión.",
+    "link": "https://www.agrolatam.com/mercados-latam/suba-fertilizantes-abril-2026-nitrogeno-america-latina/",
+    "thumbnail": "https://www.agrolatam.com/files/image/72/72020/69bd3b91c36f8_992_558!.webp?s=5d5a3bff842327a2bfc219f69ab23a6a&d=1776277567&oe=png",
+    "published": "2026-04-17",
+    "lang": "Español"
+  },
+  {
+    "category": "Ambiente",
+    "title": "Costa Rica valida Estrategia Nacional de Bioinsumos",
+    "summary": "Estrategia de bioinsumos",
+    "content": "Liderada por el MAG, esta iniciativa busca reducir la dependencia de insumos sintéticos importados y consolidar al país como referente en agricultura sostenible.",
+    "link": "https://iica.int/es/prensa/noticias/iica-apoya-proceso-de-validacion-de-la-estrategia-nacional-de-bioinsumos-de-costa-rica-liderada-por-el-ministerio-de-agricultura-y-ganaderia-del-pais/",
+    "thumbnail": "https://iica.int/wp-content/uploads/2026/03/72521.jpg",
+    "published": "2026-04-17",
+    "lang": "Español"
+  },
+  {
+    "category": "Tecnología",
+    "title": "Soluciones de nivelación 3D para optimización de terrenos",
+    "summary": "Nivelación y control de maquinaria",
+    "content": "El uso de tecnología GNSS y nivelación láser de precisión permite manipular la topografía para maximizar el uso del agua y mejorar el drenaje superficial.",
+    "link": "https://www.topconpositioning.com/latam/solutions/technology/agriculture-products/landforming",
+    "thumbnail": "https://www.topconpositioning.com/content/dam/topconpositioning/products/heros/landforming_web_hero.jpg",
+    "published": "2026-04-17",
+    "lang": "Español"
+  },
+  {
+    "category": "Agricultura",
+    "title": "República Dominicana prioriza el riego tecnificado para 2026",
+    "summary": "Riego tecnificado en el Caribe",
+    "content": "La implementación de tecnologías avanzadas de riego se ha colocado entre las diez metas prioritarias del gobierno para estimular el progreso del sector agropecuario.",
+    "link": "https://presidencia.gob.do/noticias/gobierno-coloca-el-riego-tecnificado-entre-las-metas-priorizadas-de-2026",
+    "thumbnail": "https://presidencia.gob.do/sites/default/files/styles/large/public/news/2026-01/Foto%20web_5.jpg?itok=fCZlkbLl",
+    "published": "2026-04-17",
+    "lang": "Español"
+  },
+  {
+    "category": "Inteligencia de Negocio",
+    "title": "6 tendencias agroempresariales que transformarán el sector en 2026",
+    "summary": "IA predictiva en el agro",
+    "content": "La consolidación de la Inteligencia Artificial predictiva y el uso de agentes autónomos para la toma de decisiones financieras y operativas lideran la innovación en la región.",
+    "link": "https://es.totvs.com/blog/gestion-agricola/6-tendencias-agroempresariales-para-2026-tecnologia-eficiencia-y-sostenibilidad/",
+    "thumbnail": "https://midias-sites.totvs.com/es/wp-content/uploads/2025/07/agro-11.jpg",
+    "published": "2026-04-17",
+    "lang": "English"
+  },
+  {
+    "category": "Ambiente",
+    "title": "El agua como activo financiero y la Línea de Infiltración (LDI)",
+    "summary": "Gestión hídrica y salud del suelo",
+    "content": "La gestión moderna del suelo se centra en entender el agua como capital, utilizando la descompactación medida en kPa para asegurar la infiltración profunda de la lluvia.",
+    "link": "https://www.agrolatam.com/mercados-latam/el-agua-como-activo-financiero/",
+    "thumbnail": "https://www.agrolatam.com/files/image/73/73413/69e2a78acbbcf_1340_620!.webp?s=4fc34e5542a192f83e419d7e23d04269&d=1776462786&oe=jpg",
     "published": "2026-04-17",
     "lang": "Español"
   }
