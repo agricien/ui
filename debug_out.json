@@ -1,0 +1,89 @@
+{
+  "Form Responses 7": {
+    "columns": [
+      "Timestamp",
+      "titulo_invitacion",
+      "boton1_texto",
+      "boton1_link",
+      "boton2_texto",
+      "boton2_link"
+    ],
+    "n_rows": 0
+  },
+  "Form Responses 6": {
+    "columns": [
+      "Timestamp",
+      "nombre_producto",
+      "imagen_url",
+      "descripcion_corta",
+      "accion_texto",
+      "accion_link",
+      "mostrar_en_inicio (SI/NO)"
+    ],
+    "n_rows": 0
+  },
+  "Form Responses 5": {
+    "columns": [
+      "Timestamp",
+      "modelo_nombre",
+      "imagen_referencia_url",
+      "tamano_pantalla",
+      "memoria_disponible",
+      "puertos_conexiones",
+      "sistema_operativo"
+    ],
+    "n_rows": 0
+  },
+  "Form Responses 4": {
+    "columns": [
+      "Timestamp",
+      "titulo_seccion_global",
+      "titulo_beneficio_individual",
+      "descripcion_beneficio",
+      "imagen_url",
+      "orden_aparicion"
+    ],
+    "n_rows": 0
+  },
+  "Form Responses 3": {
+    "columns": [
+      "Timestamp",
+      "etiqueta_superior",
+      "titulo_principal",
+      "texto_descripcion",
+      "boton_primario_texto",
+      "boton_primario_link",
+      "imagen_url"
+    ],
+    "n_rows": 1
+  },
+  "Form Responses 2": {
+    "columns": [
+      "Timestamp",
+      "parent_id_o_categoria",
+      "titulo",
+      "url_destino",
+      "orden_visualizacion"
+    ],
+    "n_rows": 0
+  },
+  "Form Responses 1": {
+    "columns": [
+      "Timestamp",
+      "cookie_banner_text",
+      "logo_url",
+      "search_icon_enabled",
+      "language_selector_enabled",
+      "footer_copyright_text"
+    ],
+    "n_rows": 0
+  },
+  "📊 Panel de URLs": {
+    "columns": [
+      "Tabla/Sección UI",
+      "Link para Llenar (Usuarios)",
+      "Link de Edición del Formulario (Admin)"
+    ],
+    "n_rows": 7
+  }
+}
