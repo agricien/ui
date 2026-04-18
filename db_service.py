@@ -129,6 +129,22 @@ def get_latest(table_data):
         return table_data[-1]
     return {}
 
+def get_proxied_url(url: str) -> str:
+    """
+    Envuelve una URL en un proxy de AllOrigins si es un sitio externo propenso a CORS.
+    Esto permite que Flet Web cargue imágenes de sitios con políticas restrictivas.
+    """
+    if not url or not url.startswith("http"):
+        return url
+        
+    # No hace falta proxy para sitios conocidos como abiertos o el propio CDN de google
+    open_domains = ["picsum.photos", "imgur.com", "googleusercontent.com", "agricien.com"]
+    if any(domain in url for domain in open_domains):
+        return url
+        
+    # Envolver para bypass de CORS
+    return f"https://api.allorigins.win/raw?url={requests.utils.quote(url)}"
+
 def post_to_google_form(table_name: str, payload_data: dict) -> bool:
     """
     Envía datos pre-llenados desde el formulario Flet hacia Google Forms vía HTTP POST.

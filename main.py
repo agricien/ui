@@ -153,7 +153,7 @@ def main(page: ft.Page):
                 ], width=600, alignment=ft.MainAxisAlignment.CENTER),
                 ft.Container(
                     content=ft.Image(
-                        src=str(hero_data.get("imagen_url", "https://picsum.photos/600/400")), 
+                        src=db_service.get_proxied_url(str(hero_data.get("imagen_url", "https://picsum.photos/600/400"))), 
                         border_radius=10, width=600, height=400, fit=ft.ImageFit.COVER,
                         error_content=ft.Container(
                             content=ft.Column([
@@ -186,7 +186,7 @@ def main(page: ft.Page):
             ben_controls.append(ft.Row([ft.Image(src="https://picsum.photos/400/300?1", width=400, height=300), ft.Text("Benefit X")], alignment=ft.MainAxisAlignment.SPACE_AROUND))
         else:
             for idx, ben in enumerate(bens_data):
-                img_src = str(ben.get("imagen_url", ""))
+                img_src = db_service.get_proxied_url(str(ben.get("imagen_url", "")))
                 img_widget = ft.Image(
                     src=img_src if img_src.startswith("http") else "https://picsum.photos/400/300", 
                     width=400, height=300, border_radius=10, fit=ft.ImageFit.COVER,
@@ -249,7 +249,7 @@ def main(page: ft.Page):
             page.dialog = dlg; dlg.open = True; page.update()
             
         def product_card(data_row):
-            img = str(data_row.get("imagen_url", "https://picsum.photos/300/200"))
+            img = db_service.get_proxied_url(str(data_row.get("imagen_url", "https://picsum.photos/300/200")))
             return ft.Card(content=ft.Container(padding=20, width=300, content=ft.Column([
                 ft.Image(
                     src=img if img.startswith("http") else "https://picsum.photos/300/200", 
