@@ -80,18 +80,8 @@ FORMS_MAPPING = {
     }
 }
 
-# Órdenes de las hojas esperadas dadas por el creador del Formulario
-# La hoja 0 es Panel de URLs, la hoja 1 en adelante son Formularios conectados en orden
-SHEETS_ORDER = [
-    "PanelURLs",               # index 0 (omitir)
-    "ConfiguracionGlobal",     # index 1
-    "MenuNavegacion",          # index 2
-    "SeccionHero",             # index 3
-    "Beneficios",              # index 4
-    "ProductosEquipos",        # index 5
-    "ProductosRelacionados",   # index 6
-    "LlamadoAccion_CTA"        # index 7
-]
+# No usamos una lista estática de índices ya que Google puede reordenar las hojas.
+# En su lugar, detectaremos la hoja correcta buscando las columnas específicas.
 
 def fetch_database():
     """
@@ -102,25 +92,26 @@ def fetch_database():
     try:
         # read_excel con sheet_name=None trae todas las hojas
         all_sheets_dict = pd.read_excel(SPREADSHEET_URL, sheet_name=None)
-        sheet_names = list(all_sheets_dict.keys())
         
-        db = {}
-        for idx, mapped_name in enumerate(SHEETS_ORDER):
-            if idx == 0: 
-                continue # Omitir panel de URLs
-            if idx < len(sheet_names):
-                actual_sheet_name = sheet_names[idx]
-                df = all_sheets_dict[actual_sheet_name]
-                # Convertimos NaNs a strings vacíos para evitar 'nan' en el UI
-                df = df.fillna("")
-                db[mapped_name] = df.to_dict(orient='records')
-            else:
-                db[mapped_name] = []
+        db = {table_name: [] for table_name in FORMS_MAPPING.keys()}
+        
+        for sheet_name, df in all_sheets_dict.items():
+            # Limpiar nombres de columnas (quitar espacios si los hay)
+            cols = [str(c).strip() for c in df.columns]
+            
+            # Buscar a qué tabla pertenece esta hoja según sus columnas
+            for table_name, config in FORMS_MAPPING.items():
+                target_fields = list(config["fields"].keys())
+                # Si la hoja contiene al menos los campos principales de la tabla
+                if all(field in cols for field in target_fields):
+                    df = df.fillna("")
+                    db[table_name] = df.to_dict(orient='records')
+                    break 
+                    
         return db
     except Exception as e:
         print(f"Error fetching database: {e}")
-        # Retorna data vacía si falla para evitar crahsear todo
-        return {key: [] for key in SHEETS_ORDER if key != "PanelURLs"}
+        return {table_name: [] for table_name in FORMS_MAPPING.keys()}
 
 def get_latest(table_data):
     """Retorna la última fila insertada en la tabla o un dict vacío si no hay datos"""
