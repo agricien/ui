@@ -144,17 +144,23 @@
                 
                 allNews = data.news || [];
                 
+                // Helper para convertir URLs en enlaces clicables
+                const linkify = (text) => {
+                    const urlRegex = /(https?:\/\/[^\s]+)/g;
+                    return text.replace(urlRegex, (url) => `<a href="${url}" target="_blank" class="text-primary text-decoration-none">${url}</a>`);
+                };
+
                 // Actualizar Encabezado
                 if (data.header) {
                     document.getElementById('nav-brand').innerHTML = `${data.header.brand_black} <span class="text-primary">${data.header.brand_blue}</span>`;
-                    document.getElementById('main-title').innerText = data.header.title;
-                    document.getElementById('main-subtitle').innerText = data.header.subtitle;
+                    document.getElementById('main-title').innerHTML = linkify(data.header.title);
+                    document.getElementById('main-subtitle').innerHTML = linkify(data.header.subtitle);
                 }
 
                 // Actualizar Pie de Página
                 if (data.footer) {
-                    document.getElementById('footer-line1').innerText = data.footer.line1;
-                    document.getElementById('footer-line2').innerText = data.footer.line2;
+                    document.getElementById('footer-line1').innerHTML = linkify(data.footer.line1);
+                    document.getElementById('footer-line2').innerHTML = linkify(data.footer.line2);
                 }
 
                 document.getElementById('last-update').innerText = `Total: ${allNews.length} secciones`;
