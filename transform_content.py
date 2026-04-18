@@ -37,7 +37,9 @@ def get_excel_data(url, local_path):
     """Intenta descargar el Excel desde OneDrive, si falla usa el local."""
     try:
         print(f"Intentando descargar Excel desde la nube...")
-        response = requests.get(url, timeout=10)
+        # Añadir cache-buster para evitar versiones viejas del CDN de OneDrive/SharePoint
+        url_with_cache_buster = f"{url}&t={datetime.now().timestamp()}"
+        response = requests.get(url_with_cache_buster, timeout=15)
         response.raise_for_status()
         print("Éxito: Datos obtenidos desde OneDrive.")
         return io.BytesIO(response.content)
@@ -118,6 +120,9 @@ def transform_excel_to_json(source, output_json):
                 "brand_black": str(row.get('Primera Linea Negra', '')).strip(),
                 "brand_blue": str(row.get('Primera Linea Azul', '')).strip()
             }
+            print(f"Éxito: Leído encabezado: {header_data['title']}")
+        else:
+            print("Aviso: No se encontró contenido en la hoja 'Encabezado'.")
 
         # Procesar Pie de Página
         footer_df = sheets.get('Pie de Página', pd.DataFrame())
@@ -128,6 +133,9 @@ def transform_excel_to_json(source, output_json):
                 "line1": str(row.get('Primera Linea', '')).strip(),
                 "line2": str(row.get('Segunda Linea', '')).strip()
             }
+            print(f"Éxito: Leído pie de página: {footer_data['line1'][:30]}...")
+        else:
+            print("Aviso: No se encontró contenido en la hoja 'Pie de Página'.")
 
         # Construir salida final
         final_data = {
