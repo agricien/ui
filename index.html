@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Hub | Plataforma de Noticias Sin Distracciones</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Inter', sans-serif;
+            color: #212529;
+        }
+        .navbar {
+            background-color: white;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .news-card {
+            border: none;
+            border-radius: 12px;
+            transition: transform 0.2s ease;
+            height: 100%;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .category-badge {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            color: #0d6efd;
+        }
+        .timestamp {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        .btn-outline-primary {
+            border-radius: 20px;
+            padding: 5px 20px;
+            font-size: 0.9rem;
+        }
+        header {
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+        .filter-btn {
+            border-radius: 25px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">NEWS<span class="text-primary">HUB</span></a>
+            <div class="ms-auto" id="update-indicator">
+                <span class="badge bg-light text-dark border timestamp" id="last-update">Actualizado: Cargando...</span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container">
+        <h1 class="display-4 fw-bold">Tu Diario Digital</h1>
+        <p class="lead text-muted">Agregador de noticias premium, libre de distracciones.</p>
+        <div class="mt-4" id="category-filters">
+            <button class="btn btn-primary filter-btn px-4" onclick="filterNews('Todos')">Todos</button>
+            <button class="btn btn-outline-secondary filter-btn px-4" onclick="filterNews('Tecnología')">Tecnología</button>
+            <button class="btn btn-outline-secondary filter-btn px-4" onclick="filterNews('Noticias')">Noticias</button>
+            <button class="btn btn-outline-secondary filter-btn px-4" onclick="filterNews('Agricultura')">Agricultura</button>
+        </div>
+    </header>
+
+    <main class="container py-4">
+        <div class="row g-4" id="news-container">
+            <!-- News items will be injected here -->
+            <div class="text-center py-5">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Cargando noticias...</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white py-5 mt-5 border-top">
+        <div class="container text-center text-muted">
+            <p>&copy; 2026 News Hub | Impulsado por GitHub Actions</p>
+            <p><small>Inspirado en vanalmsick/news_platform</small></p>
+        </div>
+    </footer>
+
+    <script>
+        let allNews = [];
+
+        async function loadNews() {
+            try {
+                // El archivo JSON generado por el scraper en data/news.json
+                const response = await fetch('./data/news.json');
+                allNews = await response.json();
+                
+                // Actualizar timestamp si existe
+                const lastUpdated = allNews.length > 0 ? "Hoy" : "N/A";
+                document.getElementById('last-update').innerText = `Total: ${allNews.length} noticias`;
+                
+                renderNews(allNews);
+            } catch (error) {
+                console.error('Error cargando noticias:', error);
+                document.getElementById('news-container').innerHTML = `
+                    <div class="col-12 text-center text-danger">
+                        Error al cargar las noticias. Asegúrate de que el scraper haya corrido al menos una vez.
+                    </div>
+                `;
+            }
+        }
+
+        function renderNews(news) {
+            const container = document.getElementById('news-container');
+            container.innerHTML = '';
+
+            if (news.length === 0) {
+                container.innerHTML = '<p class="text-center w-100">No hay noticias disponibles en este momento.</p>';
+                return;
+            }
+
+            news.forEach(item => {
+                const card = `
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card news-card">
+                            <img src="${item.thumbnail}" class="card-img-top" alt="${item.title}" onerror="this.src='https://picsum.photos/400/250'">
+                            <div class="card-body">
+                                <span class="category-badge">${item.category}</span>
+                                <h5 class="card-title fw-bold">${item.title}</h5>
+                                <p class="card-text text-muted small">${item.summary}</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="timestamp">${item.published}</span>
+                                    <a href="${item.link}" target="_blank" class="btn btn-outline-primary btn-sm">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', card);
+            });
+        }
+
+        function filterNews(category) {
+            // Estética de botones
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                if (btn.innerText === category) {
+                    btn.classList.add('btn-primary');
+                    btn.classList.remove('btn-outline-secondary');
+                } else {
+                    btn.classList.remove('btn-primary');
+                    btn.classList.add('btn-outline-secondary');
+                }
+            });
+
+            if (category === 'Todos') {
+                renderNews(allNews);
+            } else {
+                const filtered = allNews.filter(n => n.category === category);
+                renderNews(filtered);
+            }
+        }
+
+        // Carga inicial
+        loadNews();
+    </script>
+</body>
+</html>
