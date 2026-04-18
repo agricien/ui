@@ -142,8 +142,10 @@ def get_proxied_url(url: str) -> str:
     if any(domain in url for domain in open_domains):
         return url
         
-    # Envolver para bypass de CORS
-    return f"https://api.allorigins.win/raw?url={requests.utils.quote(url)}"
+    # Usaremos images.weserv.nl que es un proxy especializado en imágenes y muy rápido
+    # Quitamos el prefijo http/https para weserv o lo codificamos bien
+    clean_url = url.replace("https://", "").replace("http://", "")
+    return f"https://images.weserv.nl/?url={clean_url}&default=https://picsum.photos/600/400"
 
 def post_to_google_form(table_name: str, payload_data: dict) -> bool:
     """
