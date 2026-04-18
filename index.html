@@ -87,10 +87,12 @@
         <h1 class="display-4 fw-bold text-dark">El Trópico Seco 2026</h1>
         <p class="lead text-muted">Gestión Integral del Capital Hídrico y Regeneración Basada en Evidencia.</p>
         <div class="mt-4" id="category-filters">
-            <button class="btn btn-primary filter-btn px-4" onclick="filterNews('Todos')">Resumen</button>
-            <button class="btn btn-outline-secondary filter-btn px-4" onclick="filterNews('Hidrología')">Agua/Capital</button>
-            <button class="btn btn-outline-secondary filter-btn px-4" onclick="filterNews('Evidencia')">Evidencia/Data</button>
-            <button class="btn btn-outline-secondary filter-btn px-4" onclick="filterNews('Estrategia')">Estrategia</button>
+            <!-- Botones generados dinámicamente -->
+            <div class="text-center py-2">
+                <div class="spinner-grow spinner-grow-sm text-primary" role="status">
+                    <span class="visually-hidden">...</span>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -137,23 +139,31 @@
 
         async function loadNews() {
             try {
-                // El archivo JSON generado por el scraper en data/news.json
                 const response = await fetch('./data/news.json');
                 allNews = await response.json();
                 
-                // Actualizar timestamp si existe
-                const lastUpdated = allNews.length > 0 ? "Hoy" : "N/A";
-                document.getElementById('last-update').innerText = `Total: ${allNews.length} noticias`;
+                document.getElementById('last-update').innerText = `Total: ${allNews.length} secciones`;
                 
+                renderCategories(allNews); // <--- Nueva función
                 renderNews(allNews);
             } catch (error) {
                 console.error('Error cargando noticias:', error);
-                document.getElementById('news-container').innerHTML = `
-                    <div class="col-12 text-center text-danger">
-                        Error al cargar las noticias. Asegúrate de que el scraper haya corrido al menos una vez.
-                    </div>
-                `;
+                document.getElementById('news-container').innerHTML = `<p class="text-center text-danger">Error al cargar datos.</p>`;
             }
+        }
+
+        function renderCategories(news) {
+            const container = document.getElementById('category-filters');
+            const categories = [...new Set(news.map(item => item.category))];
+            
+            let html = `<button class="btn btn-primary filter-btn px-4" onclick="filterNews('Todos')">Resumen</button>`;
+            
+            categories.forEach(cat => {
+                if (!cat || cat === 'Resumen') return; // Evitar duplicar Resumen si ya existe como categoría
+                html += `<button class="btn btn-outline-secondary filter-btn px-4" onclick="filterNews('${cat}')">${cat}</button>`;
+            });
+            
+            container.innerHTML = html;
         }
 
         function renderNews(news) {
@@ -216,7 +226,8 @@
             // Estética de botones
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => {
-                if (btn.innerText === category) {
+                const isMatch = (category === 'Todos' && btn.innerText === 'Resumen') || (btn.innerText === category);
+                if (isMatch) {
                     btn.classList.add('btn-primary');
                     btn.classList.remove('btn-outline-secondary');
                 } else {
