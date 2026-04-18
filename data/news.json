@@ -6,7 +6,7 @@
     "published": "2026-04-17",
     "thumbnail": "https://images.weserv.nl/?url=images.unsplash.com/photo-1523348830342-d51c889f23ee?q=80&w=600&auto=format&fit=crop",
     "lang": "English",
-    "link": "https://github.com/vanalmsick/news_platform",
+    "link": "https://www.agribusinessglobal.com/latin-america/",
     "content": "El sector agropecuario en América Latina, y específicamente en la región de Costa Rica y el corredor seco centroamericano, atraviesa en el año 2026 una de las transformaciones más profundas de su historia contemporánea. Esta transición no es meramente tecnológica, sino fundamentalmente conceptual. La convergencia de crisis geopolíticas que han desestabilizado el mercado global de insumos sintéticos, junto con una variabilidad climática que ha llevado el estrés hídrico a niveles críticos en regiones como Guanacaste, ha forzado a los productores y consultores técnicos a abandonar los modelos de agricultura extractiva en favor de sistemas regenerativos de alta precisión."
   },
   {
@@ -26,7 +26,7 @@
     "published": "2026-04-17",
     "thumbnail": "https://images.weserv.nl/?url=images.unsplash.com/photo-1592982537447-6490332f913d?q=80&w=600&auto=format&fit=crop",
     "lang": "English",
-    "link": "https://www.nrcs.usda.gov/sites/default/files/2022-10/Soil-Quality-Indicator-Infiltration.pdf",
+    "link": "https://www.nrcs.usda.gov/resources/guides-and-instructions/soil-quality-indicator-sheets",
     "content": "La agricultura de 2026 ya no se define por la cantidad de producto aplicado, sino por la precisión del proceso gestionado. Para materializar esta visión financiera, es imperativo cuantificar la ineficiencia hídrica causada por la compactación del suelo. Se ha implementado el uso de modelos matemáticos avanzados de infiltración, como la ecuación de Kostiakov, que permite predecir la lámina acumulada de agua en función del tiempo y las propiedades estructurales del suelo."
   },
   {
@@ -54,10 +54,10 @@
     "title": "El Centro de Pensamiento del Trópico Seco",
     "summary": "AgriCien se consolida como referente intelectual en bioeconomía y resiliencia, liderando la conversación sobre el futuro agrario.",
     "published": "2026-04-17",
-    "thumbnail": "https://images.weserv.nl/?url=images.unsplash.com/photo-1454165833767-027508492211?q=80&w=600&auto=format&fit=crop",
+    "thumbnail": "https://images.weserv.nl/?url=shutterstock.com/shutterstock/photos/2085734341/display_1500/stock-photo-farmer-holding-tablet-in-corn-field-precision-farming-concept-2085734341.jpg",
     "lang": "English",
     "link": "https://www.croplife.com/editorial/6-smart-tech-trends-to-watch-in-agriculture-in-2026/",
-    "content": "AgriCien no se presenta simplemente como una empresa de servicios, sino como la marca que lidera el pensamiento sobre el futuro de la agricultura en el trópico seco. Este pilar de 'Liderazgo de Pensamiento' posiciona a la empresa como un referente intelectual en la región, desafiando el statu quo agrícola a través de artículos de fondo y el boletín Perspectivas."
+    "content": "AgriCien no se presenta simplemente como una empresa de servicios, sino como la marca que lidera the pensamiento sobre el futuro de la agricultura en el trópico seco. Este pilar de 'Liderazgo de Pensamiento' posiciona a la empresa como un referente intelectual en la región, desafiando el statu quo agrícola a través de artículos de fondo y el boletín Perspectivas."
   },
   {
     "category": "Nivelación",
@@ -65,8 +65,8 @@
     "summary": "Sistemas GNSS y nivelación 3D para optimizar la hidrología natural y proteger la capa superficial rica en materia orgánica.",
     "published": "2026-04-17",
     "thumbnail": "https://images.weserv.nl/?url=images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=600&auto=format&fit=crop",
-    "lang": "English",
-    "link": "https://www.topconpositioning.com/na/land-leveling",
+    "lang": "Español",
+    "link": "https://www.topconpositioning.com/es/soluciones/industria/agricultura/preparacion-del-suelo",
     "content": "La precisión en la preparación del suelo es el cimiento de la eficiencia hídrica. La tecnología GNSS de Topcon, apoyada por la plataforma TAP, permite un intercambio fluido de datos entre el campo y la oficina. El uso de diseños de pendientes variables es crítico para conservar la fertilidad, manipulando la topografía para compensar factores ambientales dañinos mientras se protege la materia orgánica."
   },
   {
