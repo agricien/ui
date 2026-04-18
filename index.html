@@ -29,6 +29,7 @@
         .news-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+            cursor: pointer;
         }
         .card-img-top {
             height: 200px;
@@ -167,15 +168,17 @@
             news.forEach((item, index) => {
                 const card = `
                     <div class="col-md-6 col-lg-4">
-                        <div class="card news-card">
+                        <div class="card news-card" onclick="openArticle(${index})">
                             <img src="${item.thumbnail}" class="card-img-top" alt="${item.title}" onerror="this.src='https://picsum.photos/400/250'">
                             <div class="card-body">
                                 <span class="category-badge">${item.category}</span>
-                                <h5 class="card-title fw-bold">${item.title}</h5>
+                                <h5 class="card-title fw-bold text-dark">${item.title}</h5>
                                 <p class="card-text text-muted small">${item.summary}</p>
                                 <div class="d-flex justify-content-between align-items-center mt-3">
                                     <span class="timestamp">${item.published}</span>
-                                    <button onclick="openArticle(${index})" class="btn btn-outline-primary btn-sm">Leer original [${item.lang || 'Español'}]</button>
+                                    <a href="${item.link || '#'}" target="_blank" onclick="event.stopPropagation();" class="btn btn-outline-primary btn-sm">
+                                        Original [${item.lang || 'Español'}]
+                                    </a>
                                 </div>
                             </div>
                         </div>
