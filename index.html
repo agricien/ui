@@ -187,14 +187,19 @@
 
         function openArticle(index) {
             const item = allNews[index];
-            document.getElementById('articleModalLabel').innerText = item.title;
-            // Preservar saltos de línea del reporte técnico
-            const formattedContent = item.content.replace(/\n/g, '<br>');
+            if (!item) return;
+            
+            document.getElementById('articleModalLabel').innerText = item.title || "Detalle del Reporte";
+            
+            // Defensivo: Si no hay content, usar summary, y si no hay nada, avisar.
+            let rawContent = item.content || item.summary || "No hay contenido disponible para esta sección.";
+            const formattedContent = rawContent.replace(/\n/g, '<br>');
+            
             document.getElementById('articleModalBody').innerHTML = `
                 <div class="text-center mb-4">
-                    <img src="${item.thumbnail}" class="img-fluid rounded" style="max-height: 300px; width: 100%; object-fit: cover;">
+                    <img src="${item.thumbnail}" class="img-fluid rounded" style="max-height: 300px; width: 100%; object-fit: cover;" onerror="this.src='https://picsum.photos/600/400'">
                 </div>
-                <p class="lead fw-bold text-primary mb-3">${item.category}</p>
+                <p class="lead fw-bold text-primary mb-3">${item.category || 'General'}</p>
                 <div class="article-text" style="line-height: 1.8; color: #333;">
                     ${formattedContent}
                 </div>
