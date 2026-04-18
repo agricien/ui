@@ -1,7 +1,13 @@
 import pandas as pd
 import json
 import os
+import requests
+import io
 from datetime import datetime
+
+# URL de descarga directa de OneDrive/SharePoint
+ONEDRIVE_URL = "https://agricien-my.sharepoint.com/:x:/p/edgar_mendez/IQD8LB_nWF1PT6TJzmqjgdHnAbe4nSenASMXQqSJHh0pjFA?download=1"
+LOCAL_EXCEL = "noticias.xlsx"
 
 def detect_language(url):
     """Simple heuristic to detect if the source is English or Spanish."""
@@ -19,8 +25,6 @@ def detect_language(url):
     
     for indicator in spanish_indicators:
         if indicator in url:
-            # Special case for some .com sites that are English but have "noticias" mentions? 
-            # Rare. Usually if it has "cr" or "noticias" it's Spanish.
             return "Español"
             
     for domain in english_only:
@@ -29,22 +33,38 @@ def detect_language(url):
             
     return "English" # Default to English for international sources if no Spanish indicator
 
-def transform_excel_to_json(excel_path, output_json):
-    if not os.path.exists(excel_path):
-        print(f"Error: No se encontró el archivo {excel_path}")
+def get_excel_data(url, local_path):
+    """Intenta descargar el Excel desde OneDrive, si falla usa el local."""
+    try:
+        print(f"Intentando descargar Excel desde la nube...")
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        print("Éxito: Datos obtenidos desde OneDrive.")
+        return io.BytesIO(response.content)
+    except Exception as e:
+        print(f"Aviso: No se pudo obtener el Excel desde la nube ({e}).")
+        if os.path.exists(local_path):
+            print(f"Usando archivo local de respaldo: {local_path}")
+            return local_path
+        else:
+            print("Error: No existe el archivo local de respaldo.")
+            return None
+
+def transform_excel_to_json(source, output_json):
+    if source is None:
+        print("Error: No hay fuente de datos disponible.")
         return
 
     try:
         # Leer Excel
-        df = pd.read_excel(excel_path)
+        df = pd.read_excel(source)
         
         # Mapeo de columnas requeridas
-        # Tema	Sub titulo	Titulo	Spanish	Original	Foto
         required_cols = ['Tema', 'Sub titulo', 'Titulo', 'Spanish', 'Original', 'Foto']
         for col in required_cols:
             if col not in df.columns:
                 print(f"Advertencia: Falta la columna '{col}' en el Excel.")
-                df[col] = "" # Crear vacía para evitar errores
+                df[col] = "" 
 
         news_list = []
         today = datetime.now().strftime("%Y-%m-%d")
@@ -75,10 +95,12 @@ def transform_excel_to_json(excel_path, output_json):
         with open(output_json, "w", encoding="utf-8") as f:
             json.dump(news_list, f, ensure_ascii=False, indent=2)
             
-        print(f"Éxito: Se procesaron {len(news_list)} noticias desde {excel_path} a {output_json}")
+        print(f"Éxito: Se procesaron {len(news_list)} noticias a {output_json}")
 
     except Exception as e:
         print(f"Error durante la transformación: {str(e)}")
 
 if __name__ == "__main__":
-    transform_excel_to_json("noticias.xlsx", "data/news.json")
+    # Obtener la mejor fuente disponible
+    data_source = get_excel_data(ONEDRIVE_URL, LOCAL_EXCEL)
+    transform_excel_to_json(data_source, "data/news.json")
