@@ -147,7 +147,17 @@
                 // Helper para convertir URLs en enlaces clicables
                 const linkify = (text) => {
                     if (!text) return "";
-                    // Regex mejorado para excluir puntuación final como comillas
+                    // Patrón 1: Identificar "Etiqueta : URL" para ocultar el URL tras un texto
+                    // Excluimos símbolos como © o | de la etiqueta para que no se vuelvan parte del link
+                    const labeledUrlRegex = /([a-zA-Z0-9ñáéíóúÁÉÍÓÚ\s]+)\s*:\s*["']?(https?:\/\/[^\s"'<>\(\)]+)["']?/g;
+                    
+                    if (labeledUrlRegex.test(text)) {
+                        return text.replace(labeledUrlRegex, (match, label, url) => {
+                            return `<a href="${url}" target="_blank" class="text-primary text-decoration-none">${label.trim()}</a>`;
+                        });
+                    }
+
+                    // Patrón 2: URL sola (fallback)
                     const urlRegex = /(https?:\/\/[^\s"'<>\(\)]+)/g;
                     return text.replace(urlRegex, (url) => `<a href="${url}" target="_blank" class="text-primary text-decoration-none">${url}</a>`);
                 };
