@@ -12,6 +12,18 @@
   "news": [
     {
       "category": "Ambiente",
+      "title": "El Súper Niño 2026: entre la ciencia y el sensacionalismo",
+      "summary": "Clima",
+      "content": "En medio de titulares que advierten sobre un posible “súper El Niño” en 2026, la comunidad científica insiste en poner paños fríos: el término, aunque llamativo, no forma parte del lenguaje oficial utilizado por los principales organismos meteorológicos.\n\nLa Administración Nacional Oceánica y Atmosférica de Estados Unidos (NOAA), a través de su Centro de Predicción Climática (CPC), evita este tipo de clasificaciones y, en su lugar, define los eventos de El Niño como débiles, moderados, fuertes o muy fuertes en función del calentamiento registrado en las aguas del océano Pacífico ecuatorial.",
+      "link": "https://media.telemundo51.com/2026/04/ELNINOIMPACTOST51.jpg?quality=85&strip=all&resize=850%2C478",
+      "thumbnail": "telemundo",
+      "button_text": "Original Telemundo",
+      "published": "2026-04-19",
+      "lang": "Español",
+      "is_resumen": false
+    },
+    {
+      "category": "Ambiente",
       "title": "Los suelos son clave para la seguridad alimentaria",
       "summary": "Suelos y sostenibilidad",
       "content": "Expertos alertan sobre la degradación del suelo y su impacto en la producción.",
@@ -116,7 +128,7 @@
       "button_text": "Original elpais.com",
       "published": "2026-04-19",
       "lang": "English",
-      "is_resumen": true
+      "is_resumen": false
     },
     {
       "category": "Tecnología",
@@ -176,7 +188,7 @@
       "button_text": "Original www.topconpositioning.com/",
       "published": "2026-04-19",
       "lang": "Español",
-      "is_resumen": true
+      "is_resumen": false
     },
     {
       "category": "Ambiente",
@@ -224,7 +236,7 @@
       "button_text": "Original tierramarillano.cl",
       "published": "2026-04-19",
       "lang": "English",
-      "is_resumen": true
+      "is_resumen": false
     },
     {
       "category": "Ambiente",
@@ -236,7 +248,7 @@
       "button_text": "Original elmundo.es",
       "published": "2026-04-19",
       "lang": "Español",
-      "is_resumen": true
+      "is_resumen": false
     }
   ]
 }
