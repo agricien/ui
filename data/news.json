@@ -20,7 +20,7 @@
       "button_text": "Original Telemundo",
       "published": "2026-04-19",
       "lang": "Español",
-      "is_resumen": false
+      "is_resumen": true
     },
     {
       "category": "Ambiente",
@@ -128,7 +128,7 @@
       "button_text": "Original elpais.com",
       "published": "2026-04-19",
       "lang": "English",
-      "is_resumen": false
+      "is_resumen": true
     },
     {
       "category": "Tecnología",
@@ -188,7 +188,7 @@
       "button_text": "Original www.topconpositioning.com/",
       "published": "2026-04-19",
       "lang": "Español",
-      "is_resumen": false
+      "is_resumen": true
     },
     {
       "category": "Ambiente",
@@ -236,7 +236,7 @@
       "button_text": "Original tierramarillano.cl",
       "published": "2026-04-19",
       "lang": "English",
-      "is_resumen": false
+      "is_resumen": true
     },
     {
       "category": "Ambiente",
@@ -248,7 +248,7 @@
       "button_text": "Original elmundo.es",
       "published": "2026-04-19",
       "lang": "Español",
-      "is_resumen": false
+      "is_resumen": true
     }
   ]
 }
