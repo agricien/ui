@@ -6,7 +6,7 @@ import io
 from datetime import datetime
 
 # URL de descarga directa de OneDrive/SharePoint
-ONEDRIVE_URL = "https://agricien-my.sharepoint.com/:x:/p/edgar_mendez/IQD8LB_nWF1PT6TJzmqjgdHnAbe4nSenASMXQqSJHh0pjFA?download=1"
+ONEDRIVE_URL = "https://agricien-my.sharepoint.com/:x:/p/edgar_mendez/IQD8LB_nWF1PT6TJzmqjgdHnASgL66q1zJxg5xydZHwRRVA?download=1"
 LOCAL_EXCEL = "noticias.xlsx"
 
 def detect_language(url):
