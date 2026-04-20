@@ -1,0 +1,42 @@
+{
+  "header": {
+    "title": "EL TRÓPICO SECO 2026",
+    "subtitle": "Gestión Integral del Capital Hídrico",
+    "brand_black": "AgriCien",
+    "brand_blue": "Vision 2026"
+  },
+  "footer": {
+    "line1": "© 2026 AgriCien Precision | Liderazgo de Pensamiento",
+    "line2": "Basado en el estudio: \"El Nuevo Paradigma Agrario del Trópico Seco\""
+  },
+  "company": {
+    "logo": "https://cdn-icons-png.flaticon.com/512/3061/3061341.png",
+    "main_theme": "Reporte Semanal"
+  },
+  "news": [
+    {
+      "category": "Agricultura",
+      "title": "Titulo Inferior (Newest)",
+      "summary": "Sub Newest",
+      "content": "Content New",
+      "link": "https://croplife.com",
+      "thumbnail": "https://picsum.photos/201",
+      "button_text": "Read",
+      "published": "2026-04-20",
+      "lang": "English",
+      "is_resumen": true
+    },
+    {
+      "category": "Ambiente",
+      "title": "Titulo Superior (Oldest)",
+      "summary": "Sub Oldest",
+      "content": "Content Old",
+      "link": "https://elpais.com",
+      "thumbnail": "https://picsum.photos/200",
+      "button_text": "Leer",
+      "published": "2026-04-20",
+      "lang": "English",
+      "is_resumen": false
+    }
+  ]
+}
