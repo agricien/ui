@@ -12,6 +12,18 @@
   "news": [
     {
       "category": "Falker",
+      "title": "Kit AP",
+      "summary": "Equipo Móvil Compatación",
+      "content": "Paquete integral de herramientas para agricultura de precisión.\n\n• Solución 360°: Todo el hardware y software en un solo proveedor.\n• Equipamiento Incluido: SoloDrill, FieldBox y acceso a FalkerMap.\n• Soporte Total: Incluye capacitación, apoyo y asistencia técnica.\n• Escalabilidad: Ideal desde principiantes hasta grandes extensiones.\n• Diseño Robusto: Dimensionado para operaciones de campo exigentes.",
+      "link": "https://www.falker.com.br/es/clorofilog",
+      "thumbnail": "https://www.falker.com.br/images/products/kit-ap/kitap-card.png",
+      "button_text": "Original Falker",
+      "published": "2026-04-20",
+      "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Falker",
       "title": "clorofiLOG",
       "summary": "Medidor de Clorofila",
       "content": "Medidor óptico digital de clorofila para análisis foliar no destructivo.\n\n• Medición Precisa: Analiza absorción de luz sin dañar la planta.\n• Ahorro y Eficiencia: Optimiza el uso y aplicación de fertilizantes.\n• GPS Integrado: Todas las mediciones son georeferenciadas.\n• Conectividad USB / Bluetooth: Sincronización automática con Web y App.\n• Historial en Línea: Gestión racional basada en datos en la nube.",
@@ -32,7 +44,7 @@
       "button_text": "Los Antonios Site:",
       "published": "2026-04-20",
       "lang": "English",
-      "is_resumen": false
+      "is_resumen": true
     },
     {
       "category": "Mitigar sequía",
@@ -44,7 +56,7 @@
       "button_text": "Original Susbtack José Agüero",
       "published": "2026-04-20",
       "lang": "English",
-      "is_resumen": false
+      "is_resumen": true
     }
   ]
 }
