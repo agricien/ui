@@ -11,16 +11,28 @@
   },
   "news": [
     {
+      "category": "Mitigar sequía",
+      "title": "#32- Cómo finca La Loba triplicó su forraje y venció la sequía en Bagaces",
+      "summary": "LDI para producir más pasto en sequía",
+      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
+      "link": "#",
+      "thumbnail": "https://picsum.photos/600/400",
+      "button_text": "Ver Original [Español]",
+      "published": "2026-04-20",
+      "lang": "Español",
+      "is_resumen": false
+    },
+    {
       "category": "Clima",
       "title": "El Súper Niño 2026: entre la ciencia y el sensacionalismo",
       "summary": "Niño",
-      "content": "En medio de titulares que advierten sobre un posible “súper El Niño” en 2026, la comunidad científica insiste en poner paños fríos: el término, aunque llamativo, no forma parte del lenguaje oficial utilizado por los principales organismos meteorológicos.\n\nLa Administración Nacional Oceánica y Atmosférica de Estados Unidos (NOAA), a través de su Centro de Predicción Climática (CPC), evita este tipo de clasificaciones y, en su lugar, define los eventos de El Niño como débiles, moderados, fuertes o muy fuertes en función del calentamiento registrado en las aguas del océano Pacífico ecuatorial.",
+      "content": "En medio de titulares que advierten sobre un posible “súper El Niño” en 2026, la comunidad científica insiste en poner paños fríos: el término, aunque llamativo, no forma parte del lenguaje oficial utilizado por los principales organismos meteorológicos.\n\nLa Administración Nacional Oceánica y Atmosférica de Estados Unidos (NOAA), a través de su Centro de Predicción Climática (CPC), evita este tipo de clasificaciones y, en su lugar, define los eventos de El Niño como débiles, moderados, fuertes o muy fuertes en función del calentamiento registrado en las aguas del océano Pacífico ecuatorial. En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
       "link": "https://www.telemundo51.com/el-tiempo/noticias-del-tiempo/el-super-nino-2026-entre-la-ciencia-y-el-sensacionalismo/2772856/",
       "thumbnail": "https://media.telemundo51.com/2026/04/ELNINOIMPACTOST51.jpg",
       "button_text": "Original Telemundo",
       "published": "2026-04-20",
       "lang": "Español",
-      "is_resumen": true
+      "is_resumen": false
     },
     {
       "category": "Ambiente",
@@ -128,7 +140,7 @@
       "button_text": "Original elpais.com",
       "published": "2026-04-20",
       "lang": "English",
-      "is_resumen": true
+      "is_resumen": false
     },
     {
       "category": "Tecnología",
@@ -188,7 +200,7 @@
       "button_text": "Original www.topconpositioning.com/",
       "published": "2026-04-20",
       "lang": "Español",
-      "is_resumen": true
+      "is_resumen": false
     },
     {
       "category": "Ambiente",
@@ -236,7 +248,7 @@
       "button_text": "Original tierramarillano.cl",
       "published": "2026-04-20",
       "lang": "English",
-      "is_resumen": true
+      "is_resumen": false
     },
     {
       "category": "Ambiente",
@@ -248,7 +260,7 @@
       "button_text": "Original elmundo.es",
       "published": "2026-04-20",
       "lang": "Español",
-      "is_resumen": true
+      "is_resumen": false
     }
   ]
 }
