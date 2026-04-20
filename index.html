@@ -146,6 +146,7 @@
 
     <script>
         let allNews = [];
+        let mainTheme = 'Resumen';
 
         async function loadNews() {
             try {
@@ -181,11 +182,36 @@
                     return text.replace(urlRegex, (url) => `<a href="${url}" target="_blank" class="detect-link text-decoration-none text-primary">${url}</a>`);
                 };
 
+                // Actualizar Configuración de Empresa
+                if (data.company) {
+                    mainTheme = data.company.main_theme || 'Resumen';
+                    if (data.company.logo && data.company.logo !== "nan") {
+                        const logoHtml = `<img src="${data.company.logo}" alt="Logo" style="max-height: 40px; margin-right: 15px; vertical-align: middle;">`;
+                        document.getElementById('nav-brand').insertAdjacentHTML('afterbegin', logoHtml);
+                    }
+                }
+
                 // Actualizar Encabezado
                 if (data.header) {
                     const blackPart = linkify(data.header.brand_black);
                     const bluePart = linkify(data.header.brand_blue);
-                    document.getElementById('nav-brand').innerHTML = `<span class="text-dark">${blackPart}</span> <span class="text-primary">${bluePart}</span>`;
+                    
+                    // Asegurarnos de no sobreescribir el logo si ya se insertó
+                    const brandText = `<span class="text-dark">${blackPart}</span> <span class="text-primary">${bluePart}</span>`;
+                    const brandContainer = document.getElementById('nav-brand');
+                    
+                    // Si ya hay un img, solo actualizar el texto después de él
+                    const existingImg = brandContainer.querySelector('img');
+                    if (existingImg) {
+                        // Limpiar nodos de texto y span, mantener img
+                        Array.from(brandContainer.childNodes).forEach(node => {
+                            if (node !== existingImg) brandContainer.removeChild(node);
+                        });
+                        brandContainer.insertAdjacentHTML('beforeend', brandText);
+                    } else {
+                        brandContainer.innerHTML = brandText;
+                    }
+                    
                     document.getElementById('main-title').innerHTML = linkify(data.header.title);
                     document.getElementById('main-subtitle').innerHTML = linkify(data.header.subtitle);
                 }
@@ -199,7 +225,7 @@
                 document.getElementById('last-update').innerText = `Total: ${allNews.length} secciones`;
                 
                 renderCategories(allNews);
-                filterNews('Resumen'); // Cargar Resumen por defecto
+                filterNews(mainTheme); // Cargar Tema Principal por defecto
             } catch (error) {
                 console.error('Error cargando noticias:', error);
                 document.getElementById('news-container').innerHTML = `<p class="text-center text-danger">Error al cargar datos.</p>`;
@@ -210,7 +236,7 @@
             const container = document.getElementById('category-filters');
             const categories = [...new Set(news.map(item => item.category))];
             
-            let html = `<button class="btn btn-primary filter-btn px-4" id="btn-resumen" onclick="filterNews('Resumen')">Resumen</button>`;
+            let html = `<button class="btn btn-primary filter-btn px-4" id="btn-resumen" onclick="filterNews('${mainTheme}')">${mainTheme}</button>`;
             
             categories.forEach(cat => {
                 if (!cat || cat === 'Resumen') return;
@@ -289,7 +315,7 @@
                 }
             });
 
-            if (category === 'Resumen') {
+            if (category === mainTheme) {
                 const filtered = allNews.filter(n => n.is_resumen);
                 renderNews(filtered);
             } else if (category === 'Todos') {

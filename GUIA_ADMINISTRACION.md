@@ -39,6 +39,11 @@ Se usa solo la **Fila 2** para gestionar la parte inferior del sitio.
 - **Primera Linea**: Texto principal del footer (ej: Copyright).
 - **Segunda Linea**: Texto secundario (ej: "Desarrollo basado en...").
 
+### 4. Hoja: `Imagen Empresa`
+Controla los elementos de identidad visual adicionales. Se usa solo la **Fila 2**.
+- **Logo**: URL directa de la imagen del logo (ej: link de una imagen en la web). Aparecerá en la esquina superior izquierda.
+- **Tema Principal**: Texto que sustituirá a la etiqueta "Resumen" en los filtros y la vista inicial (ej: "Semanario", "Reporte", "Destacados").
+
 ---
 
 ## 🔗 Formato Avanzado de Enlaces

@@ -137,10 +137,29 @@ def transform_excel_to_json(source, output_json):
         else:
             print("Aviso: No se encontró contenido en la hoja 'Pie de Página'.")
 
+        # Procesar Imagen Empresa
+        company_df = sheets.get('Imagen Empresa', pd.DataFrame())
+        company_data = {
+            "logo": "",
+            "main_theme": "Resumen"
+        }
+        if not company_df.empty:
+            row = company_df.iloc[0]
+            company_data = {
+                "logo": str(row.get('Logo', '')).strip(),
+                "main_theme": str(row.get('Tema Principal', 'Resumen')).strip()
+            }
+            if company_data["main_theme"] == "nan" or company_data["main_theme"] == "":
+                company_data["main_theme"] = "Resumen"
+            print(f"Éxito: Leída configuración de empresa: {company_data['main_theme']}")
+        else:
+            print("Aviso: No se encontró la hoja 'Imagen Empresa'. Usando valores por defecto.")
+
         # Construir salida final
         final_data = {
             "header": header_data,
             "footer": footer_data,
+            "company": company_data,
             "news": news_list
         }
 
