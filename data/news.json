@@ -1,42 +1,66 @@
 {
   "header": {
-    "title": "EL TRÓPICO SECO 2026",
-    "subtitle": "Gestión Integral del Capital Hídrico",
-    "brand_black": "AgriCien",
-    "brand_blue": "Vision 2026"
+    "title": "Agricultura 2026",
+    "subtitle": "Gestión Integral del Capital Hídrico y Regeneración Basada en Evidencia",
+    "brand_black": "AgriCien :",
+    "brand_blue": "Visión 2026"
   },
   "footer": {
-    "line1": "© 2026 AgriCien Precision | Liderazgo de Pensamiento",
-    "line2": "Basado en el estudio: \"El Nuevo Paradigma Agrario del Trópico Seco\""
+    "line1": "© 2026 [AgriCien : https://emendez002.github.io/agricien/] Precision | Liderazgo de Pensamiento",
+    "line2": "Desarrollo basado en : [vanalmsick : https://github.com/vanalmsick/news_platform]"
   },
   "company": {
-    "logo": "https://cdn-icons-png.flaticon.com/512/3061/3061341.png",
-    "main_theme": "Reporte Semanal"
+    "logo": "https://images.squarespace-cdn.com/content/v1/5bd1dc11c46f6d371c488433/1579306779524-ALJQVXHQ1OC7MMUQTLW2/AgriCien_Logo_Sencillo.png?format=500w",
+    "main_theme": "Noticias"
   },
   "news": [
     {
-      "category": "Agricultura",
-      "title": "Titulo Inferior (Newest)",
-      "summary": "Sub Newest",
-      "content": "Content New",
-      "link": "https://croplife.com",
-      "thumbnail": "https://picsum.photos/201",
-      "button_text": "Read",
+      "category": "Falker",
+      "title": "Kit AP",
+      "summary": "Equipo Móvil Compatación",
+      "content": "Paquete integral de herramientas para agricultura de precisión.\n\n• Solución 360°: Todo el hardware y software en un solo proveedor.\n• Equipamiento Incluido: SoloDrill, FieldBox y acceso a FalkerMap.\n• Soporte Total: Incluye capacitación, apoyo y asistencia técnica.\n• Escalabilidad: Ideal desde principiantes hasta grandes extensiones.\n• Diseño Robusto: Dimensionado para operaciones de campo exigentes.",
+      "link": "https://www.falker.com.br/es/clorofilog",
+      "thumbnail": "https://www.falker.com.br/images/products/kit-ap/kitap-card.png",
+      "button_text": "Original Falker",
+      "published": "2026-04-26",
+      "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Falker",
+      "title": "clorofiLOG",
+      "summary": "Medidor de Clorofila",
+      "content": "Medidor óptico digital de clorofila para análisis foliar no destructivo.\n\n• Medición Precisa: Analiza absorción de luz sin dañar la planta.\n• Ahorro y Eficiencia: Optimiza el uso y aplicación de fertilizantes.\n• GPS Integrado: Todas las mediciones son georeferenciadas.\n• Conectividad USB / Bluetooth: Sincronización automática con Web y App.\n• Historial en Línea: Gestión racional basada en datos en la nube.",
+      "link": "https://www.falker.com.br/es/clorofilog",
+      "thumbnail": "https://emendez002.github.io/agricien/Falker/www.falker.com.br/images/products/clorofilog/bg-top-es.webp",
+      "button_text": "Original Falker",
+      "published": "2026-04-26",
+      "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Los Antonios",
+      "title": "Bulldozer angledozer y tildozer",
+      "summary": "Mover Tierra",
+      "content": "Los Antonios le ofrece la posibilidad de acceder a los acuerdos que tiene con varias entidades bancarias como BBVA, BNP Paribas o La Caixa.\n\nEn función de sus necesidades se le hará una simulación para que vea cuál es la solución que mejor se adapta a sus necesidades.",
+      "link": "https://losantonios.com/es/financiacion/",
+      "thumbnail": "https://losantonios.com/wp-content/uploads/2021/02/medidas-bulldozer-angledozer-tildozer.gif",
+      "button_text": "Los Antonios Site:",
       "published": "2026-04-26",
       "lang": "English",
       "is_resumen": true
     },
     {
-      "category": "Ambiente",
-      "title": "Titulo Superior (Oldest)",
-      "summary": "Sub Oldest",
-      "content": "Content Old",
-      "link": "https://elpais.com",
-      "thumbnail": "https://picsum.photos/200",
-      "button_text": "Leer",
+      "category": "Mitigar sequía",
+      "title": "#32- Cómo finca La Loba triplicó su forraje y venció la sequía en Bagaces",
+      "summary": "LDI para producir más pasto en sequía",
+      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
+      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
+      "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
+      "button_text": "Original Susbtack José Agüero",
       "published": "2026-04-26",
       "lang": "English",
-      "is_resumen": false
+      "is_resumen": true
     }
   ]
 }
