@@ -15,6 +15,18 @@
   },
   "news": [
     {
+      "category": "Nosotros",
+      "title": "En AgriCien somos una empresa de consultoría y e tecnología especializada en el manejo del agua en cultivos, desarrollo de proyectos agrícolas, tecnologías de Agricultura de Pecisión y Consultoría Agrícola.",
+      "summary": "Consultoría y Tecnología Especializada",
+      "content": "Desde 1992 y a través de cuatro continentes, hemos ayudado a centenas de productores agropecuarios a incrementar su eficiencia, productividad y competitividad. \nEn AgriCien somos una empresa de consultoría y tecnología especializada en el manejo del agua en cultivos, el desarrollo de proyectos agrícolas, tecnologías de Agricultura de Pecisión y Consultoría Agrícola. Con sede en Costa Rica y oficinas asociadas en México, Colombia, Argentina, Brasil y Nicaragua, AgriCien cuenta con una cartera activa de clientes y proyectos en Latinoamérica y el Caribe, África Oriental y el Sudeste Asiático.\n\nAgriCien cuenta con un equipo de expertos en agronomía, edafología, ingeniería agrícola y mecánica, fisiología de cultivos, protección de cultivos, agrometeorología y desarrollo de negocios que trabaja en estrecha colaboración con el agricultor para identificar, localizar, medir y monitorear los principales factores que limitan el rendimiento en el campo, estableciendo e implementando diversas prácticas específicas para cada sitio. Las prácticas de agricultura de precisión incluyen mapas topográficos 3D, de suelo, de análisis de riesgo de vegetación (VRA) y de rendimiento para un manejo específico del sitio; imágenes multiespectrales del dosel para el monitoreo del crecimiento y la detección temprana de plagas.\nSe obtienen mayores rendimientos tras la implementación de la formación de terrenos con pendiente variable mediante GPS 3D, lo que garantiza una profundidad de siembra uniforme y una mejor germinación, una densidad óptima de plantas, un crecimiento vigoroso, una mayor eficiencia en el uso del nitrógeno, una maduración y calidad uniformes, menor demanda de agua, riego uniforme y un drenaje más rápido, a la vez que se conserva la fertilidad del suelo. Confío en que el siguiente perfil de AgriCien se ajuste a las necesidades de su negocio agrícola y espero colaborar con usted. No dude en contactarnos cuando lo considere necesario.",
+      "link": "#",
+      "thumbnail": "https://th.bing.com/th/id/OIP.g_AVcWg4_lvqYnK2RWZ-BwHaE7?w=238&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3",
+      "button_text": "Agricultura Científica S.A.",
+      "published": "2026-04-28",
+      "lang": "Español",
+      "is_resumen": false
+    },
+    {
       "category": "Tecnología",
       "title": "Imagen Borrar",
       "summary": "Imagen Propia",
@@ -192,18 +204,6 @@
       "button_text": "Original Falker",
       "published": "2026-04-28",
       "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Nosotros",
-      "title": "En AgriCien somos una empresa de consultoría y e tecnología especializada en el manejo del agua en cultivos, desarrollo de proyectos agrícolas, tecnologías de Agricultura de Pecisión y Consultoría Agrícola.",
-      "summary": "Consultoría y Tecnología Especializada",
-      "content": "Desde 1992 y a través de cuatro continentes, hemos ayudado a centenas de productores agropecuarios a incrementar su eficiencia, productividad y competitividad. \nEn AgriCien somos una empresa de consultoría y tecnología especializada en el manejo del agua en cultivos, el desarrollo de proyectos agrícolas, tecnologías de Agricultura de Pecisión y Consultoría Agrícola. Con sede en Costa Rica y oficinas asociadas en México, Colombia, Argentina, Brasil y Nicaragua, AgriCien cuenta con una cartera activa de clientes y proyectos en Latinoamérica y el Caribe, África Oriental y el Sudeste Asiático.\n\nAgriCien cuenta con un equipo de expertos en agronomía, edafología, ingeniería agrícola y mecánica, fisiología de cultivos, protección de cultivos, agrometeorología y desarrollo de negocios que trabaja en estrecha colaboración con el agricultor para identificar, localizar, medir y monitorear los principales factores que limitan el rendimiento en el campo, estableciendo e implementando diversas prácticas específicas para cada sitio. Las prácticas de agricultura de precisión incluyen mapas topográficos 3D, de suelo, de análisis de riesgo de vegetación (VRA) y de rendimiento para un manejo específico del sitio; imágenes multiespectrales del dosel para el monitoreo del crecimiento y la detección temprana de plagas.\nSe obtienen mayores rendimientos tras la implementación de la formación de terrenos con pendiente variable mediante GPS 3D, lo que garantiza una profundidad de siembra uniforme y una mejor germinación, una densidad óptima de plantas, un crecimiento vigoroso, una mayor eficiencia en el uso del nitrógeno, una maduración y calidad uniformes, menor demanda de agua, riego uniforme y un drenaje más rápido, a la vez que se conserva la fertilidad del suelo. Confío en que el siguiente perfil de AgriCien se ajuste a las necesidades de su negocio agrícola y espero colaborar con usted. No dude en contactarnos cuando lo considere necesario.",
-      "link": "#",
-      "thumbnail": "https://th.bing.com/th/id/OIP.g_AVcWg4_lvqYnK2RWZ-BwHaE7?w=238&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3",
-      "button_text": "Agricultura Científica S.A.",
-      "published": "2026-04-28",
-      "lang": "Español",
       "is_resumen": false
     }
   ]
