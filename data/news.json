@@ -11,7 +11,7 @@
   },
   "company": {
     "logo": "https://images.squarespace-cdn.com/content/v1/5bd1dc11c46f6d371c488433/1579306779524-ALJQVXHQ1OC7MMUQTLW2/AgriCien_Logo_Sencillo.png?format=500w",
-    "main_theme": "Noticias"
+    "main_theme": "Productos y Servicios"
   },
   "news": [
     {
@@ -39,7 +39,7 @@
       "is_resumen": true
     },
     {
-      "category": "Falker",
+      "category": "GeoData",
       "title": "Kit AP",
       "summary": "Equipo Móvil Compatación",
       "content": "Paquete integral de herramientas para agricultura de precisión.\n\n• Solución 360°: Todo el hardware y software en un solo proveedor.\n• Equipamiento Incluido: SoloDrill, FieldBox y acceso a FalkerMap.\n• Soporte Total: Incluye capacitación, apoyo y asistencia técnica.\n• Escalabilidad: Ideal desde principiantes hasta grandes extensiones.\n• Diseño Robusto: Dimensionado para operaciones de campo exigentes.",
@@ -51,7 +51,7 @@
       "is_resumen": false
     },
     {
-      "category": "Falker",
+      "category": "GeoData",
       "title": "clorofiLOG",
       "summary": "Medidor de Clorofila",
       "content": "Medidor óptico digital de clorofila para análisis foliar no destructivo.\n\n• Medición Precisa: Analiza absorción de luz sin dañar la planta.\n• Ahorro y Eficiencia: Optimiza el uso y aplicación de fertilizantes.\n• GPS Integrado: Todas las mediciones son georeferenciadas.\n• Conectividad USB / Bluetooth: Sincronización automática con Web y App.\n• Historial en Línea: Gestión racional basada en datos en la nube.",
