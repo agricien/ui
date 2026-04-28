@@ -24,7 +24,7 @@
       "button_text": "Borrar",
       "published": "2026-04-28",
       "lang": "English",
-      "is_resumen": true
+      "is_resumen": false
     },
     {
       "category": "DitchAssist",
@@ -36,12 +36,12 @@
       "button_text": "Sitio Fabricante",
       "published": "2026-04-28",
       "lang": "English",
-      "is_resumen": true
+      "is_resumen": false
     },
     {
-      "category": "GeoData",
-      "title": "Kit AP",
-      "summary": "Equipo Móvil Compatación",
+      "category": "Falker",
+      "title": "SoloStar",
+      "summary": "Kit Compactación",
       "content": "Paquete integral de herramientas para agricultura de precisión.\n\n• Solución 360°: Todo el hardware y software en un solo proveedor.\n• Equipamiento Incluido: SoloDrill, FieldBox y acceso a FalkerMap.\n• Soporte Total: Incluye capacitación, apoyo y asistencia técnica.\n• Escalabilidad: Ideal desde principiantes hasta grandes extensiones.\n• Diseño Robusto: Dimensionado para operaciones de campo exigentes.",
       "link": "https://www.falker.com.br/es/clorofilog",
       "thumbnail": "https://www.falker.com.br/images/products/kit-ap/kitap-card.png",
@@ -51,7 +51,7 @@
       "is_resumen": false
     },
     {
-      "category": "GeoData",
+      "category": "Falker",
       "title": "clorofiLOG",
       "summary": "Medidor de Clorofila",
       "content": "Medidor óptico digital de clorofila para análisis foliar no destructivo.\n\n• Medición Precisa: Analiza absorción de luz sin dañar la planta.\n• Ahorro y Eficiencia: Optimiza el uso y aplicación de fertilizantes.\n• GPS Integrado: Todas las mediciones son georeferenciadas.\n• Conectividad USB / Bluetooth: Sincronización automática con Web y App.\n• Historial en Línea: Gestión racional basada en datos en la nube.",
@@ -72,10 +72,10 @@
       "button_text": "Los Antonios Site:",
       "published": "2026-04-28",
       "lang": "English",
-      "is_resumen": true
+      "is_resumen": false
     },
     {
-      "category": "Mitigar sequía",
+      "category": "Regenerativa",
       "title": "#32- Cómo finca La Loba triplicó su forraje y venció la sequía en Bagaces",
       "summary": "LDI para producir más pasto en sequía",
       "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
@@ -84,7 +84,19 @@
       "button_text": "Original Susbtack José Agüero",
       "published": "2026-04-28",
       "lang": "English",
-      "is_resumen": true
+      "is_resumen": false
+    },
+    {
+      "category": "Nosotros",
+      "title": "En AgriCien somos una empresa de consultoría y tecnología especializada en el manejo del agua en cultivos, el desarrollo de proyectos agrícolas, tecnologías de Agricultura de Pecisión y Consultoría Agrícola.",
+      "summary": "En AgriCien somos una empresa de consultoría y tecnología especializada en el manejo del agua en cultivos, el desarrollo de proyectos agrícolas, tecnologías de Agricultura de Pecisión y Consultoría Agrícola.",
+      "content": "En AgriCien somos una empresa de consultoría y tecnología especializada en el manejo del agua en cultivos, el desarrollo de proyectos agrícolas, tecnologías de Agricultura de Pecisión y Consultoría Agrícola. Con sede en Costa Rica y oficinas asociadas en México, Colombia, Argentina, Brasil y Nicaragua, AgriCien cuenta con una cartera activa de clientes y proyectos en Latinoamérica y el Caribe, África Oriental y el Sudeste Asiático.\n\nAgriCien cuenta con un equipo de expertos en agronomía, edafología, ingeniería agrícola y mecánica, fisiología de cultivos, protección de cultivos, agrometeorología y desarrollo de negocios que trabaja en estrecha colaboración con el agricultor para identificar, localizar, medir y monitorear los principales factores que limitan el rendimiento en el campo, estableciendo e implementando diversas prácticas específicas para cada sitio. Las prácticas de agricultura de precisión incluyen mapas topográficos 3D, de suelo, de análisis de riesgo de vegetación (VRA) y de rendimiento para un manejo específico del sitio; imágenes multiespectrales del dosel para el monitoreo del crecimiento y la detección temprana de plagas.\nSe obtienen mayores rendimientos tras la implementación de la formación de terrenos con pendiente variable mediante GPS 3D, lo que garantiza una profundidad de siembra uniforme y una mejor germinación, una densidad óptima de plantas, un crecimiento vigoroso, una mayor eficiencia en el uso del nitrógeno, una maduración y calidad uniformes, menor demanda de agua, riego uniforme y un drenaje más rápido, a la vez que se conserva la fertilidad del suelo. Confío en que el siguiente perfil de AgriCien se ajuste a las necesidades de su negocio agrícola y espero colaborar con usted. No dude en contactarnos cuando lo considere necesario.",
+      "link": "#",
+      "thumbnail": "https://th.bing.com/th/id/OIP.g_AVcWg4_lvqYnK2RWZ-BwHaE7?w=238&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3",
+      "button_text": "Original Susbtack José Agüero",
+      "published": "2026-04-28",
+      "lang": "Español",
+      "is_resumen": false
     }
   ]
 }
