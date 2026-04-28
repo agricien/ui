@@ -131,42 +131,51 @@
         }
         /* Subtheme Accordion Styles */
         .subtheme-section {
-            margin-bottom: 3rem;
+            margin-bottom: 0.75rem;
         }
         .subtheme-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 1rem 1.5rem;
+            padding: 0.75rem 1.25rem;
             background: white;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
             cursor: pointer;
             border: 1px solid #eee;
             transition: all 0.3s ease;
         }
         .subtheme-header:hover {
-            background: #f1f8ff;
+            background: #f8f9fa;
             border-color: #0d6efd;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         .subtheme-title {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: #2c3e50;
             margin: 0;
         }
         .subtheme-icon {
             transition: transform 0.3s ease;
+            color: #6c757d;
         }
-        .collapsed .subtheme-icon {
-            transform: rotate(-90deg);
+        .subtheme-header.active .subtheme-icon {
+            transform: rotate(180deg);
         }
         .subtheme-content {
             overflow: hidden;
-            transition: max-height 0.5s ease-out;
-        }
-        .collapsed + .subtheme-content {
             max-height: 0;
+            opacity: 0;
+            transition: all 0.4s ease-in-out;
+            display: none;
+            margin-bottom: 1.5rem;
+        }
+        .subtheme-content.show {
+            display: flex;
+            max-height: 5000px;
+            opacity: 1;
+            padding-top: 0.5rem;
         }
     </style>
 </head>
@@ -373,26 +382,31 @@
                 return;
             }
 
-            // Agrupar por SubTema
-            const grouped = {};
+            // Agrupar por SubTema preservando el orden del Excel
+            const grouped = new Map();
+            const order = [];
+            
             news.forEach(item => {
                 const sub = item.sub_category || 'General';
-                if (!grouped[sub]) grouped[sub] = [];
-                grouped[sub].push(item);
+                if (!grouped.has(sub)) {
+                    grouped.set(sub, []);
+                    order.push(sub);
+                }
+                grouped.get(sub).push(item);
             });
 
-            Object.keys(grouped).forEach((sub, index) => {
-                const subItems = grouped[sub];
+            order.forEach((sub, index) => {
+                const subItems = grouped.get(sub);
                 const subId = `subtheme-${index}`;
                 
                 let subHtml = `
                     <div class="subtheme-section w-100">
-                        <div class="subtheme-header shadow-sm" onclick="toggleSubtheme('${subId}')">
+                        <div class="subtheme-header shadow-sm" onclick="toggleSubtheme('${subId}', this)">
                             <h3 class="subtheme-title">
                                 <span class="badge bg-primary me-2">${subItems.length}</span>
                                 ${sub}
                             </h3>
-                            <span class="subtheme-icon fs-4">▼</span>
+                            <span class="subtheme-icon fs-6">▼</span>
                         </div>
                         <div class="subtheme-content row g-4" id="${subId}">
                 `;
@@ -424,20 +438,10 @@
             });
         }
 
-        function toggleSubtheme(id) {
+        function toggleSubtheme(id, header) {
             const el = document.getElementById(id);
-            const header = el.previousElementSibling;
-            header.classList.toggle('collapsed');
-            
-            if (header.classList.contains('collapsed')) {
-                el.style.maxHeight = '0px';
-                el.style.opacity = '0';
-                setTimeout(() => el.style.display = 'none', 500);
-            } else {
-                el.style.display = 'flex';
-                el.style.opacity = '1';
-                el.style.maxHeight = '5000px'; // Un valor suficientemente grande
-            }
+            header.classList.toggle('active');
+            el.classList.toggle('show');
         }
 
         function openArticleByTitle(title) {
