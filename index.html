@@ -80,6 +80,94 @@
             background-color: #f8f9fa;
             border-radius: 15px 15px 0 0;
         }
+        /* Banner Styles */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border-radius: 0 0 40px 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .banner-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+        }
+        .banner-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+        .banner-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .banner-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        /* Subtheme Accordion Styles */
+        .subtheme-section {
+            margin-bottom: 3rem;
+        }
+        .subtheme-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+        .subtheme-header:hover {
+            background: #f1f8ff;
+            border-color: #0d6efd;
+        }
+        .subtheme-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin: 0;
+        }
+        .subtheme-icon {
+            transition: transform 0.3s ease;
+        }
+        .collapsed .subtheme-icon {
+            transform: rotate(-90deg);
+        }
+        .subtheme-content {
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        .collapsed + .subtheme-content {
+            max-height: 0;
+        }
     </style>
 </head>
 <body>
@@ -92,6 +180,10 @@
             </div>
         </div>
     </nav>
+
+    <div id="banner-section">
+        <!-- Banner dinámico -->
+    </div>
 
     <header class="container">
         <h1 class="display-4 fw-bold text-dark" id="main-title">Cargando...</h1>
@@ -224,6 +316,7 @@
 
                 document.getElementById('last-update').innerText = `Total: ${allNews.length} secciones`;
                 
+                renderBanner(data.banner);
                 renderCategories(allNews);
                 filterNews(mainTheme); // Cargar Tema Principal por defecto
             } catch (error) {
@@ -232,15 +325,40 @@
             }
         }
 
+        function renderBanner(banners) {
+            const container = document.getElementById('banner-section');
+            if (!banners || banners.length === 0) {
+                container.innerHTML = '';
+                return;
+            }
+
+            // Por ahora mostramos el primer banner (se puede expandir a carrusel)
+            const b = banners[0];
+            container.innerHTML = `
+                <div class="banner-container">
+                    <div class="banner-slide" style="background-image: url('${b.image || 'https://picsum.photos/1200/600'}')">
+                        <div class="banner-overlay"></div>
+                        <div class="banner-content">
+                            <h2 class="banner-title">${b.title}</h2>
+                            <p class="banner-subtitle">${b.subtitle}</p>
+                            <a href="${b.link || '#'}" target="_blank" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-bold shadow-lg">
+                                ${b.button_text || 'Más Información'}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
         function renderCategories(news) {
             const container = document.getElementById('category-filters');
             const categories = [...new Set(news.map(item => item.category))];
             
-            let html = `<button class="btn btn-primary filter-btn px-4" id="btn-resumen" onclick="filterNews('${mainTheme}')">${mainTheme}</button>`;
+            let html = `<button class="btn btn-primary filter-btn px-4 m-1 shadow-sm" id="btn-resumen" onclick="filterNews('${mainTheme}')">${mainTheme}</button>`;
             
             categories.forEach(cat => {
-                if (!cat || cat === 'Resumen') return;
-                html += `<button class="btn btn-outline-secondary filter-btn px-4" onclick="filterNews('${cat}')">${cat}</button>`;
+                if (!cat || cat === 'Resumen' || cat === mainTheme) return;
+                html += `<button class="btn btn-outline-secondary filter-btn px-4 m-1 shadow-sm" onclick="filterNews('${cat}')">${cat}</button>`;
             });
             
             container.innerHTML = html;
@@ -255,29 +373,71 @@
                 return;
             }
 
-            news.forEach((item) => {
-                // Usar el título como ID único para la búsqueda
-                const itemData = JSON.stringify(item).replace(/'/g, "&apos;");
-                const card = `
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card news-card" onclick='openArticleByTitle("${item.title.replace(/"/g, '&quot;')}")'>
-                            <img src="${item.thumbnail}" class="card-img-top" alt="${item.title}" onerror="this.src='https://picsum.photos/400/250'">
-                            <div class="card-body">
-                                <span class="category-badge">${item.category}</span>
-                                <h5 class="card-title fw-bold text-dark">${item.title}</h5>
-                                <p class="card-text text-muted small">${item.summary}</p>
-                                <div class="d-flex justify-content-between align-items-center mt-3">
-                                    <span class="timestamp">${item.published}</span>
-                                    <a href="${item.link || '#'}" target="_blank" onclick="event.stopPropagation();" class="btn btn-outline-primary btn-sm">
-                                        ${item.button_text || 'Ver Original'}
-                                    </a>
+            // Agrupar por SubTema
+            const grouped = {};
+            news.forEach(item => {
+                const sub = item.sub_category || 'General';
+                if (!grouped[sub]) grouped[sub] = [];
+                grouped[sub].push(item);
+            });
+
+            Object.keys(grouped).forEach((sub, index) => {
+                const subItems = grouped[sub];
+                const subId = `subtheme-${index}`;
+                
+                let subHtml = `
+                    <div class="subtheme-section w-100">
+                        <div class="subtheme-header shadow-sm" onclick="toggleSubtheme('${subId}')">
+                            <h3 class="subtheme-title">
+                                <span class="badge bg-primary me-2">${subItems.length}</span>
+                                ${sub}
+                            </h3>
+                            <span class="subtheme-icon fs-4">▼</span>
+                        </div>
+                        <div class="subtheme-content row g-4" id="${subId}">
+                `;
+
+                subItems.forEach((item) => {
+                    const card = `
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card news-card" onclick='openArticleByTitle("${item.title.replace(/"/g, '&quot;')}")'>
+                                <img src="${item.thumbnail}" class="card-img-top" alt="${item.title}" onerror="this.src='https://picsum.photos/400/250'">
+                                <div class="card-body">
+                                    <span class="category-badge">${item.category}</span>
+                                    <h5 class="card-title fw-bold text-dark">${item.title}</h5>
+                                    <p class="card-text text-muted small">${item.summary}</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="timestamp">${item.published}</span>
+                                        <a href="${item.link || '#'}" target="_blank" onclick="event.stopPropagation();" class="btn btn-outline-primary btn-sm">
+                                            ${item.button_text || 'Ver Original'}
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                `;
-                container.insertAdjacentHTML('beforeend', card);
+                    `;
+                    subHtml += card;
+                });
+
+                subHtml += `</div></div>`;
+                container.insertAdjacentHTML('beforeend', subHtml);
             });
+        }
+
+        function toggleSubtheme(id) {
+            const el = document.getElementById(id);
+            const header = el.previousElementSibling;
+            header.classList.toggle('collapsed');
+            
+            if (header.classList.contains('collapsed')) {
+                el.style.maxHeight = '0px';
+                el.style.opacity = '0';
+                setTimeout(() => el.style.display = 'none', 500);
+            } else {
+                el.style.display = 'flex';
+                el.style.opacity = '1';
+                el.style.maxHeight = '5000px'; // Un valor suficientemente grande
+            }
         }
 
         function openArticleByTitle(title) {
@@ -291,11 +451,19 @@
             
             document.getElementById('articleModalBody').innerHTML = `
                 <div class="text-center mb-4">
-                    <img src="${item.thumbnail}" class="img-fluid rounded" style="max-height: 300px; width: 100%; object-fit: cover;" onerror="this.src='https://picsum.photos/600/400'">
+                    <img src="${item.thumbnail}" class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;" onerror="this.src='https://picsum.photos/600/400'">
                 </div>
-                <p class="lead fw-bold text-primary mb-3">${item.category || 'General'}</p>
-                <div class="article-text" style="line-height: 1.8; color: #333;">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <p class="lead fw-bold text-primary m-0">${item.category || 'General'} | ${item.sub_category || ''}</p>
+                    <span class="badge bg-light text-dark">${item.published}</span>
+                </div>
+                <div class="article-text border-top pt-3" style="line-height: 1.8; color: #333; font-size: 1.1rem;">
                     ${formattedContent}
+                </div>
+                <div class="mt-4 text-center">
+                    <a href="${item.link}" target="_blank" class="btn btn-primary px-4 rounded-pill">
+                        ${item.button_text}
+                    </a>
                 </div>
             `;
             const myModal = new bootstrap.Modal(document.getElementById('articleModal'));
@@ -324,6 +492,9 @@
                 const filtered = allNews.filter(n => n.category === category);
                 renderNews(filtered);
             }
+            
+            // Hacer scroll suave hacia los resultados
+            document.getElementById('category-filters').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         // Carga inicial

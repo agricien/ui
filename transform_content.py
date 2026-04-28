@@ -61,53 +61,90 @@ def transform_excel_to_json(source, output_json):
         # Leer todas las hojas
         sheets = pd.read_excel(source, sheet_name=None)
         
-        # Procesar hoja de Noticias (anteriormente Sheet1)
-        df = sheets.get('Noticias', sheets.get('Sheet1', pd.DataFrame()))
-        if df.empty:
-            print("Error: No se encontró la hoja de Noticias.")
-            return
-
-        # Invertir el orden (inferiores primero)
-        df = df.iloc[::-1]
+        # Hojas de sistema que no son temas
+        system_sheets = ['Encabezado', 'Pie de Página', 'Imagen Empresa', 'Banner', 'Hoja1']
         
-        # Mapeo de columnas requeridas
-        required_cols = ['Tema', 'Sub titulo', 'Titulo', 'Spanish', 'Original', 'Foto', 'Boton', 'Resumen']
-        for col in required_cols:
-            if col not in df.columns:
-                print(f"Advertencia: Falta la columna '{col}' en el Excel.")
-                df[col] = "" 
-
+        # Mapeo de columnas requeridas para temas
+        required_cols = ['SubTema', 'Sub titulo', 'Titulo', 'Spanish', 'Original', 'Foto', 'Boton', 'Resumen']
+        
         news_list = []
         today = datetime.now().strftime("%Y-%m-%d")
 
-        for _, row in df.iterrows():
-            if pd.isna(row['Titulo']) or str(row['Titulo']).strip() == "":
-                continue
+        # Procesar Banner
+        banner_data = []
+        banner_df = sheets.get('Banner', pd.DataFrame())
+        if not banner_df.empty:
+            banner_df = banner_df.fillna("")
+            for _, row in banner_df.iterrows():
+                if pd.isna(row.get('Titulo')) or str(row.get('Titulo')).strip() == "":
+                    continue
+                banner_data.append({
+                    "title": str(row.get('Titulo', '')).strip(),
+                    "subtitle": str(row.get('Sub titulo', '')).strip(),
+                    "image": str(row.get('Foto', '')).strip(),
+                    "link": str(row.get('Original', '')).strip(),
+                    "button_text": str(row.get('Boton', 'Saber Más')).strip()
+                })
+            print(f"Éxito: Leídos {len(banner_data)} elementos para el Banner.")
 
-            # Determinar texto del botón (Prioridad: Columna G "Boton")
-            btn_text = str(row['Boton']).strip()
-            if btn_text == "" or btn_text == "nan":
-                lang = detect_language(row['Original'])
-                btn_text = f"Ver Original [{lang}]"
+        # Procesar Temas (todas las hojas excepto system_sheets)
+        theme_sheets = [s for s in sheets.keys() if s not in system_sheets]
+        
+        # Si existe 'Noticias' y no hay otros temas, usar Noticias (legacy support)
+        if 'Noticias' in sheets and not theme_sheets:
+            theme_sheets = ['Noticias']
+        elif 'Noticias' in sheets:
+            # Si hay otros temas, ignorar Noticias o añadirlo si tiene la estructura nueva
+            pass
 
-            item = {
-                "category": str(row['Tema']).strip(),
-                "title": str(row['Titulo']).strip(),
-                "summary": str(row['Sub titulo']).strip(),
-                "content": str(row['Spanish']).strip(),
-                "link": str(row['Original']).strip(),
-                "thumbnail": str(row['Foto']).strip(),
-                "button_text": btn_text,
-                "published": today,
-                "lang": detect_language(row['Original']),
-                "is_resumen": str(row['Resumen']).strip() == "1"
-            }
+        for sheet_name in theme_sheets:
+            df = sheets[sheet_name]
+            if df.empty: continue
             
-            # Limpieza básica de URLs
-            if item['link'] == "nan": item['link'] = "#"
-            if item['thumbnail'] == "nan": item['thumbnail'] = "https://picsum.photos/600/400"
+            # Normalizar columnas para detectar estructura
+            cols = [str(c).strip() for c in df.columns]
+            
+            # Si no tiene SubTema pero tiene Tema (Legacy), mapear
+            if 'SubTema' not in cols and 'Tema' in cols:
+                df = df.rename(columns={'Tema': 'SubTema'})
+            
+            # Asegurar que las columnas existan
+            for col in required_cols:
+                if col not in df.columns:
+                    df[col] = ""
 
-            news_list.append(item)
+            # Invertir el orden para que lo más nuevo (abajo en excel) aparezca primero? 
+            # El usuario no especificó, pero mantendremos la lógica anterior de inversión si es necesario.
+            # df = df.iloc[::-1]
+
+            for _, row in df.iterrows():
+                if pd.isna(row['Titulo']) or str(row['Titulo']).strip() == "":
+                    continue
+
+                btn_text = str(row['Boton']).strip()
+                if btn_text == "" or btn_text == "nan":
+                    lang = detect_language(row['Original'])
+                    btn_text = f"Ver Original [{lang}]"
+
+                item = {
+                    "category": sheet_name,
+                    "sub_category": str(row['SubTema']).strip(),
+                    "title": str(row['Titulo']).strip(),
+                    "summary": str(row['Sub titulo']).strip(),
+                    "content": str(row['Spanish']).strip(),
+                    "link": str(row['Original']).strip(),
+                    "thumbnail": str(row['Foto']).strip(),
+                    "button_text": btn_text,
+                    "published": today,
+                    "lang": detect_language(row['Original']),
+                    "is_resumen": str(row['Resumen']).strip() == "1"
+                }
+                
+                if item['link'] == "nan": item['link'] = "#"
+                if item['thumbnail'] == "nan": item['thumbnail'] = "https://picsum.photos/600/400"
+
+                news_list.append(item)
+            print(f"Éxito: Procesada hoja de tema: {sheet_name} ({len(df)} filas)")
 
         # Procesar Encabezado
         header_df = sheets.get('Encabezado', pd.DataFrame())
@@ -120,10 +157,7 @@ def transform_excel_to_json(source, output_json):
                 "brand_black": str(row.get('Primera Linea Negra', '')).strip(),
                 "brand_blue": str(row.get('Primera Linea Azul', '')).strip()
             }
-            print(f"Éxito: Leído encabezado: {header_data['title']}")
-        else:
-            print("Aviso: No se encontró contenido en la hoja 'Encabezado'.")
-
+        
         # Procesar Pie de Página
         footer_df = sheets.get('Pie de Página', pd.DataFrame())
         footer_data = {}
@@ -133,33 +167,23 @@ def transform_excel_to_json(source, output_json):
                 "line1": str(row.get('Primera Linea', '')).strip(),
                 "line2": str(row.get('Segunda Linea', '')).strip()
             }
-            print(f"Éxito: Leído pie de página: {footer_data['line1'][:30]}...")
-        else:
-            print("Aviso: No se encontró contenido en la hoja 'Pie de Página'.")
 
         # Procesar Imagen Empresa
         company_df = sheets.get('Imagen Empresa', pd.DataFrame())
-        company_data = {
-            "logo": "",
-            "main_theme": "Resumen"
-        }
+        company_data = {"logo": "", "main_theme": "Resumen"}
         if not company_df.empty:
             row = company_df.iloc[0]
             company_data = {
                 "logo": str(row.get('Logo', '')).strip(),
                 "main_theme": str(row.get('Tema Principal', 'Resumen')).strip()
             }
-            if company_data["main_theme"] == "nan" or company_data["main_theme"] == "":
-                company_data["main_theme"] = "Resumen"
-            print(f"Éxito: Leída configuración de empresa: {company_data['main_theme']}")
-        else:
-            print("Aviso: No se encontró la hoja 'Imagen Empresa'. Usando valores por defecto.")
 
         # Construir salida final
         final_data = {
             "header": header_data,
             "footer": footer_data,
             "company": company_data,
+            "banner": banner_data,
             "news": news_list
         }
 
@@ -168,12 +192,15 @@ def transform_excel_to_json(source, output_json):
         with open(output_json, "w", encoding="utf-8") as f:
             json.dump(final_data, f, ensure_ascii=False, indent=2)
             
-        print(f"Éxito: Se procesaron {len(news_list)} noticias y configuración a {output_json}")
+        print(f"Éxito: Se procesaron {len(news_list)} items de temas y {len(banner_data)} banners a {output_json}")
 
     except Exception as e:
         print(f"Error durante la transformación: {str(e)}")
+        import traceback
+        traceback.print_exc()
 
 if __name__ == "__main__":
     # Obtener la mejor fuente disponible
     data_source = get_excel_data(ONEDRIVE_URL, LOCAL_EXCEL)
     transform_excel_to_json(data_source, "data/news.json")
+
