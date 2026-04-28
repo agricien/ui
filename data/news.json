@@ -15,6 +15,18 @@
   },
   "news": [
     {
+      "category": "DitchAssist",
+      "title": "Ditch Assist DIG™",
+      "summary": "Control de Excavaciones",
+      "content": "Sistema de excavación de última generación. Deja de gastar el 30-60% de tu tiempo revisando pendientes y deshazte del láser. Operación con un solo hombre para optimizar al 100% tu sitio de trabajo.",
+      "link": "https://www.ditchassist.com/about_ditch_assist_dig/",
+      "thumbnail": "https://cdn.ditchassist.com/wp-content/uploads/2025/04/dig-schematic-png.webp",
+      "button_text": "Sitio Fabricante",
+      "published": "2026-04-28",
+      "lang": "English",
+      "is_resumen": true
+    },
+    {
       "category": "Falker",
       "title": "Kit AP",
       "summary": "Equipo Móvil Compatación",
