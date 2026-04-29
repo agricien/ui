@@ -255,6 +255,19 @@
     },
     {
       "category": "Tecnología",
+      "sub_category": "Topcon",
+      "title": "AgForm-3D Software",
+      "summary": "Software de Diseño de Nivelación de Suelos",
+      "content": "nan",
+      "link": "#",
+      "thumbnail": "https://picsum.photos/600/400",
+      "button_text": "Más detalles",
+      "published": "2026-04-29",
+      "lang": "Español",
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
       "sub_category": "Ag Leader",
       "title": "Control de Pulverización",
       "summary": "DirectCommand L2",
@@ -264,6 +277,19 @@
       "button_text": "Más detalles",
       "published": "2026-04-29",
       "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
+      "sub_category": "Ag Leader",
+      "title": "SMS Software",
+      "summary": "Software especializado en Agricultura de Precisión",
+      "content": "nan",
+      "link": "#",
+      "thumbnail": "https://picsum.photos/600/400",
+      "button_text": "Más detalles",
+      "published": "2026-04-29",
+      "lang": "Español",
       "is_resumen": false
     },
     {
@@ -296,13 +322,13 @@
       "category": "Tecnología",
       "sub_category": "Agrotécnica Los Antonios",
       "title": "Traílla hidráulica de empuje TH42-BP",
-      "summary": "nan",
-      "content": "nan",
-      "link": "#",
-      "thumbnail": "https://picsum.photos/600/400",
-      "button_text": "Ver Original [Español]",
+      "summary": "Equipos de movimiento de suelos",
+      "content": "Ofrecemos una amplia gama de maquinaria agrícola diseñada para optimizar el rendimiento y la eficiencia en cada tarea del campo.\n\nLa Trailla Hidráulica de Empuje, modelo TH42-BP, Cuenta con una capacidad de 6.5 a 8 m3 y un ancho de corte de 2.5-2.8 metros, están diseñadas para una potencia de 200-240 HP.\n\nOfrecemos asesoramiento especializado para ayudarte a elegir la maquinaria que mejor se ajuste a tu actividad. Con un servicio técnico eficiente y repuestos disponibles, garantizamos el mejor soporte postventa.\n\nOpcionales\nMástil hidráulico\nVálvula de secuencia\nRipper fijo (5 brazos) «Modelo pequeño»\nAnclaje ripper fijo con tuberías (sin ripper)\nEnganche trasero, sin tuberías\nEnganche trasero, con 4 tuberías\nEnganche trasero, con 6 tuberías\nConjunto pirulo atornillado\nConjunto pirulo para enganche trasero\nAmortiguación\nAutomatización (láser/GPS) con hidroválvula\nAutomatización (láser/GPS) distribuidor proporcional y filtro de presión",
+      "link": "https://losantonios.com/es/traillas/traillas-hidraulicas-de-empuje/th42-bp/",
+      "thumbnail": "https://losantonios.com/wp-content/uploads/2020/11/42.png",
+      "button_text": "Más detalles",
       "published": "2026-04-29",
-      "lang": "Español",
+      "lang": "English",
       "is_resumen": false
     },
     {
@@ -377,7 +403,7 @@
       "summary": "#32- Cómo finca La Loba triplicó su forraje y venció la sequía en Bagaces",
       "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
       "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
+      "thumbnail": "https://substackcdn.com/image/fetch/$s_!pn6x!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5d2c2cc7-3611-4a8d-97d9-46dfc3b43106_4284x2859.jpeg",
       "button_text": "Original Susbtack José Agüero",
       "published": "2026-04-29",
       "lang": "English",
@@ -508,7 +534,7 @@
       "content": "En AgriCien convertimos la compactación del suelo en un dato medible y accionable. Ejecutamos campañas de campo con equipos especializados para caracterizar el perfil de resistencia, identificar capas restrictivas y delimitar su variabilidad espacial.\n\nProcesamos la información con herramientas geoespaciales para generar mapas de compactación de alta resolución, correlacionados con variables productivas (rendimiento, drenaje, tránsito, microrelieve). Entregamos reportes técnicos claros con interpretación agronómica y un plan de acción específico por ambiente.\n\nNuestro servicio no se queda en el diagnóstico: proponemos y acompañamos soluciones prácticas —subsolado dirigido, manejo de tráfico, ajustes de humedad de labor, integración con nivelación y drenaje— orientadas a recuperar infiltración, aireación radicular y eficiencia operativa.\n\nMedir es decidir. Reducir compactación es recuperar productividad",
       "link": "#",
       "thumbnail": "https://www.falker.com.br/images/products/penetrolog/aquario.webp",
-      "button_text": "PenetroLOG Falker",
+      "button_text": "Más detalles",
       "published": "2026-04-29",
       "lang": "Español",
       "is_resumen": false
