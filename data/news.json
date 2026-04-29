@@ -36,10 +36,11 @@
       "Topcon": "https://st.perplexity.ai/estatic/0b226c450798410ac541646c86ec31afd840e5beab817a5d84fa821e7db61981ec84c3b4a3f072a7a2e1899c9fb06c6e5c2a40245a2238cb09d10c5023c2e540984c32ae9ec7ba4e396e0de1e14bf9089813f30e56b0ad15083e59e6e4cefa43",
       "Falker": "https://www.falker.com.br/images/logo@2x.webp",
       "Ditch Assist": "https://cdn.ditchassist.com/wp-content/uploads/2024/02/Black-300x187.png",
-      "Maher Electrónica": "https://www.maherelectronica.com/wp-content/uploads/2026/03/logo-web-aniversario.png",
+      "Maher Electrónica": "https://tse3.mm.bing.net/th/id/OIP.JyqphHvEKZqA-h0G8qOvZwHaB4?rs=1&pid=ImgDetMain&o=7&rm=3",
       "Agritecnica Los Antonios": "https://losantonios.com/wp-content/themes/losantonios/img/logo.svg",
       "Ag Leader": "https://www.agleader.com/wp-content/uploads/2024/04/Ag-Leader-Logo1-1.png",
-      "Los Antonios": "https://losantonios.com/wp-content/themes/losantonios/img/logo.svg"
+      "Los Antonios": "https://losantonios.com/wp-content/themes/losantonios/img/logo.svg",
+      "Traube Engineering": "https://scontent.fmga11-2.fna.fbcdn.net/v/t39.30808-6/470566737_541730685529825_5211797707323352046_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=2a1932&_nc_ohc=9a0trRaAtRwQ7kNvwFjUiwD&_nc_oc=AdoqEkx_b4eLH7ANKQXmYGDH5DM5l8s_MP9GruNP5tVc630SHhptyyk49nTugrwI0qPJpiMgATz2hTXcnPnnMsj-&_nc_zt=23&_nc_ht=scontent.fmga11-2.fna&_nc_gid=vtaG6HtPHDtsDS9s0repYQ&_nc_ss=7b2a8&oh=00_Af26rnM8qvUDQtZ3yZngiWfuFd4V5VCU1wqSSx-kJ-TSFw&oe=69F82632"
     }
   },
   "news": [
@@ -228,14 +229,53 @@
     {
       "category": "Tecnología",
       "sub_category": "Topcon",
-      "title": "Original Topcon",
-      "summary": "Nivelación de suelos",
+      "title": "Nivelación de suelos",
+      "summary": "Manejo de Aguas",
       "content": "Desde superficies básicas planas y de pendiente única hasta diseños avanzados de múltiples y variables pendientes, Topcon 3D Land Forming (formación de terreno por GNSS) ofrece un control de manejo de agua totalmente personalizable. Compuesta por tres fases clave: levantamiento, diseño y ejecución, la solución puede adaptarse a prácticamente cualquier operación agrícola, además de muchas aplicaciones específicas, como estanques, cimentaciones de edificios y caminos.",
       "link": "https://www.topconpositioning.com/solutions/technology/agriculture-products/landforming",
       "thumbnail": "https://www.topconpositioning.com/content/topconpositioning/global/en/solutions/agriculture/soil-preparation/_jcr_content/root/container/container/container_416579458/columns/node0/teaser_copy_copy_cop.coreimg.85.1600.jpeg/1749001850139/landforming-f-20220928-0005-web-teaser.jpeg",
       "button_text": "Sitio Fabricante",
       "published": "2026-04-29",
       "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
+      "sub_category": "Traube Engineering",
+      "title": "Sembradora de un solo surco",
+      "summary": "Sembradora de Caña",
+      "content": "nan",
+      "link": "#",
+      "thumbnail": "https://picsum.photos/600/400",
+      "button_text": "Ver Original [Español]",
+      "published": "2026-04-29",
+      "lang": "Español",
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
+      "sub_category": "Traube Engineering",
+      "title": "Sembradora de dos surcos",
+      "summary": "Sembradora de Caña",
+      "content": "nan",
+      "link": "#",
+      "thumbnail": "https://picsum.photos/600/400",
+      "button_text": "Ver Original [Español]",
+      "published": "2026-04-29",
+      "lang": "Español",
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
+      "sub_category": "Traube Engineering",
+      "title": "Sembradora de tres surcos",
+      "summary": "Sembradora de Caña",
+      "content": "nan",
+      "link": "#",
+      "thumbnail": "https://picsum.photos/600/400",
+      "button_text": "Ver Original [Español]",
+      "published": "2026-04-29",
+      "lang": "Español",
       "is_resumen": false
     },
     {
