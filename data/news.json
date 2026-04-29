@@ -41,6 +41,19 @@
     {
       "category": "Tecnología",
       "sub_category": "Falker",
+      "title": "SoloFLux",
+      "summary": "Permeámero Digital",
+      "content": "SoloFlux es un permeámetro digital automatizado, la herramienta ideal para medir la conductividad hidráulica y comprender la dinámica del agua en el suelo.\n\nEl equipo es innovador porque mide el flujo de agua en el suelo de forma digital y automática, lo que hace que la recogida de datos sea mucho más práctica y la evaluación más intuitiva. Lo que antes era un trabajo laborioso que requería la supervisión in situ de un técnico cualificado, ahora es más rápido con SoloFlux y la recogida y registro automáticos de datos.",
+      "link": "https://www.falker.com.br/es/soloflux",
+      "thumbnail": "https://www.falker.com.br/images/products/soloflux/Site-parceria-embrapa-es.webp",
+      "button_text": "Original Falker",
+      "published": "2026-04-29",
+      "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
+      "sub_category": "Falker",
       "title": "ClorofiLOG",
       "summary": "Medidor de Clorofila",
       "content": "Medidor óptico digital de clorofila para análisis foliar no destructivo.\n\n• Medición Precisa: Analiza absorción de luz sin dañar la planta.\n• Ahorro y Eficiencia: Optimiza el uso y aplicación de fertilizantes.\n• GPS Integrado: Todas las mediciones son georeferenciadas.\n• Conectividad USB / Bluetooth: Sincronización automática con Web y App.\n• Historial en Línea: Gestión racional basada en datos en la nube.",
@@ -55,14 +68,40 @@
       "category": "Tecnología",
       "sub_category": "Falker",
       "title": "SoloStar",
-      "summary": "Kit Compactación",
+      "summary": "Medición automática de Compactación",
       "content": "Paquete integral de herramientas para agricultura de precisión.\n\n• Solución 360°: Todo el hardware y software en un solo proveedor.\n• Equipamiento Incluido: SoloDrill, FieldBox y acceso a FalkerMap.\n• Soporte Total: Incluye capacitación, apoyo y asistencia técnica.\n• Escalabilidad: Ideal desde principiantes hasta grandes extensiones.\n• Diseño Robusto: Dimensionado para operaciones de campo exigentes.",
       "link": "https://www.falker.com.br/es/clorofilog",
       "thumbnail": "https://www.falker.com.br/images/products/kit-ap/kitap-card.png",
       "button_text": "Original Falker",
       "published": "2026-04-29",
       "lang": "English",
-      "is_resumen": true
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
+      "sub_category": "Falker",
+      "title": "PenetroLOG",
+      "summary": "Medición Manual de Compactación",
+      "content": "Paquete integral de herramientas para agricultura de precisión.\n\n• Solución 360°: Todo el hardware y software en un solo proveedor.\n• Equipamiento Incluido: SoloDrill, FieldBox y acceso a FalkerMap.\n• Soporte Total: Incluye capacitación, apoyo y asistencia técnica.\n• Escalabilidad: Ideal desde principiantes hasta grandes extensiones.\n• Diseño Robusto: Dimensionado para operaciones de campo exigentes.",
+      "link": "https://www.falker.com.br/es/clorofilog",
+      "thumbnail": "https://www.falker.com.br/images/products/kit-ap/kitap-card.png",
+      "button_text": "Original Falker",
+      "published": "2026-04-29",
+      "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
+      "sub_category": "Falker",
+      "title": "Sensor Clorofila",
+      "summary": "clorofiLOG",
+      "content": "Medidor óptico digital de clorofila para análisis foliar no destructivo.\n\n• Medición Precisa: Analiza absorción de luz sin dañar la planta.\n• Ahorro y Eficiencia: Optimiza el uso y aplicación de fertilizantes.\n• GPS Integrado: Todas las mediciones son georeferenciadas.\n• Conectividad USB / Bluetooth: Sincronización automática con Web y App.\n• Historial en Línea: Gestión racional basada en datos en la nube.",
+      "link": "https://www.falker.com.br/es/clorofilog",
+      "thumbnail": "https://emendez002.github.io/agricien/Falker/www.falker.com.br/images/products/clorofilog/bg-top-es.webp",
+      "button_text": "Original Falker",
+      "published": "2026-04-29",
+      "lang": "English",
+      "is_resumen": false
     },
     {
       "category": "Tecnología",
@@ -75,7 +114,7 @@
       "button_text": "Sitio Fabricante",
       "published": "2026-04-29",
       "lang": "English",
-      "is_resumen": true
+      "is_resumen": false
     },
     {
       "category": "Tecnología",
@@ -86,19 +125,6 @@
       "link": "https://www.topconpositioning.com/solutions/technology/agriculture-products/landforming",
       "thumbnail": "https://www.topconpositioning.com/content/topconpositioning/global/en/solutions/agriculture/soil-preparation/_jcr_content/root/container/container/container_416579458/columns/node0/teaser_copy_copy_cop.coreimg.85.1600.jpeg/1749001850139/landforming-f-20220928-0005-web-teaser.jpeg",
       "button_text": "Sitio Fabricante",
-      "published": "2026-04-29",
-      "lang": "English",
-      "is_resumen": true
-    },
-    {
-      "category": "Tecnología",
-      "sub_category": "Falker",
-      "title": "Sensor Clorofila",
-      "summary": "clorofiLOG",
-      "content": "Medidor óptico digital de clorofila para análisis foliar no destructivo.\n\n• Medición Precisa: Analiza absorción de luz sin dañar la planta.\n• Ahorro y Eficiencia: Optimiza el uso y aplicación de fertilizantes.\n• GPS Integrado: Todas las mediciones son georeferenciadas.\n• Conectividad USB / Bluetooth: Sincronización automática con Web y App.\n• Historial en Línea: Gestión racional basada en datos en la nube.",
-      "link": "https://www.falker.com.br/es/clorofilog",
-      "thumbnail": "https://emendez002.github.io/agricien/Falker/www.falker.com.br/images/products/clorofilog/bg-top-es.webp",
-      "button_text": "Original Falker",
       "published": "2026-04-29",
       "lang": "English",
       "is_resumen": false
