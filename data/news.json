@@ -294,6 +294,19 @@
     },
     {
       "category": "Tecnología",
+      "sub_category": "Agrotécnica Los Antonios",
+      "title": "Traílla hidráulica de empuje TH42-BP",
+      "summary": "nan",
+      "content": "nan",
+      "link": "#",
+      "thumbnail": "https://picsum.photos/600/400",
+      "button_text": "Ver Original [Español]",
+      "published": "2026-04-29",
+      "lang": "Español",
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
       "sub_category": "Traube Engineering",
       "title": "Sembradora de un solo surco",
       "summary": "Sembradora de Caña",
@@ -352,7 +365,7 @@
       "content": "Consultoría de drenaje agrícola en la región liderada por el Dr. Vidal, nuestro especialista en riego y drenaje.\nEl rendimiento no depende de cuánto riegas, sino de cómo gestionas el agua en todo el sistema: cuando falta… y cuando sobra.\n\nEn AgriCien, bajo la dirección del Dr. Vidal, hemos documentado un patrón claro en múltiples proyectos: En años de alta precipitación —eventos tipo La Niña con frecuencia típica promedio de 30-50% en un periodo de 20 años, la falta de drenaje adecuado se convierte en la principal limitante productiva.\n\nHechos clave que deben estar en la mesa de decisión:\n• Caídas productivas relevantes: En inviernos intensos, sistemas sin drenaje funcional pueden perder entre 15% y 20% del potencial productivo.\n• El exceso también es estrés: No solo la sequía limita. La saturación prolongada reduce oxigenación radicular, afecta absorción de nutrientes y compromete la eficiencia fisiológica del cultivo.\n• Tecnología sin balance es riesgo: Sistemas de riego tecnificado mal integrados al drenaje pueden agravar el problema, elevando niveles freáticos y generando condiciones de asfixia radicular.\n• Manejo hídrico integral: La productividad estable proviene de diseñar el sistema completo: captación, conducción, infiltración, almacenamiento y evacuación del agua.\n\nConocemos el sistema en profundidad. Hemos realizado análisis históricos multivariados concluyendo de forma directa sobre las afectaciones recurrentes en campo y, más importante aún, hemos validado soluciones técnicas que permiten mitigar estos impactos, estabilizando la producción incluso bajo escenarios de alta variabilidad climática.",
       "link": "https://www.linkedin.com/posts/agricultura-cientifica-s%2Ea%2E_agrotecnologaeda-caaehadeazaeqcar-manejohaeddrico-activity-7454940253049516033-d6FD?utm_source=share&utm_medium=member_desktop&rcm=ACoAABReOq8B0UUNRhPQKxt7ORv92k2D5eK3TBY",
       "thumbnail": "https://www.agleader.com/wp-content/uploads/2024/06/goldDiggerSoilMax-500x350.jpg",
-      "button_text": "Visita",
+      "button_text": "Más información",
       "published": "2026-04-29",
       "lang": "English",
       "is_resumen": false
@@ -368,7 +381,7 @@
       "button_text": "Original Susbtack José Agüero",
       "published": "2026-04-29",
       "lang": "English",
-      "is_resumen": true
+      "is_resumen": false
     },
     {
       "category": "Regeneración",
@@ -637,8 +650,21 @@
       "summary": "Manejo de Aguas",
       "content": "nan",
       "link": "https://youtu.be/0VgzFNebBHI?si=JsRUisKgkgQFgIj3",
-      "thumbnail": "https://picsum.photos/600/400",
+      "thumbnail": "https://www.topconpositioning.com/content/topconpositioning/global/en/solutions/agriculture/soil-preparation/_jcr_content/root/container/container/container_416579458/columns/node0/teaser_copy_copy_cop.coreimg.85.1600.jpeg/1749001850139/landforming-f-20220928-0005-web-teaser.jpeg",
       "button_text": "Link del video",
+      "published": "2026-04-29",
+      "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Recursos",
+      "sub_category": "Guías y Manuales",
+      "title": "Guía técnica: Monitoreo de compactación del suelo",
+      "summary": "Compactación, el enemigo invisiblede tu cultivo",
+      "content": "nan",
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7423122267905114112",
+      "thumbnail": "https://media.licdn.com/dms/image/v2/D4E22AQHyqigUJPjang/feedshare-shrink_800/B4EZwQ6SgyKMAg-/0/1769810241961?e=1779321600&v=beta&t=065QYWLF_md5T0rGkuJ_QwkWcl2kQnsm3c0T3WgpJBY",
+      "button_text": "Más detalles",
       "published": "2026-04-29",
       "lang": "English",
       "is_resumen": false
