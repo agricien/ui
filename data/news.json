@@ -22,10 +22,22 @@
       "button_text": "Agricultura Científica S.A."
     }
   ],
+  "categories_order": [
+    "Servicios",
+    "Regeneración",
+    "Tecnología",
+    "Proyectos"
+  ],
+  "subtheme_logos": {
+    "Tecnología": {
+      "Topcon": "https://images.squarespace-cdn.com/content/v1/5bd1dc11c46f6d371c488433/1579306779524-ALJQVXHQ1OC7MMUQTLW2/AgriCien_Logo_Sencillo.png?format=500w",
+      "Falker": "https://www.falker.com.br/images/logo@2x.webp"
+    }
+  },
   "news": [
     {
       "category": "Servicios",
-      "sub_category": "Servicios",
+      "sub_category": "Relevamiento",
       "title": "Topografía GNSS RTK",
       "summary": "nan",
       "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
@@ -38,10 +50,10 @@
     },
     {
       "category": "Servicios",
-      "sub_category": "Servicios",
-      "title": "Diseño de fincas (Agrícolas, ganaderas)",
+      "sub_category": "Ingeniería",
+      "title": "Diseño de fincas Agrícolas y Ganaderas",
       "summary": "nan",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
+      "content": "s alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
       "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
       "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
       "button_text": "Original Susbtack José Agüero",
@@ -51,10 +63,10 @@
     },
     {
       "category": "Servicios",
-      "sub_category": "Servicios",
+      "sub_category": "Regeneración",
       "title": "Plan de pastoreo regenerativo",
       "summary": "nan",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
+      "content": "durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
       "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
       "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
       "button_text": "Original Susbtack José Agüero",
@@ -64,7 +76,7 @@
     },
     {
       "category": "Servicios",
-      "sub_category": "Servicios",
+      "sub_category": "Estudio",
       "title": "Permeabilidad de suelos",
       "summary": "nan",
       "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
@@ -77,7 +89,7 @@
     },
     {
       "category": "Servicios",
-      "sub_category": "Servicios",
+      "sub_category": "GIS",
       "title": "Procesamiento y análisis GIS",
       "summary": "nan",
       "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
@@ -90,7 +102,7 @@
     },
     {
       "category": "Servicios",
-      "sub_category": "Servicios",
+      "sub_category": "Conformación de Suelos",
       "title": "Diseño de nivelación de suelos",
       "summary": "nan",
       "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
@@ -103,7 +115,7 @@
     },
     {
       "category": "Servicios",
-      "sub_category": "Servicios",
+      "sub_category": "Suelos",
       "title": "Compactación de suelos",
       "summary": "nan",
       "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
@@ -230,214 +242,6 @@
       "published": "2026-04-28",
       "lang": "English",
       "is_resumen": true
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Proyectos",
-      "title": "Nuestos clientes",
-      "summary": "Internacional y Nacional",
-      "content": "Medidor óptico digital de clorofila para análisis foliar no destructivo.\n\n• Medición Precisa: Analiza absorción de luz sin dañar la planta.\n• Ahorro y Eficiencia: Optimiza el uso y aplicación de fertilizantes.\n• GPS Integrado: Todas las mediciones son georeferenciadas.\n• Conectividad USB / Bluetooth: Sincronización automática con Web y App.\n• Historial en Línea: Gestión racional basada en datos en la nube.",
-      "link": "https://www.falker.com.br/es/clorofilog",
-      "thumbnail": "https://emendez002.github.io/agricien/Falker/www.falker.com.br/images/products/clorofilog/bg-top-es.webp",
-      "button_text": "Original Falker",
-      "published": "2026-04-28",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Proyectos",
-      "title": "Drenaje Agrícola",
-      "summary": "nan",
-      "content": "Medidor óptico digital de clorofila para análisis foliar no destructivo.\n\n• Medición Precisa: Analiza absorción de luz sin dañar la planta.\n• Ahorro y Eficiencia: Optimiza el uso y aplicación de fertilizantes.\n• GPS Integrado: Todas las mediciones son georeferenciadas.\n• Conectividad USB / Bluetooth: Sincronización automática con Web y App.\n• Historial en Línea: Gestión racional basada en datos en la nube.",
-      "link": "https://www.falker.com.br/es/clorofilog",
-      "thumbnail": "https://emendez002.github.io/agricien/Falker/www.falker.com.br/images/products/clorofilog/bg-top-es.webp",
-      "button_text": "Original Falker",
-      "published": "2026-04-28",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Servicios",
-      "title": "Topografía GNSS RTK",
-      "summary": "nan",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
-      "button_text": "Original Susbtack José Agüero",
-      "published": "2026-04-28",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Servicios",
-      "title": "Diseño de fincas (Agrícolas, ganaderas)",
-      "summary": "nan",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
-      "button_text": "Original Susbtack José Agüero",
-      "published": "2026-04-28",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Servicios",
-      "title": "Plan de pastoreo regenerativo",
-      "summary": "nan",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
-      "button_text": "Original Susbtack José Agüero",
-      "published": "2026-04-28",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Servicios",
-      "title": "Permeabilidad de suelos",
-      "summary": "nan",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
-      "button_text": "Original Susbtack José Agüero",
-      "published": "2026-04-28",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Servicios",
-      "title": "Procesamiento y análisis GIS",
-      "summary": "nan",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
-      "button_text": "Original Susbtack José Agüero",
-      "published": "2026-04-28",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Servicios",
-      "title": "Diseño de nivelación de suelos",
-      "summary": "nan",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
-      "button_text": "Original Susbtack José Agüero",
-      "published": "2026-04-28",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Servicios",
-      "title": "Compactación de suelos",
-      "summary": "nan",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
-      "button_text": "Original Susbtack José Agüero",
-      "published": "2026-04-28",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Proyectos",
-      "title": "#32- Cómo finca La Loba triplicó su forraje y venció la sequía en Bagaces",
-      "summary": "LDI para producir más pasto en sequía",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
-      "button_text": "Original Susbtack José Agüero",
-      "published": "2026-04-28",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Regeneración",
-      "title": "Bulldozer angledozer y tildozer",
-      "summary": "Mover Tierra",
-      "content": "Los Antonios le ofrece la posibilidad de acceder a los acuerdos que tiene con varias entidades bancarias como BBVA, BNP Paribas o La Caixa.\n\nEn función de sus necesidades se le hará una simulación para que vea cuál es la solución que mejor se adapta a sus necesidades.",
-      "link": "https://losantonios.com/es/financiacion/",
-      "thumbnail": "https://losantonios.com/wp-content/uploads/2021/02/medidas-bulldozer-angledozer-tildozer.gif",
-      "button_text": "Los Antonios Site:",
-      "published": "2026-04-28",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Tecnología",
-      "title": "clorofiLOG",
-      "summary": "Medidor de Clorofila",
-      "content": "Medidor óptico digital de clorofila para análisis foliar no destructivo.\n\n• Medición Precisa: Analiza absorción de luz sin dañar la planta.\n• Ahorro y Eficiencia: Optimiza el uso y aplicación de fertilizantes.\n• GPS Integrado: Todas las mediciones son georeferenciadas.\n• Conectividad USB / Bluetooth: Sincronización automática con Web y App.\n• Historial en Línea: Gestión racional basada en datos en la nube.",
-      "link": "https://www.falker.com.br/es/clorofilog",
-      "thumbnail": "https://emendez002.github.io/agricien/Falker/www.falker.com.br/images/products/clorofilog/bg-top-es.webp",
-      "button_text": "Original Falker",
-      "published": "2026-04-28",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Tecnología",
-      "title": "SoloStar",
-      "summary": "Kit Compactación",
-      "content": "Paquete integral de herramientas para agricultura de precisión.\n\n• Solución 360°: Todo el hardware y software en un solo proveedor.\n• Equipamiento Incluido: SoloDrill, FieldBox y acceso a FalkerMap.\n• Soporte Total: Incluye capacitación, apoyo y asistencia técnica.\n• Escalabilidad: Ideal desde principiantes hasta grandes extensiones.\n• Diseño Robusto: Dimensionado para operaciones de campo exigentes.",
-      "link": "https://www.falker.com.br/es/clorofilog",
-      "thumbnail": "https://www.falker.com.br/images/products/kit-ap/kitap-card.png",
-      "button_text": "Original Falker",
-      "published": "2026-04-28",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Tecnología",
-      "title": "Ditch Assist DIG™",
-      "summary": "Control de Excavaciones",
-      "content": "Sistema de excavación de última generación. Deja de gastar el 30-60% de tu tiempo revisando pendientes y deshazte del láser. Operación con un solo hombre para optimizar al 100% tu sitio de trabajo.",
-      "link": "https://www.ditchassist.com/about_ditch_assist_dig/",
-      "thumbnail": "https://cdn.ditchassist.com/wp-content/uploads/2025/04/dig-schematic-png.webp",
-      "button_text": "Sitio Fabricante",
-      "published": "2026-04-28",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Tecnología",
-      "title": "Imagen Borrar",
-      "summary": "Imagen Propia",
-      "content": "Sistema de excavación de última generación. Deja de gastar el 30-60% de tu tiempo revisando pendientes y deshazte del láser. Operación con un solo hombre para optimizar al 100% tu sitio de trabajo.",
-      "link": "https://www.ditchassist.com/about_ditch_assist_dig/",
-      "thumbnail": "https://agricien-my.sharepoint.com/personal/edgar_mendez_agricien_com/Documents/imagenes/20260425_085714.jpg",
-      "button_text": "Borrar",
-      "published": "2026-04-28",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Noticias",
-      "sub_category": "Nosotros",
-      "title": "En AgriCien somos una empresa de consultoría y e tecnología especializada en el manejo del agua en cultivos, desarrollo de proyectos agrícolas, tecnologías de Agricultura de Pecisión y Consultoría Agrícola.",
-      "summary": "Consultoría y Tecnología Especializada",
-      "content": "Desde 1992 y a través de cuatro continentes, hemos ayudado a centenas de productores agropecuarios a incrementar su eficiencia, productividad y competitividad. \nEn AgriCien somos una empresa de consultoría y tecnología especializada en el manejo del agua en cultivos, el desarrollo de proyectos agrícolas, tecnologías de Agricultura de Pecisión y Consultoría Agrícola. Con sede en Costa Rica y oficinas asociadas en México, Colombia, Argentina, Brasil y Nicaragua, AgriCien cuenta con una cartera activa de clientes y proyectos en Latinoamérica y el Caribe, África Oriental y el Sudeste Asiático.\n\nAgriCien cuenta con un equipo de expertos en agronomía, edafología, ingeniería agrícola y mecánica, fisiología de cultivos, protección de cultivos, agrometeorología y desarrollo de negocios que trabaja en estrecha colaboración con el agricultor para identificar, localizar, medir y monitorear los principales factores que limitan el rendimiento en el campo, estableciendo e implementando diversas prácticas específicas para cada sitio. Las prácticas de agricultura de precisión incluyen mapas topográficos 3D, de suelo, de análisis de riesgo de vegetación (VRA) y de rendimiento para un manejo específico del sitio; imágenes multiespectrales del dosel para el monitoreo del crecimiento y la detección temprana de plagas.\nSe obtienen mayores rendimientos tras la implementación de la formación de terrenos con pendiente variable mediante GPS 3D, lo que garantiza una profundidad de siembra uniforme y una mejor germinación, una densidad óptima de plantas, un crecimiento vigoroso, una mayor eficiencia en el uso del nitrógeno, una maduración y calidad uniformes, menor demanda de agua, riego uniforme y un drenaje más rápido, a la vez que se conserva la fertilidad del suelo. Confío en que el siguiente perfil de AgriCien se ajuste a las necesidades de su negocio agrícola y espero colaborar con usted. No dude en contactarnos cuando lo considere necesario.",
-      "link": "#",
-      "thumbnail": "https://th.bing.com/th/id/OIP.g_AVcWg4_lvqYnK2RWZ-BwHaE7?w=238&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3",
-      "button_text": "Agricultura Científica S.A.",
-      "published": "2026-04-28",
-      "lang": "Español",
-      "is_resumen": false
     }
   ]
 }

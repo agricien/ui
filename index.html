@@ -163,6 +163,11 @@
         .subtheme-header.active .subtheme-icon {
             transform: rotate(180deg);
         }
+        .subtheme-header .subtheme-logo {
+            max-height: 24px;
+            margin-right: 12px;
+            object-fit: contain;
+        }
         .subtheme-content {
             overflow: hidden;
             max-height: 0;
@@ -326,7 +331,8 @@
                 document.getElementById('last-update').innerText = `Total: ${allNews.length} secciones`;
                 
                 renderBanner(data.banner);
-                renderCategories(allNews);
+                renderCategories(allNews, data.categories_order);
+                window.subthemeLogos = data.subtheme_logos || {};
                 filterNews(mainTheme); // Cargar Tema Principal por defecto
             } catch (error) {
                 console.error('Error cargando noticias:', error);
@@ -359,9 +365,10 @@
             `;
         }
 
-        function renderCategories(news) {
+        function renderCategories(news, order) {
             const container = document.getElementById('category-filters');
-            const categories = [...new Set(news.map(item => item.category))];
+            // Usar el orden del Excel si está disponible, sino calcular único
+            const categories = order || [...new Set(news.map(item => item.category))];
             
             let html = `<button class="btn btn-primary filter-btn px-4 m-1 shadow-sm" id="btn-resumen" onclick="filterNews('${mainTheme}')">${mainTheme}</button>`;
             
@@ -398,12 +405,31 @@
             order.forEach((sub, index) => {
                 const subItems = grouped.get(sub);
                 const subId = `subtheme-${index}`;
+                const currentCategory = subItems[0].category;
                 
+                // Buscar logo para este subtema
+                let logoHtml = `<span class="badge bg-primary me-2">${subItems.length}</span>`;
+                if (window.subthemeLogos[currentCategory] && window.subthemeLogos[currentCategory][sub]) {
+                    const logoUrl = window.subthemeLogos[currentCategory][sub];
+                    logoHtml = `<img src="${logoUrl}" class="subtheme-logo" alt="logo">`;
+                }
+
+                // SI EL SUBTEMA ES IGUAL AL TEMA: Mostrar directamente las tarjetas sin acordeón
+                if (sub.toLowerCase().trim() === currentCategory.toLowerCase().trim()) {
+                    let directCards = '';
+                    subItems.forEach((item) => {
+                        directCards += generateCardHtml(item);
+                    });
+                    container.insertAdjacentHTML('beforeend', `<div class="row g-4 mb-4">${directCards}</div>`);
+                    return;
+                }
+
+                // SI EL SUBTEMA ES DIFERENTE: Mostrar acordeón
                 let subHtml = `
                     <div class="subtheme-section w-100">
                         <div class="subtheme-header shadow-sm" onclick="toggleSubtheme('${subId}', this)">
                             <h3 class="subtheme-title">
-                                <span class="badge bg-primary me-2">${subItems.length}</span>
+                                ${logoHtml}
                                 ${sub}
                             </h3>
                             <span class="subtheme-icon fs-6">▼</span>
@@ -412,30 +438,33 @@
                 `;
 
                 subItems.forEach((item) => {
-                    const card = `
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card news-card" onclick='openArticleByTitle("${item.title.replace(/"/g, '&quot;')}")'>
-                                <img src="${item.thumbnail}" class="card-img-top" alt="${item.title}" onerror="this.src='https://picsum.photos/400/250'">
-                                <div class="card-body">
-                                    <span class="category-badge">${item.category}</span>
-                                    <h5 class="card-title fw-bold text-dark">${item.title}</h5>
-                                    <p class="card-text text-muted small">${item.summary}</p>
-                                    <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <span class="timestamp">${item.published}</span>
-                                        <a href="${item.link || '#'}" target="_blank" onclick="event.stopPropagation();" class="btn btn-outline-primary btn-sm">
-                                            ${item.button_text || 'Ver Original'}
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    subHtml += card;
+                    subHtml += generateCardHtml(item);
                 });
 
                 subHtml += `</div></div>`;
                 container.insertAdjacentHTML('beforeend', subHtml);
             });
+        }
+
+        function generateCardHtml(item) {
+            return `
+                <div class="col-md-6 col-lg-4">
+                    <div class="card news-card" onclick='openArticleByTitle("${item.title.replace(/"/g, '&quot;')}")'>
+                        <img src="${item.thumbnail}" class="card-img-top" alt="${item.title}" onerror="this.src='https://picsum.photos/400/250'">
+                        <div class="card-body">
+                            <span class="category-badge">${item.category}</span>
+                            <h5 class="card-title fw-bold text-dark">${item.title}</h5>
+                            <p class="card-text text-muted small">${item.summary}</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="timestamp">${item.published}</span>
+                                <a href="${item.link || '#'}" target="_blank" onclick="event.stopPropagation();" class="btn btn-outline-primary btn-sm">
+                                    ${item.button_text || 'Ver Original'}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
         }
 
         function toggleSubtheme(id, header) {

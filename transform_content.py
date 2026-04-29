@@ -58,17 +58,31 @@ def transform_excel_to_json(source, output_json):
         return
 
     try:
-        # Leer todas las hojas
+        # Leer todas las hojas (sheet_name=None devuelve un OrderedDict con el orden del Excel)
         sheets = pd.read_excel(source, sheet_name=None)
         
         # Hojas de sistema que no son temas
-        system_sheets = ['Encabezado', 'Pie de Página', 'Imagen Empresa', 'Banner', 'Hoja1']
+        system_sheets = ['Encabezado', 'Pie de Página', 'Imagen Empresa', 'Banner', 'Hoja1', 'Logos']
         
         # Mapeo de columnas requeridas para temas
         required_cols = ['SubTema', 'Sub titulo', 'Titulo', 'Spanish', 'Original', 'Foto', 'Boton', 'Resumen']
         
         news_list = []
         today = datetime.now().strftime("%Y-%m-%d")
+
+        # Procesar Logos
+        logos_data = {}
+        logos_df = sheets.get('Logos', pd.DataFrame())
+        if not logos_df.empty:
+            logos_df = logos_df.fillna("")
+            for _, row in logos_df.iterrows():
+                t = str(row.get('Tema', '')).strip()
+                s = str(row.get('SubTema', '')).strip()
+                l = str(row.get('Logo', '')).strip()
+                if t and s and l:
+                    if t not in logos_data: logos_data[t] = {}
+                    logos_data[t][s] = l
+            print(f"Éxito: Leídos {len(logos_df)} registros de Logos.")
 
         # Procesar Banner
         banner_data = []
@@ -87,35 +101,29 @@ def transform_excel_to_json(source, output_json):
                 })
             print(f"Éxito: Leídos {len(banner_data)} elementos para el Banner.")
 
-        # Procesar Temas (todas las hojas excepto system_sheets)
+        # Procesar Temas en el ORDEN de las hojas
         theme_sheets = [s for s in sheets.keys() if s not in system_sheets]
         
-        # Si existe 'Noticias' y no hay otros temas, usar Noticias (legacy support)
-        if 'Noticias' in sheets and not theme_sheets:
-            theme_sheets = ['Noticias']
-        elif 'Noticias' in sheets:
-            # Si hay otros temas, ignorar Noticias o añadirlo si tiene la estructura nueva
-            pass
+        # Si existe 'Noticias' (legacy)
+        if 'Noticias' in sheets and 'Noticias' not in theme_sheets:
+            theme_sheets.append('Noticias')
+
+        # Guardar el orden de las categorías para la UI
+        categories_order = theme_sheets.copy()
 
         for sheet_name in theme_sheets:
             df = sheets[sheet_name]
             if df.empty: continue
             
-            # Normalizar columnas para detectar estructura
+            # Normalizar columnas
             cols = [str(c).strip() for c in df.columns]
             
-            # Si no tiene SubTema pero tiene Tema (Legacy), mapear
             if 'SubTema' not in cols and 'Tema' in cols:
                 df = df.rename(columns={'Tema': 'SubTema'})
             
-            # Asegurar que las columnas existan
             for col in required_cols:
                 if col not in df.columns:
                     df[col] = ""
-
-            # Invertir el orden para que lo más nuevo (abajo en excel) aparezca primero? 
-            # El usuario no especificó, pero mantendremos la lógica anterior de inversión si es necesario.
-            # df = df.iloc[::-1]
 
             for _, row in df.iterrows():
                 if pd.isna(row['Titulo']) or str(row['Titulo']).strip() == "":
@@ -184,6 +192,8 @@ def transform_excel_to_json(source, output_json):
             "footer": footer_data,
             "company": company_data,
             "banner": banner_data,
+            "categories_order": categories_order,
+            "subtheme_logos": logos_data,
             "news": news_list
         }
 
@@ -192,7 +202,7 @@ def transform_excel_to_json(source, output_json):
         with open(output_json, "w", encoding="utf-8") as f:
             json.dump(final_data, f, ensure_ascii=False, indent=2)
             
-        print(f"Éxito: Se procesaron {len(news_list)} items de temas y {len(banner_data)} banners a {output_json}")
+        print(f"Éxito: Se procesaron {len(news_list)} items, {len(categories_order)} categorías y {len(banner_data)} banners.")
 
     except Exception as e:
         print(f"Error durante la transformación: {str(e)}")
