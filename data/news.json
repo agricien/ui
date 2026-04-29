@@ -37,10 +37,24 @@
       "Falker": "https://www.falker.com.br/images/logo@2x.webp",
       "Ditch Assist": "https://cdn.ditchassist.com/wp-content/uploads/2024/02/Black-300x187.png",
       "Maher Electrónica": "https://www.maherelectronica.com/wp-content/uploads/2026/03/logo-web-aniversario.png",
-      "Agritecnica Los Antonios": "https://losantonios.com/wp-content/themes/losantonios/img/logo.svg"
+      "Agritecnica Los Antonios": "https://losantonios.com/wp-content/themes/losantonios/img/logo.svg",
+      "Ag Leader": "https://www.agleader.com/wp-content/uploads/2024/04/Ag-Leader-Logo1-1.png"
     }
   },
   "news": [
+    {
+      "category": "Tecnología",
+      "sub_category": "Maher Electrónica",
+      "title": "Maher Sensors",
+      "summary": "Medición en Agua, Suelos y Clima",
+      "content": "SENSORES PARA AGRICULTURA DE PRECISIÓN, SENSORS\nSensores inteligentes para agricultura de precisión que permiten monitorizar parámetros agronómicos influyentes en el desarrollo de las plantas.\n\nToma decisiones inteligentes basadas en datos reales\n\nLos sensores agrícolas envían los datos a la nube para su visualización desde un smartphone, PC, tablet, etc.\n¿Cuándo y cuánto regar? ¿Cuándo abrir/cerrar las ventanas del invernadero? Son algunas de las decisiones que podrás tomar de forma eficiente mejorando el rendimiento de tus cultivos",
+      "link": "https://www.maherelectronica.com/monitorizacion-sensores/sensores-agricultura-precision/",
+      "thumbnail": "https://www.maherelectronica.com/wp-content/uploads/2022/06/sensores-agricultura-precision.jpg",
+      "button_text": "Mas detalles Maher Sensor",
+      "published": "2026-04-29",
+      "lang": "English",
+      "is_resumen": false
+    },
     {
       "category": "Tecnología",
       "sub_category": "Falker",
@@ -505,6 +519,19 @@
       "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
       "thumbnail": "https://drive.google.com/file/d/1ABsRrTCNmli_xtLlSeySlKJ7YGKDeHHl/view?usp=sharing",
       "button_text": "PenetroLOG Falker",
+      "published": "2026-04-29",
+      "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Noticias",
+      "sub_category": "AgriShow 2026",
+      "title": "Topcon News",
+      "summary": "nan",
+      "content": "Topcon Agriculture ha anunciado una nueva serie de innovaciones diseñadas para ampliar el acceso a la tecnología de precisión en toda Latinoamérica. En Agrishow 2026, que tendrá lugar del 27 de abril al 1 de mayo en Brasil, Topcon presentará soluciones para productores de cultivos extensivos, café, cítricos y caña de azúcar, incluyendo una ampliación de la gama Value Line para aplicaciones de pulverización en viñedos y huertos, así como la introducción de un nuevo receptor GNSS modular para la agricultura de precisión.",
+      "link": "https://www.topconpositioning.com/articles/topcon-agriculture-unveils-new-innovations-at-agrishow-2026-in-brazil",
+      "thumbnail": "https://www.topconpositioning.com/content/topconpositioning/global/en/articles/topcon-agriculture-unveils-new-innovations-at-agrishow-2026-in-brazil/_jcr_content/root/container/container/container/image.coreimg.85.1600.jpeg/1777395628027/topcon-press-release-agrishow-web-thumbnail.jpeg",
+      "button_text": "Topcon Agriculture - Agrishow 2026 - Brazil",
       "published": "2026-04-29",
       "lang": "English",
       "is_resumen": false
