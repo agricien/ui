@@ -16,7 +16,7 @@
   "banner": [
     {
       "title": "Soluciones para Producir Más y Mejor",
-      "subtitle": "Agricultura de Precisión   |   Manejo del Agua   |   Gestión de Cultivo   |    Consultoría Especializada",
+      "subtitle": "Agricultura de Precisión   |   Manejo del Agua   |   Gestión de Cultivo   |    Consultoría Agrícola",
       "image": "https://drive.google.com/file/d/1alvmM0W15iwsVAe2YVzL6j4nWSVWCUXa/view?usp=sharing",
       "link": "",
       "button_text": "Agricultura Científica S.A."
@@ -374,7 +374,7 @@
       "category": "Tecnología",
       "sub_category": "Agrotécnica Los Antonios",
       "title": "Refinadora cuello cisne 4000CC-4500CC-5000CC-6000CC",
-      "summary": "nan",
+      "summary": "Equipos de movimiento de suelos",
       "content": "Ofrecemos una amplia gama de maquinaria agrícola diseñada para optimizar el rendimiento y la eficiencia en cada tarea del campo.\n\nLa refinadora cuello cisne 4000CC-4500CC-5000CC-6000CC, cuenta con un ancho de corte de 4-6 metros, están diseñadas para una potencia de 140-220 HP.\n\nOfrecemos asesoramiento especializado para ayudarte a elegir la maquinaria que mejor se ajuste a tu actividad. Con un servicio técnico eficiente y repuestos disponibles, garantizamos el mejor soporte postventa.\n\nOpcionales\nMástil hidráulico\nElevación paralela\nDoble inclinación",
       "link": "https://losantonios.com/es/refinadoras/refinadoras-cuello-cisne/4000cc-4500cc-5000cc-6000cc/",
       "thumbnail": "https://losantonios.com/wp-content/uploads/2020/11/refinadora-4000c.png",
@@ -387,7 +387,7 @@
       "category": "Tecnología",
       "sub_category": "Agrotécnica Los Antonios",
       "title": "Refinadora cuello cisne 2500CC-2750CC-3000CC",
-      "summary": "nan",
+      "summary": "Equipos de movimiento de suelos",
       "content": "Ofrecemos una amplia gama de maquinaria agrícola diseñada para optimizar el rendimiento y la eficiencia en cada tarea del campo.\n\nLa refinadora cuello cisne 2500CC-2750CC-3000CC, cuenta con un ancho de corte de 4-5 metros, están diseñadas para una potencia de 100-130 HP.\n\nOfrecemos asesoramiento especializado para ayudarte a elegir la maquinaria que mejor se ajuste a tu actividad. Con un servicio técnico eficiente y repuestos disponibles, garantizamos el mejor soporte postventa.\n\nOpcionales\nMástil hidráulico\nElevación paralela\nDoble inclinación",
       "link": "https://losantonios.com/es/refinadoras/refinadoras-cuello-cisne/2500cc-2750cc-3000cc/",
       "thumbnail": "https://losantonios.com/wp-content/uploads/2020/11/refinadora-2000c.png",
@@ -505,9 +505,9 @@
       "sub_category": "Topografía GNSS RTK",
       "title": "Topografía GNSS RTK",
       "summary": "Relevamiento terrestre",
-      "content": "n AgriCien realizamos levantamientos topográficos con GNSS RTK para obtener datos centimétricos confiables en tiempo real. Generamos modelos digitales de terreno (DTM/DSM) de alto detalle, base para diseño y control de obras agrícolas e hidráulicas.\n\nEjecutamos levantamientos para nivelación de suelos, drenaje, riego, caminos, replanteo y control de movimiento de tierras, con densidades de puntos ajustadas al objetivo del proyecto. Procesamos la información para entregar curvas de nivel, mapas de pendientes, volúmenes y superficies con precisión técnica.\n\nIntegramos los datos a flujos de trabajo GIS y a sistemas de control automático de maquinaria, garantizando que el diseño se ejecute exactamente en campo.\n\nPrecisión en terreno para decisiones y obras sin desviaciones.",
+      "content": "En AgriCien realizamos levantamientos topográficos con GNSS RTK para obtener datos centimétricos confiables en tiempo real. Generamos modelos digitales de terreno (DTM/DSM) de alto detalle, base para diseño y control de obras agrícolas e hidráulicas.\n\nEjecutamos levantamientos para nivelación de suelos, drenaje, riego, caminos, replanteo y control de movimiento de tierras, con densidades de puntos ajustadas al objetivo del proyecto. Procesamos la información para entregar curvas de nivel, mapas de pendientes, volúmenes y superficies con precisión técnica.\n\nIntegramos los datos a flujos de trabajo GIS y a sistemas de control automático de maquinaria, garantizando que el diseño se ejecute exactamente en campo.\n\nPrecisión en terreno para decisiones y obras sin desviaciones.",
       "link": "#",
-      "thumbnail": "https://picsum.photos/600/400",
+      "thumbnail": "https://lirp-cdn.multiscreensite.com/30bbaf2d/dms3rep/multi/opt/HiPerVR_%2B_F_20181001_0006-1920w.jpg",
       "button_text": "Más detalles",
       "published": "2026-04-29",
       "lang": "Español",
