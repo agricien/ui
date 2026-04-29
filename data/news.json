@@ -215,6 +215,19 @@
     },
     {
       "category": "Tecnología",
+      "sub_category": "Falker",
+      "title": "SoloDrill",
+      "summary": "Muestreador Hidráulico de Suelos",
+      "content": "SoloDrill es el muestreador de suelo de Falker, un dispositivo profesional de recogida de muestras de suelo para la agricultura de precisión. Conocido en el mercado hace más de 10 años, combina robustez y simplicidad de uso en el campo, garantizando un muestreo de calidad.\n\n \n \nDesarrollado para satisfacer las exigencias del muestreo a gran escala, dispone de un cortador de paja que evita la contaminación con paja y permite tomar muestras a más de una profundidad. ¡Ahora Falker ha ido más lejos! Hemos escuchado y respondido a los deseos de clientes y usuarios y hemos desarrollado una evolución de lo que ya era bueno, robusto y fácil de usar.",
+      "link": "https://www.falker.com.br/es/solodrill",
+      "thumbnail": "https://media.licdn.com/dms/image/v2/D4E22AQGhhj0EojKdew/feedshare-shrink_800/B4EZbqYLXxGcAg-/0/1747688929961?e=1779321600&v=beta&t=t41gFRnP8sQS39oXri8xaJZ-4Ym_D0Xsr_cST-cLJH4",
+      "button_text": "Visita el sitio",
+      "published": "2026-04-29",
+      "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
       "sub_category": "Ditch Assist",
       "title": "Ditch Assist DIG™",
       "summary": "Control de Excavaciones",
@@ -247,7 +260,20 @@
       "content": "Aplicación precisa de líquidos, mayor eficiencia. \nDescubra por qué la gestión inteligente de líquidos comienza con DirectCommand L2.\n\nCaracterísticas de DirectCommand L2\nControl de secciones: Controle hasta 36 secciones de la barra de pulverización con aplicación de tasa variable.\n\nAmplia compatibilidad con múltiples aplicaciones: Desde controladores de líquidos hasta sembradoras, pulverizadores o aplicadores de NH3, controla todas sus máquinas de aplicación.\n\nSistema actualizable a RightSpot: Cuando esté listo para actualizar su sistema al control boquilla por boquilla, puede actualizar fácilmente de DirectCommand L2 a RightSpot.\n\nVisibilidad líder en la industria: Visibilidad dentro y fuera de la cabina y control durante todo el año con InCommand, que incluye monitoreo del tamaño de las gotas.",
       "link": "https://www.agleader.com/directcommand-l2/",
       "thumbnail": "https://www.agleader.com/wp-content/uploads/2024/11/L2-4.png",
-      "button_text": "Mas detalles",
+      "button_text": "Más detalles",
+      "published": "2026-04-29",
+      "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
+      "sub_category": "Agrotécnica Los Antonios",
+      "title": "Traílla hidráulica de empuje TH39",
+      "summary": "Equipos de movimiento de suelos",
+      "content": "nan",
+      "link": "https://losantonios.com/es/traillas/traillas-hidraulicas-de-empuje/th39/",
+      "thumbnail": "https://losantonios.com/wp-content/uploads/2020/10/trailla-th-39.png",
+      "button_text": "Más detalles",
       "published": "2026-04-29",
       "lang": "English",
       "is_resumen": false
@@ -367,19 +393,32 @@
       "button_text": "Original Susbtack José Agüero",
       "published": "2026-04-29",
       "lang": "English",
-      "is_resumen": true
+      "is_resumen": false
     },
     {
       "category": "Servicios",
-      "sub_category": "Diseño de fincas Agrícolas y Ganaderas",
+      "sub_category": "Diseño de fincas Agrícolas",
       "title": "Diseño de fincas Agrícolas y Ganaderas",
       "summary": "nan",
-      "content": "s alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
-      "button_text": "Original Susbtack José Agüero",
+      "content": "nan",
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7339136818254143488",
+      "thumbnail": "https://media.licdn.com/dms/image/v2/D4E22AQHyIe2hHvcx7g/feedshare-shrink_800/B4EZdnZ7mRHgAg-/0/1749786570669?e=1779321600&v=beta&t=oL5vryExGzsGelD5MPQDQYhMHcaoV01MeR7Dq5cVhC8",
+      "button_text": "Más detalles",
       "published": "2026-04-29",
       "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Servicios",
+      "sub_category": "Diseño de fincas Ganaderas",
+      "title": "Diseño de fincas Ganaderas",
+      "summary": "nan",
+      "content": "nan",
+      "link": "#",
+      "thumbnail": "https://picsum.photos/600/400",
+      "button_text": "Más detalles",
+      "published": "2026-04-29",
+      "lang": "Español",
       "is_resumen": false
     },
     {
@@ -450,19 +489,6 @@
     {
       "category": "Servicios",
       "sub_category": "Diseño de riego para cultivo de Arroz",
-      "title": "Muestreo Compactación de suelos",
-      "summary": "nan",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://drive.google.com/file/d/1ABsRrTCNmli_xtLlSeySlKJ7YGKDeHHl/view?usp=sharing",
-      "button_text": "PenetroLOG Falker",
-      "published": "2026-04-29",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Servicios",
-      "sub_category": "Consultoría en Riego y Drenaje",
       "title": "Muestreo Compactación de suelos",
       "summary": "nan",
       "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
