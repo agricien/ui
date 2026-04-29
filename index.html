@@ -406,7 +406,12 @@
                 renderBanner(data.banner);
                 renderCategories(allNews, data.categories_order);
                 window.subthemeLogos = data.subtheme_logos || {};
-                filterNews(mainTheme); // Cargar Tema Principal por defecto
+                
+                // Cargar la primera categoría disponible por defecto
+                const firstCat = (data.categories_order && data.categories_order.length > 0) 
+                    ? data.categories_order[0] 
+                    : allNews[0].category;
+                filterNews(firstCat);
             } catch (error) {
                 console.error('Error cargando noticias:', error);
                 document.getElementById('news-container').innerHTML = `<p class="text-center text-danger">Error al cargar datos.</p>`;
@@ -443,10 +448,10 @@
             // Usar el orden del Excel si está disponible, sino calcular único
             const categories = order || [...new Set(news.map(item => item.category))];
             
-            let html = `<button class="btn btn-primary filter-btn px-4 m-1 shadow-sm" id="btn-resumen" onclick="filterNews('${mainTheme}')">${mainTheme}</button>`;
+            let html = '';
             
             categories.forEach(cat => {
-                if (!cat || cat === 'Resumen' || cat === mainTheme) return;
+                if (!cat || cat === 'Resumen') return;
                 html += `<button class="btn btn-outline-secondary filter-btn px-4 m-1 shadow-sm" onclick="filterNews('${cat}')">${cat}</button>`;
             });
             
