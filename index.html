@@ -195,6 +195,61 @@
             opacity: 1;
             padding-top: 0.5rem;
         }
+        /* Mosaic Styles */
+        .mosaic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .subtheme-card {
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #eee;
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .subtheme-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+            border-color: #0d6efd;
+        }
+        .subtheme-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            background: #fff;
+            padding: 1rem;
+            border-bottom: 1px solid #f8f9fa;
+        }
+        .subtheme-card .card-body {
+            padding: 1.25rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .subtheme-card .card-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin: 0;
+            color: #2c3e50;
+        }
+        .subtheme-card .card-subtitle {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 0.5rem;
+        }
+        .back-btn {
+            margin-bottom: 2rem;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -215,11 +270,16 @@
     <header class="container">
         <h1 class="display-4 fw-bold text-dark" id="main-title">Cargando...</h1>
         <p class="lead text-muted" id="main-subtitle">Por favor espere.</p>
-        <div class="mt-4" id="category-filters">
-            <!-- Botones generados dinámicamente -->
-            <div class="text-center py-2">
-                <div class="spinner-grow spinner-grow-sm text-primary" role="status">
-                    <span class="visually-hidden">...</span>
+        <div class="text-center mt-4">
+            <button class="btn btn-outline-secondary back-btn rounded-pill px-4" id="global-back-btn" onclick="goBackToMosaic()">
+                ← Regresar a <span id="back-category-name">Temas</span>
+            </button>
+            <div id="category-filters" class="d-flex flex-wrap justify-content-center">
+                <!-- Botones generados dinámicamente -->
+                <div class="text-center py-2">
+                    <div class="spinner-grow spinner-grow-sm text-primary" role="status">
+                        <span class="visually-hidden">...</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -396,6 +456,7 @@
         function renderNews(news) {
             const container = document.getElementById('news-container');
             container.innerHTML = '';
+            document.getElementById('global-back-btn').style.display = 'none';
 
             if (news.length === 0) {
                 container.innerHTML = '<p class="text-center w-100">No hay secciones disponibles.</p>';
@@ -415,48 +476,62 @@
                 grouped.get(sub).push(item);
             });
 
+            // Si hay un solo subtema y es igual a la categoría, mostrar directo
+            if (order.length === 1 && order[0].toLowerCase().trim() === news[0].category.toLowerCase().trim()) {
+                let directCards = '';
+                news.forEach(item => directCards += generateCardHtml(item));
+                container.innerHTML = `<div class="row g-4">${directCards}</div>`;
+                return;
+            }
+
+            // Renderizar Mosaico de Subtemas
+            let mosaicHtml = '<div class="mosaic-grid w-100">';
             order.forEach((sub, index) => {
                 const subItems = grouped.get(sub);
-                const subId = `subtheme-${index}`;
-                const currentCategory = subItems[0].category;
+                // Buscar el representante (Resumen == 1)
+                let rep = subItems.find(item => item.is_resumen) || subItems[0];
                 
-                // Buscar logo para este subtema
-                let logoHtml = `<span class="badge bg-primary me-2">${subItems.length}</span>`;
+                const currentCategory = rep.category;
+                let logoUrl = rep.thumbnail;
                 if (window.subthemeLogos[currentCategory] && window.subthemeLogos[currentCategory][sub]) {
-                    const logoUrl = window.subthemeLogos[currentCategory][sub];
-                    logoHtml = `<img src="${logoUrl}" class="subtheme-logo" alt="logo">`;
+                    logoUrl = window.subthemeLogos[currentCategory][sub];
                 }
 
-                // SI EL SUBTEMA ES IGUAL AL TEMA: Mostrar directamente las tarjetas sin acordeón
-                if (sub.toLowerCase().trim() === currentCategory.toLowerCase().trim()) {
-                    let directCards = '';
-                    subItems.forEach((item) => {
-                        directCards += generateCardHtml(item);
-                    });
-                    container.insertAdjacentHTML('beforeend', `<div class="row g-4 mb-4">${directCards}</div>`);
-                    return;
-                }
-
-                // SI EL SUBTEMA ES DIFERENTE: Mostrar acordeón
-                let subHtml = `
-                    <div class="subtheme-section w-100">
-                        <div class="subtheme-header shadow-sm" onclick="toggleSubtheme('${subId}', this)">
-                            <h3 class="subtheme-title">
-                                ${logoHtml}
-                                ${sub}
-                            </h3>
-                            <span class="subtheme-icon fs-6">▼</span>
+                mosaicHtml += `
+                    <div class="subtheme-card shadow-sm" onclick="showSubthemeDetails('${sub.replace(/'/g, "\\'")}', '${currentCategory}')">
+                        <img src="${logoUrl}" alt="${sub}" onerror="this.src='https://picsum.photos/400/250'">
+                        <div class="card-body">
+                            <h4 class="card-title">${sub}</h4>
+                            <p class="card-subtitle">${subItems.length} Elementos</p>
+                            <button class="btn btn-primary btn-sm mt-3 rounded-pill">Ver Todo</button>
                         </div>
-                        <div class="subtheme-content row g-4" id="${subId}">
+                    </div>
                 `;
-
-                subItems.forEach((item) => {
-                    subHtml += generateCardHtml(item);
-                });
-
-                subHtml += `</div></div>`;
-                container.insertAdjacentHTML('beforeend', subHtml);
             });
+            mosaicHtml += '</div>';
+            container.innerHTML = mosaicHtml;
+        }
+
+        function showSubthemeDetails(subName, categoryName) {
+            const container = document.getElementById('news-container');
+            const items = allNews.filter(n => n.category === categoryName && n.sub_category === subName);
+            
+            // Configurar botón de regreso
+            document.getElementById('global-back-btn').style.display = 'inline-block';
+            document.getElementById('back-category-name').innerText = categoryName;
+            window.lastCategory = categoryName;
+
+            let html = `<div class="col-12 mb-4"><h2 class="fw-bold text-primary">${subName}</h2></div>`;
+            items.forEach(item => {
+                html += generateCardHtml(item);
+            });
+            
+            container.innerHTML = `<div class="row g-4 animate__animated animate__fadeIn">${html}</div>`;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function goBackToMosaic() {
+            filterNews(window.lastCategory || 'Tecnología');
         }
 
         function generateCardHtml(item) {
