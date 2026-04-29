@@ -33,7 +33,7 @@
   ],
   "subtheme_logos": {
     "Tecnología": {
-      "Topcon": "https://images.squarespace-cdn.com/content/v1/5bd1dc11c46f6d371c488433/1579306779524-ALJQVXHQ1OC7MMUQTLW2/AgriCien_Logo_Sencillo.png?format=500w",
+      "Topcon": "https://cdn.prod.website-files.com/6451596f6f257204395998bb/6451596f6f2572bff95999f8_logo.png",
       "Falker": "https://www.falker.com.br/images/logo@2x.webp"
     }
   },
@@ -80,12 +80,12 @@
     {
       "category": "Tecnología",
       "sub_category": "Topcon",
-      "title": "Imagen Borrar",
+      "title": "Original Topcon",
       "summary": "Nivelación de suelos",
-      "content": "Sistema de excavación de última generación. Deja de gastar el 30-60% de tu tiempo revisando pendientes y deshazte del láser. Operación con un solo hombre para optimizar al 100% tu sitio de trabajo.",
-      "link": "https://www.ditchassist.com/about_ditch_assist_dig/",
+      "content": "Desde superficies básicas planas y de pendiente única hasta diseños avanzados de múltiples y variables pendientes, Topcon 3D Land Forming (formación de terreno por GNSS) ofrece un control de manejo de agua totalmente personalizable. Compuesta por tres fases clave: levantamiento, diseño y ejecución, la solución puede adaptarse a prácticamente cualquier operación agrícola, además de muchas aplicaciones específicas, como estanques, cimentaciones de edificios y caminos.",
+      "link": "https://www.topconpositioning.com/solutions/technology/agriculture-products/landforming",
       "thumbnail": "https://www.topconpositioning.com/content/topconpositioning/global/en/solutions/agriculture/soil-preparation/_jcr_content/root/container/container/container_416579458/columns/node0/teaser_copy_copy_cop.coreimg.85.1600.jpeg/1749001850139/landforming-f-20220928-0005-web-teaser.jpeg",
-      "button_text": "Borrar",
+      "button_text": "Sitio Fabricante",
       "published": "2026-04-28",
       "lang": "English",
       "is_resumen": true
