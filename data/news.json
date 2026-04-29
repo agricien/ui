@@ -34,7 +34,9 @@
   "subtheme_logos": {
     "Tecnología": {
       "Topcon": "https://st.perplexity.ai/estatic/0b226c450798410ac541646c86ec31afd840e5beab817a5d84fa821e7db61981ec84c3b4a3f072a7a2e1899c9fb06c6e5c2a40245a2238cb09d10c5023c2e540984c32ae9ec7ba4e396e0de1e14bf9089813f30e56b0ad15083e59e6e4cefa43",
-      "Falker": "https://www.falker.com.br/images/logo@2x.webp"
+      "Falker": "https://www.falker.com.br/images/logo@2x.webp",
+      "Ditch Assist": "https://cdn.ditchassist.com/wp-content/uploads/2024/02/Black-300x187.png",
+      "Maher Electrónica": "https://www.maherelectronica.com/wp-content/uploads/2026/03/logo-web-aniversario.png"
     }
   },
   "news": [
