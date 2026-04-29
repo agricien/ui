@@ -37,10 +37,10 @@
       "Falker": "https://www.falker.com.br/images/logo@2x.webp",
       "Ditch Assist": "https://cdn.ditchassist.com/wp-content/uploads/2024/02/Black-300x187.png",
       "Maher Electrónica": "https://www.maherelectronica.com/wp-content/uploads/2026/03/logo-web-aniversario.png",
-      "Agritecnica Los Antonios": "https://losantonios.com/wp-content/themes/losantonios/img/logo.svg",
+      "Agrotécnica Los Antonios": "https://losantonios.com/wp-content/themes/losantonios/img/logo.svg",
       "Ag Leader": "https://www.agleader.com/wp-content/uploads/2024/04/Ag-Leader-Logo1-1.png",
-      "Los Antonios": "https://losantonios.com/wp-content/themes/losantonios/img/logo.svg",
-      "Traube Engineering": "https://scontent.fmga11-2.fna.fbcdn.net/v/t39.30808-6/470566737_541730685529825_5211797707323352046_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=2a1932&_nc_ohc=9a0trRaAtRwQ7kNvwFjUiwD&_nc_oc=AdoqEkx_b4eLH7ANKQXmYGDH5DM5l8s_MP9GruNP5tVc630SHhptyyk49nTugrwI0qPJpiMgATz2hTXcnPnnMsj-&_nc_zt=23&_nc_ht=scontent.fmga11-2.fna&_nc_gid=vtaG6HtPHDtsDS9s0repYQ&_nc_ss=7b2a8&oh=00_Af26rnM8qvUDQtZ3yZngiWfuFd4V5VCU1wqSSx-kJ-TSFw&oe=69F82632"
+      "Traube Engineering": "https://scontent.fmga11-2.fna.fbcdn.net/v/t39.30808-6/470566737_541730685529825_5211797707323352046_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=2a1932&_nc_ohc=9a0trRaAtRwQ7kNvwFjUiwD&_nc_oc=AdoqEkx_b4eLH7ANKQXmYGDH5DM5l8s_MP9GruNP5tVc630SHhptyyk49nTugrwI0qPJpiMgATz2hTXcnPnnMsj-&_nc_zt=23&_nc_ht=scontent.fmga11-2.fna&_nc_gid=vtaG6HtPHDtsDS9s0repYQ&_nc_ss=7b2a8&oh=00_Af26rnM8qvUDQtZ3yZngiWfuFd4V5VCU1wqSSx-kJ-TSFw&oe=69F82632",
+      "Los Antonios": "https://losantonios.com/wp-content/themes/losantonios/img/logo.svg"
     }
   },
   "news": [
@@ -270,7 +270,7 @@
       "sub_category": "Agrotécnica Los Antonios",
       "title": "Traílla hidráulica de empuje TH39",
       "summary": "Equipos de movimiento de suelos",
-      "content": "nan",
+      "content": "Ofrecemos una amplia gama de maquinaria agrícola diseñada para optimizar el rendimiento y la eficiencia en cada tarea del campo.\n\nLa Trailla Hidráulica de Empuje, modelo TH39, uenta con una capacidad de 6 a 6.5 m3 y un ancho de corte de 2.5-2.6 metros, están diseñadas para una potencia de 180-190 HP.\n\nOfrecemos asesoramiento especializado para ayudarte a elegir la maquinaria que mejor se ajuste a tu actividad. Con un servicio técnico eficiente y repuestos disponibles, garantizamos el mejor soporte postventa.\n\nOpcionales\nAnclaje Mástil-Hidroválvulas\nMástil Hidráulico\nVálvula de secuencia\nRipper fijo (5 brazos) «Modelo pequeño»\nAnclaje Ripper fijo con tuberías\nEnganche trasero, sin tuberías (sin ripper)\nEnganche trasero, con 4 tuberías\nEnganche trasero, con 6 tuberías\nAmortiguación\nRejilla Tajadera\nAutomatización (láser/GPS) con hidroválvula\nAutomatización (láser/GPS) distribuidor proporcional y filtro de presión",
       "link": "https://losantonios.com/es/traillas/traillas-hidraulicas-de-empuje/th39/",
       "thumbnail": "https://losantonios.com/wp-content/uploads/2020/10/trailla-th-39.png",
       "button_text": "Más detalles",
@@ -283,7 +283,7 @@
       "sub_category": "Traube Engineering",
       "title": "Sembradora de un solo surco",
       "summary": "Sembradora de Caña",
-      "content": "Capacidad de 6 toneladas de semilla, incluye cámara y monitor de operación. Acople de 3 puntos.",
+      "content": "Capacidad de 6 toneladas de semilla, incluye cámara y monitor de operación. Acople de 3 puntos.  \n\nOpciones\nTapador de surcos con 2 discos ajustables y rueda compactadora.",
       "link": "#",
       "thumbnail": "https://picsum.photos/600/400",
       "button_text": "Ver Original [Español]",
