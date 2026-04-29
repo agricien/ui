@@ -41,7 +41,7 @@
       "Ag Leader": "https://www.agleader.com/wp-content/uploads/2024/04/Ag-Leader-Logo1-1.png",
       "Traube Engineering": "https://th.bing.com/th/id/OIP.8Jgip0tNCmNbmRQAbN6IiAHaEO?w=108&h=108&c=1&bgcl=8c7e09&r=0&o=7&dpr=1.5&pid=ImgRC&rm=3",
       "Los Antonios": "https://losantonios.com/wp-content/themes/losantonios/img/logo.svg",
-      "Yeomans Plow": "https://tse3.mm.bing.net/th/id/OIP.O3-nRTZUF7wJ5X7855dC0AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+      "Yeomans arados": "https://tse3.mm.bing.net/th/id/OIP.O3-nRTZUF7wJ5X7855dC0AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
     }
   },
   "news": [
@@ -294,9 +294,9 @@
     },
     {
       "category": "Tecnología",
-      "sub_category": "Yeomans",
-      "title": "SB6",
-      "summary": "Arado descompactador",
+      "sub_category": "Yeomans arados",
+      "title": "Yeomans Modelo SB6",
+      "summary": "Arado descompactador no inversor del suelo",
       "content": "nan",
       "link": "#",
       "thumbnail": "https://picsum.photos/600/400",
@@ -505,20 +505,20 @@
       "sub_category": "Topografía GNSS RTK",
       "title": "Topografía GNSS RTK",
       "summary": "Relevamiento terrestre",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://drive.google.com/file/d/1L7gYC25Jx4V_zZzgy8ery0giru7ck66M/view?usp=sharing",
+      "content": "n AgriCien realizamos levantamientos topográficos con GNSS RTK para obtener datos centimétricos confiables en tiempo real. Generamos modelos digitales de terreno (DTM/DSM) de alto detalle, base para diseño y control de obras agrícolas e hidráulicas.\n\nEjecutamos levantamientos para nivelación de suelos, drenaje, riego, caminos, replanteo y control de movimiento de tierras, con densidades de puntos ajustadas al objetivo del proyecto. Procesamos la información para entregar curvas de nivel, mapas de pendientes, volúmenes y superficies con precisión técnica.\n\nIntegramos los datos a flujos de trabajo GIS y a sistemas de control automático de maquinaria, garantizando que el diseño se ejecute exactamente en campo.\n\nPrecisión en terreno para decisiones y obras sin desviaciones.",
+      "link": "#",
+      "thumbnail": "https://picsum.photos/600/400",
       "button_text": "Más detalles",
       "published": "2026-04-29",
-      "lang": "English",
+      "lang": "Español",
       "is_resumen": false
     },
     {
       "category": "Servicios",
       "sub_category": "Diseño de fincas Agrícolas",
-      "title": "Diseño de fincas Agrícolas y Ganaderas",
+      "title": "Diseño de fincas Agrícolas",
       "summary": "nan",
-      "content": "nan",
+      "content": "En AgriCien diseñamos fincas agrícolas con enfoque técnico, operativo e integrado. Organizamos el espacio productivo considerando sistemas de riego, drenajes, obras hidráulicas, caminos, lotificación, accesos, pendientes, suelos y manejo del agua.\n\nIntegramos topografía GNSS RTK, modelos digitales de terreno, análisis GIS e información productiva para definir una distribución funcional de la finca, orientada a mejorar la eficiencia operativa, reducir costos de labores, optimizar el uso del agua y facilitar la mecanización.\n\nCada diseño se desarrolla pensando en la ejecución y operación diaria: ubicación de lotes, trazado de caminos, conducción y evacuación de agua, infraestructura de riego, drenaje y puntos críticos de manejo.\n\nDiseñamos fincas más ordenadas, eficientes y preparadas para producir mejor.",
       "link": "https://www.linkedin.com/feed/update/urn:li:activity:7339136818254143488",
       "thumbnail": "https://media.licdn.com/dms/image/v2/D4E22AQHyIe2hHvcx7g/feedshare-shrink_800/B4EZdnZ7mRHgAg-/0/1749786570669?e=1779321600&v=beta&t=oL5vryExGzsGelD5MPQDQYhMHcaoV01MeR7Dq5cVhC8",
       "button_text": "Más detalles",
@@ -615,32 +615,6 @@
       "button_text": "Ver Original [Español]",
       "published": "2026-04-29",
       "lang": "Español",
-      "is_resumen": false
-    },
-    {
-      "category": "Recursos",
-      "sub_category": "Proyectos",
-      "title": "Drenaje Agrícola",
-      "summary": "nan",
-      "content": "Medidor óptico digital de clorofila para análisis foliar no destructivo.\n\n• Medición Precisa: Analiza absorción de luz sin dañar la planta.\n• Ahorro y Eficiencia: Optimiza el uso y aplicación de fertilizantes.\n• GPS Integrado: Todas las mediciones son georeferenciadas.\n• Conectividad USB / Bluetooth: Sincronización automática con Web y App.\n• Historial en Línea: Gestión racional basada en datos en la nube.",
-      "link": "https://www.falker.com.br/es/clorofilog",
-      "thumbnail": "https://emendez002.github.io/agricien/Falker/www.falker.com.br/images/products/clorofilog/bg-top-es.webp",
-      "button_text": "Original Falker",
-      "published": "2026-04-29",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Recursos",
-      "sub_category": "Proyectos",
-      "title": "#32- Cómo finca La Loba triplicó su forraje y venció la sequía en Bagaces",
-      "summary": "LDI para producir más pasto en sequía",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
-      "button_text": "Original Susbtack José Agüero",
-      "published": "2026-04-29",
-      "lang": "English",
       "is_resumen": false
     },
     {
