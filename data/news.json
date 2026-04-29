@@ -337,11 +337,11 @@
       "title": "Traílla hidráulica de empuje TH48-BP",
       "summary": "Equipos de movimiento de suelos",
       "content": "Ofrecemos una amplia gama de maquinaria agrícola diseñada para optimizar el rendimiento y la eficiencia en cada tarea del campo.\n\nLa Trailla Hidráulica de Empuje, modelo TH48-BP, cuenta con una capacidad de 8 a 9 m3 y un ancho de corte de 2.6-2.8 metros, están diseñadas para una potencia de 200-280 HP.\n\nOfrecemos asesoramiento especializado para ayudarte a elegir la maquinaria que mejor se ajuste a tu actividad. Con un servicio técnico eficiente y repuestos disponibles, garantizamos el mejor soporte postventa.\n\nOpcionales\nMástil hidráulico\nVálvula de secuencia\nRipper fijo\nAnclaje ripper fijo con tuberías (sin ripper)\nRipper con enganche rápido\nAnclaje ripper enganche rápido con tuberías (sin ripper)\nEnganche trasero, sin tuberías\nEnganche trasero, con 4 tuberías\nEnganche trasero, con 6 tuberías\nConjunto pirulo atornillado\nConjunto pirulo para enganche trasero\nAutomatización (láser/GPS) con hidroválvula\nAutomatización (láser/GPS) distribuidor proporcional y filtro de presión",
-      "link": "#",
-      "thumbnail": "https://picsum.photos/600/400",
+      "link": "https://losantonios.com/es/traillas/traillas-hidraulicas-de-empuje/th48-bp/",
+      "thumbnail": "https://losantonios.com/wp-content/uploads/2020/10/trailla-th-48-BP.png",
       "button_text": "Más detalles",
       "published": "2026-04-29",
-      "lang": "Español",
+      "lang": "English",
       "is_resumen": false
     },
     {
@@ -478,10 +478,10 @@
       "category": "Servicios",
       "sub_category": "Diseño de fincas Ganaderas",
       "title": "Diseño de fincas Ganaderas",
-      "summary": "nan",
-      "content": "nan",
+      "summary": "Apartos, caminos, abastecimiento de agua, abrevaderos, etc.",
+      "content": "En AgriCien diseñamos fincas ganaderas desde la base del sistema, priorizando las decisiones que más impacto tienen en productividad y resiliencia. Aplicamos la Escala de Permanencia para ordenar el diseño: clima → agua → topografía → suelos → vegetación → infraestructura → manejo.\n\nDesarrollamos soluciones integradas que consideran captación, conducción e infiltración de agua, drenaje funcional en eventos extremos, sombra estratégica, subdivisiones y rotación, trazado de caminos y accesos, y ubicación óptima de bebederos y corrales. Todo soportado en modelos digitales de terreno, análisis hidrológico y criterios de operación en campo.\n\nEl resultado es un layout técnico de alta eficiencia, con planos, especificaciones y secuencia de implementación, orientado a maximizar carga animal, estabilidad forrajera y uso del agua, reduciendo costos y riesgos.\n\nDiseñar bien es producir mejor, con menos incertidumbre.",
       "link": "#",
-      "thumbnail": "https://picsum.photos/600/400",
+      "thumbnail": "https://a.storyblok.com/f/160385/1354x533/ddbdbe674c/formas-potreros.webp/m/filters:quality(70)/",
       "button_text": "Más detalles",
       "published": "2026-04-29",
       "lang": "Español",
@@ -723,6 +723,19 @@
     },
     {
       "category": "Noticias",
+      "sub_category": "AgriShow 2026",
+      "title": "Topcon News",
+      "summary": "Innovaciones diseñadas para ampliar el acceso a la tecnología de precisión",
+      "content": "Topcon Agriculture ha anunciado una nueva serie de innovaciones diseñadas para ampliar el acceso a la tecnología de precisión en toda Latinoamérica. En Agrishow 2026, que tendrá lugar del 27 de abril al 1 de mayo en Brasil, Topcon presentará soluciones para productores de cultivos extensivos, café, cítricos y caña de azúcar, incluyendo una ampliación de la gama Value Line para aplicaciones de pulverización en viñedos y huertos, así como la introducción de un nuevo receptor GNSS modular para la agricultura de precisión.",
+      "link": "https://www.topconpositioning.com/articles/topcon-agriculture-unveils-new-innovations-at-agrishow-2026-in-brazil",
+      "thumbnail": "https://www.topconpositioning.com/content/topconpositioning/global/en/articles/topcon-agriculture-unveils-new-innovations-at-agrishow-2026-in-brazil/_jcr_content/root/container/container/container/image.coreimg.85.1600.jpeg/1777395628027/topcon-press-release-agrishow-web-thumbnail.jpeg",
+      "button_text": "Más detalles",
+      "published": "2026-04-29",
+      "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Noticias",
       "sub_category": "Topografía GNSS RTK",
       "title": "Topografía GNSS RTK",
       "summary": "nan",
@@ -813,19 +826,6 @@
       "is_resumen": false
     },
     {
-      "category": "Noticias",
-      "sub_category": "AgriShow 2026",
-      "title": "Topcon News",
-      "summary": "nan",
-      "content": "Topcon Agriculture ha anunciado una nueva serie de innovaciones diseñadas para ampliar el acceso a la tecnología de precisión en toda Latinoamérica. En Agrishow 2026, que tendrá lugar del 27 de abril al 1 de mayo en Brasil, Topcon presentará soluciones para productores de cultivos extensivos, café, cítricos y caña de azúcar, incluyendo una ampliación de la gama Value Line para aplicaciones de pulverización en viñedos y huertos, así como la introducción de un nuevo receptor GNSS modular para la agricultura de precisión.",
-      "link": "https://www.topconpositioning.com/articles/topcon-agriculture-unveils-new-innovations-at-agrishow-2026-in-brazil",
-      "thumbnail": "https://www.topconpositioning.com/content/topconpositioning/global/en/articles/topcon-agriculture-unveils-new-innovations-at-agrishow-2026-in-brazil/_jcr_content/root/container/container/container/image.coreimg.85.1600.jpeg/1777395628027/topcon-press-release-agrishow-web-thumbnail.jpeg",
-      "button_text": "Topcon Agriculture - Agrishow 2026 - Brazil",
-      "published": "2026-04-29",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
       "category": "Contáctanos",
       "sub_category": "nan",
       "title": "Topografía GNSS RTK",
@@ -837,84 +837,6 @@
       "published": "2026-04-29",
       "lang": "English",
       "is_resumen": true
-    },
-    {
-      "category": "Contáctanos",
-      "sub_category": "nan",
-      "title": "Diseño de fincas Agrícolas y Ganaderas",
-      "summary": "nan",
-      "content": "s alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
-      "button_text": "Original Susbtack José Agüero",
-      "published": "2026-04-29",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Contáctanos",
-      "sub_category": "https://wa.me/50589883143?text=Escr%C3%ADbeme",
-      "title": "Plan de pastoreo regenerativo",
-      "summary": "nan",
-      "content": "durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://drive.google.com/file/d/1iabaTdbxHnrnr4AOABbvQh-9bjJrJRoo/view?usp=sharing",
-      "button_text": "Savory",
-      "published": "2026-04-29",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Contáctanos",
-      "sub_category": "Permeabilidad de suelos",
-      "title": "Permeabilidad de suelos",
-      "summary": "nan",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://www.falker.com.br/images/products/soloflux/Site-parceria-embrapa-es.webp",
-      "button_text": "Permeámetro Automatizado SoloFlux",
-      "published": "2026-04-29",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Contáctanos",
-      "sub_category": "Procesamiento y análisis GIS",
-      "title": "Procesamiento y análisis GIS",
-      "summary": "nan",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://substackcdn.com/image/fetch/$s_!Kt2f!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26625542-5408-43f7-b9fa-fe538a4faca7_4032x3024.jpeg",
-      "button_text": "Original Susbtack José Agüero",
-      "published": "2026-04-29",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Contáctanos",
-      "sub_category": "Diseño de nivelación de suelos",
-      "title": "Diseño de nivelación de suelos",
-      "summary": "nan",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://drive.google.com/file/d/1Ar16fqJmvCWcEXpwU1K8GpemegnIp1SG/view?usp=sharing",
-      "button_text": "Nivelación de Suelos",
-      "published": "2026-04-29",
-      "lang": "English",
-      "is_resumen": false
-    },
-    {
-      "category": "Contáctanos",
-      "sub_category": "Muestreo Compactación de suelos",
-      "title": "Muestreo Compactación de suelos",
-      "summary": "nan",
-      "content": "En el corazón de Bagaces, la Finca La Loba del productor José Santos Salazar está reescribiendo la narrativa de la ganadería en suelos difíciles. Tradicionalmente, los suelos de tipo Vertisol (arcillas negras, pesadas, expansivas) de esta propiedad imponían un techo productivo: durante el invierno, el crecimiento del pasto era tan limitado que apenas alcanzaba los 40 cm en un período de lluvias, obligando al productor a depender de costosos suplementos externos en la época seca.",
-      "link": "https://open.substack.com/pub/joseaguero1/p/32-como-finca-la-loba-triplico-su?utm_campaign=post-expanded-share&utm_medium=web",
-      "thumbnail": "https://drive.google.com/file/d/1ABsRrTCNmli_xtLlSeySlKJ7YGKDeHHl/view?usp=sharing",
-      "button_text": "PenetroLOG Falker",
-      "published": "2026-04-29",
-      "lang": "English",
-      "is_resumen": false
     }
   ]
 }
