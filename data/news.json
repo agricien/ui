@@ -498,7 +498,7 @@
       "category": "Solución a problemas",
       "sub_category": "Imagenes Agricien",
       "title": "Imagen Agricien",
-      "summary": "JPG",
+      "summary": "Imagen",
       "content": "Ejemplo de Imagen Agricien",
       "link": "https://emendez002.github.io/agricien/",
       "thumbnail": "https://agricien.github.io/imagenes/WhatsApp%20Image%202026-04-24%20at%2015.23.02.jpeg",
@@ -516,6 +516,19 @@
       "link": "https://emendez002.github.io/agricien/",
       "thumbnail": "https://agricien.github.io/imagenes/WhatsApp%20Video%202026-02-24%20at%2009.33.59.mp4",
       "button_text": "Sitio Agricien",
+      "published": "2026-04-29",
+      "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Solución a problemas",
+      "sub_category": "Imagenes Agricien",
+      "title": "Imagen Agricien",
+      "summary": "Imagen",
+      "content": "Ejemplo de Imagen Agricien",
+      "link": "https://emendez002.github.io/agricien/",
+      "thumbnail": "https://agricien.github.io/imagenes/giphy.gif",
+      "button_text": "Ver Original [English]",
       "published": "2026-04-29",
       "lang": "English",
       "is_resumen": false
