@@ -219,25 +219,25 @@
             <div class="mb-4">
                 <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">SISTEMA DE VIGILANCIA TECNOLÓGICA</span>
                 <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Panel de Monitoreo SICOP</h1>
-                <p class="lead opacity-75 animate__animated animate__fadeInUp">Seguimiento en tiempo real de licitaciones públicas basado en tu catálogo de 105 servicios.</p>
+                <p class="lead opacity-75 animate__animated animate__fadeInUp">Seguimiento en tiempo real de licitaciones públicas basado en tu catálogo de 114 servicios.</p>
             </div>
 
             <div class="row g-4 stats-container animate__animated animate__zoomIn">
                 <div class="col-md-4">
                     <div class="stat-card">
-                        <span class="stat-value" id="count-items">105</span>
+                        <span class="stat-value" id="count-items">114</span>
                         <span class="stat-label">Ítems Monitoreados</span>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="stat-card">
-                        <span class="stat-value" id="count-tenders">5</span>
+                        <span class="stat-value" id="count-tenders">10</span>
                         <span class="stat-label">Oportunidades Reales</span>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="stat-card">
-                        <span class="stat-value" id="count-alerts">3</span>
+                        <span class="stat-value" id="count-alerts">6</span>
                         <span class="stat-label">Alertas Críticas</span>
                     </div>
                 </div>
@@ -349,7 +349,9 @@
                 "Integración de telemetría de maquinaria (ISOBUS).",
                 "Automatización de flujos de trabajo SIG.",
                 "Cartografía temática agrícola y edafológica.",
-                "Servicios de nube espacial y web mapping."
+                "Servicios de nube espacial y web mapping.",
+                "Lineas de infiltración.",
+                "Cosecha de agua."
             ],
             b: [
                 "Diseño maestro (Masterplan) de fincas agrícolas.",
@@ -386,7 +388,9 @@
                 "Diagnóstico de degradación de pasturas.",
                 "Planificación de cosecha de agua de lluvia.",
                 "Monitoreo de dinámica microbiológica del suelo.",
-                "Asesoría en viticultura de alta precisión."
+                "Asesoría en viticultura de alta precisión.",
+                "Estudio Impacto Ambiental.",
+                "Plan de Gestión Ambiental."
             ],
             c: [
                 "Consolas agrícolas (Topcon X25, X35, XD, XD+).",
@@ -423,11 +427,34 @@
                 "Estaciones de bombeo con telemetría.",
                 "Módulos de fertirriego.",
                 "Plataformas de software SaaS agronómico.",
-                "Repuestos y cableado ISOBUS de precisión."
+                "Repuestos y cableado ISOBUS de precisión.",
+                "Power BI.",
+                "Tableau.",
+                "Business Intelligence.",
+                "Análisis de datos.",
+                "Diseño Nivelación."
             ]
         };
 
         const tenders = [
+            {
+                id: "2026PX-000017-0015700001",
+                inst: "BANCO DE COSTA RICA (BCR)",
+                desc: "Curso Inteligencia de Negocios Aplicada con Power BI (Modelado y Funciones DAX).",
+                date: "04/05/2026",
+                match: "Ítems: 108, 110, 111 (Power BI / BI)",
+                cat: "C. Tecnología / Datos",
+                alert: true
+            },
+            {
+                id: "2026PX-000019-0018100001",
+                inst: "INS SERVICIOS S.A.",
+                desc: "Servicios de capacitación en Análisis de Datos con Power BI para personal técnico.",
+                date: "05/05/2026",
+                match: "Ítems: 108, 111 (Análisis de Datos)",
+                cat: "C. Tecnología",
+                alert: true
+            },
             {
                 id: "2026LD-000015-0000700001",
                 inst: "MUNICIPALIDAD DE GRECIA",
@@ -456,21 +483,12 @@
                 alert: true
             },
             {
-                id: "2026LE-000003-0018800002",
-                inst: "SENARA",
-                desc: "Construcción de Estructuras Hidráulicas en Canales de Riego, DRAT, SENARA.",
+                id: "2026PX-000100-0004900001",
+                inst: "BANCO CENTRAL DE COSTA RICA",
+                desc: "Capacitación: Análisis y modelado de datos con Microsoft Power BI - Nivel 1 y 2.",
                 date: "30/04/2026",
-                match: "Ítems: 26, 41 (Canales de Riego)",
-                cat: "A. Ingeniería / Riego",
-                alert: false
-            },
-            {
-                id: "2026LD-000060-0006300001",
-                inst: "ITCR (TEC)",
-                desc: "Suministro de equipo para ensayos triaxiales en suelos para laboratorio institucional.",
-                date: "07/05/2026",
-                match: "Ítems: 82, 101 (Equipamiento de Suelos)",
-                cat: "C. Hardware",
+                match: "Ítems: 108, 111 (Power BI / Modelado)",
+                cat: "C. Tecnología",
                 alert: false
             }
         ];
