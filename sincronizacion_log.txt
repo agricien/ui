@@ -1,0 +1,1 @@
+[29/04/2026 20:33:26,47] ERROR: No se encontro la carpeta local: "C:\Users\XSF\Agricien\imagenes" 

@@ -1,81 +1,64 @@
 @echo off
+:: ==========================================
+:: MODO OCULTO (PowerShell Wrapper)
+:: ==========================================
+if "%~1"=="-hidden" goto :run
+powershell -WindowStyle Hidden -Command "Start-Process '%~f0' -ArgumentList '-hidden' -WindowStyle Hidden"
+exit /b
+
+:run
 setlocal enabledelayedexpansion
 
 :: ==========================================
 :: CONFIGURACION
 :: ==========================================
-set "URL=https://agricien-my.sharepoint.com/:f:/p/edgar_mendez/IgBZVjiP8iH8T5-RWYIelhgQAf2HJ1IftQkF7T2TWPNTR4U?e=tDuSgV&download=1"
+:: RUTA ORIGEN: Ajusta esta ruta a donde se sincroniza tu OneDrive
+set "ONEDRIVE_PATH=%USERPROFILE%\OneDrive - Agricien\imagenes"
+
+:: Intentar detectar rutas alternativas si la anterior no existe
+if not exist "!ONEDRIVE_PATH!" set "ONEDRIVE_PATH=%USERPROFILE%\OneDrive\imagenes"
+if not exist "!ONEDRIVE_PATH!" set "ONEDRIVE_PATH=%USERPROFILE%\Agricien\imagenes"
+
 set "REPO_DIR=imagenes"
-set "TEMP_ZIP=onedrive_media.zip"
-set "TEMP_DIR=temp_extract"
 set "REMOTE_REPO=git@github.com:agricien/imagenes.git"
 
-echo ==========================================
-echo    SINCRONIZADOR ONEDRIVE -> GITHUB
-echo ==========================================
+:: Cambiar al directorio del script
+cd /d "%~dp0"
 
-:: 1. Inicializar repositorio si no existe
+:: 1. Verificar Carpeta Origen
+if not exist "%ONEDRIVE_PATH%" (
+    :: Si no se encuentra, registrar error y salir (como es oculto no podemos pausar)
+    echo [%date% %time%] ERROR: No se encontro la carpeta local: "%ONEDRIVE_PATH%" >> sincronizacion_log.txt
+    exit /b
+)
+
+:: 2. Inicializar repositorio si no existe
 if not exist "%REPO_DIR%\.git" (
-    echo [INFO] Inicializando repositorio local...
     if not exist "%REPO_DIR%" mkdir "%REPO_DIR%"
     cd /d "%REPO_DIR%"
     git init
-    if not exist "README.md" echo # imagenes > README.md
+    echo # imagenes > README.md
     git add README.md
     git commit -m "first commit"
     git branch -M main
     git remote add origin %REMOTE_REPO%
-    echo [INFO] Repositorio configurado.
     cd ..
 )
 
-:: 2. Descargar contenido desde OneDrive
-echo [1/4] Descargando archivos desde OneDrive...
-curl -L -o "%TEMP_ZIP%" "%URL%"
-if %ERRORLEVEL% neq 0 (
-    echo [ERROR] No se pudo descargar el archivo de OneDrive.
-    pause
-    exit /b
-)
-
-:: 3. Descomprimir y Sincronizar
-echo [2/4] Procesando archivos...
-if exist "%TEMP_DIR%" rd /s /q "%TEMP_DIR%"
-mkdir "%TEMP_DIR%"
-tar -xf "%TEMP_ZIP%" -C "%TEMP_DIR%"
-
-:: Limpiar el repo local (excepto .git y README.md) para detectar borrados
-echo [3/4] Sincronizando cambios (deteccion de borrados)...
-for /d %%i in ("%REPO_DIR%\*") do (
-    if /i not "%%~nxi"==".git" rd /s /q "%%i"
-)
-for %%i in ("%REPO_DIR%\*") do (
-    if /i not "%%~nxi"==".git" if /i not "%%~nxi"=="README.md" del /q "%%i"
-)
-
-:: Copiar nuevos archivos desde la descarga
-xcopy /s /e /y "%TEMP_DIR%\*" "%REPO_DIR%\" > nul
+:: 3. Sincronizar usando ROBOCOPY (Modo Espejo / Mirror)
+:: /MIR: Espeja la carpeta (borra en destino lo que no esta en origen)
+:: /XD .git: Protege la carpeta de configuracion de Git
+robocopy "%ONEDRIVE_PATH%" "%REPO_DIR%" /MIR /XD .git /R:3 /W:5 > nul
 
 :: 4. Git Add, Commit y Push
-echo [4/4] Subiendo a GitHub...
 cd /d "%REPO_DIR%"
 git add .
-:: Verificar si hay cambios antes de hacer commit
+:: Solo subir si hay cambios
 git diff --cached --quiet
 if %ERRORLEVEL% neq 0 (
-    git commit -m "Sincronizacion automatica: %date% %time%"
+    git commit -m "Sincronizacion automatica (OneDrive Local): %date% %time%"
     git push origin main
-    echo [SUCCESS] Cambios subidos correctamente.
-) else (
-    echo [INFO] No hay cambios detectados.
 )
 
-:: Limpieza final
-cd ..
-rd /s /q "%TEMP_DIR%"
-del "%TEMP_ZIP%"
+exit /b
 
-echo ==========================================
-echo Proceso completado exitosamente.
-echo ==========================================
-timeout /t 5
