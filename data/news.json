@@ -77,7 +77,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Control y Comando",
+      "sub_category": "Control a Distancia",
       "title": "Maher Ciclón",
       "summary": "Automatización y Controlde Equipos de Riego",
       "content": "MAHER CICLÓN - PROGRAMADOR INTELIGENTE\n\nEl Programador de Riego Inteligente CICLÓN es un programador sencillo y robusto. Sencillo, porque es tan fácil de manejar como todos nuestros productos y robusto, porque está preparado para resistir largas jornadas de trabajo.\n\nCICLON es capaz de controlar todo el sistema de riego, el bombeo, la fertilización, la agitación de los fertilizantes y la limpieza de filtros de una gran variedad de instalaciones agrícolas.\n\nMONITORIZA Y CONTROLA equipos básicos a combustión con todos sus parámetros de operación como temperatura, presión de aceite, presión en tubería, caudal, rpm, consumo de combustible. Capáz de hacer la automatización total desde el encendido, apagado, control de RPM por presión de flujo en tubería.",
@@ -90,7 +90,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Flujo Saturado",
+      "sub_category": "Infiltración Saturada",
       "title": "SoloFLux",
       "summary": "Permeámero Digital",
       "content": "SoloFlux es un permeámetro digital automatizado, la herramienta ideal para medir la conductividad hidráulica y comprender la dinámica del agua en el suelo.\n\nEl equipo es innovador porque mide el flujo de agua en el suelo de forma digital y automática, lo que hace que la recogida de datos sea mucho más práctica y la evaluación más intuitiva. Lo que antes era un trabajo laborioso que requería la supervisión in situ de un técnico cualificado, ahora es más rápido con SoloFlux y la recogida y registro automáticos de datos.",
@@ -376,7 +376,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Agrotécnica Los Antonios",
+      "sub_category": "Refinadoras 140-180 hp",
       "title": "Refinadora cuello cisne 4000CC-4500CC-5000CC-6000CC",
       "summary": "Equipos de movimiento de suelos",
       "content": "Ofrecemos una amplia gama de maquinaria agrícola diseñada para optimizar el rendimiento y la eficiencia en cada tarea del campo.\n\nLa refinadora cuello cisne 4000CC-4500CC-5000CC-6000CC, cuenta con un ancho de corte de 4-6 metros, están diseñadas para una potencia de 140-220 HP.\n\nOfrecemos asesoramiento especializado para ayudarte a elegir la maquinaria que mejor se ajuste a tu actividad. Con un servicio técnico eficiente y repuestos disponibles, garantizamos el mejor soporte postventa.\n\nOpcionales\nMástil hidráulico\nElevación paralela\nDoble inclinación",
@@ -389,7 +389,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Agrotécnica Los Antonios",
+      "sub_category": "Refinadoras 100-120 hp",
       "title": "Refinadora cuello cisne 2500CC-2750CC-3000CC",
       "summary": "Equipos de movimiento de suelos",
       "content": "Ofrecemos una amplia gama de maquinaria agrícola diseñada para optimizar el rendimiento y la eficiencia en cada tarea del campo.\n\nLa refinadora cuello cisne 2500CC-2750CC-3000CC, cuenta con un ancho de corte de 4-5 metros, están diseñadas para una potencia de 100-130 HP.\n\nOfrecemos asesoramiento especializado para ayudarte a elegir la maquinaria que mejor se ajuste a tu actividad. Con un servicio técnico eficiente y repuestos disponibles, garantizamos el mejor soporte postventa.\n\nOpcionales\nMástil hidráulico\nElevación paralela\nDoble inclinación",
@@ -402,7 +402,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Traube Engineering",
+      "sub_category": "Siembra caña 1 surco",
       "title": "Sembradora de un solo surco",
       "summary": "Sembradora de Caña",
       "content": "Capacidad de 6 toneladas de semilla, incluye cámara y monitor de operación. Acople de 3 puntos.  \n\nOpciones\nTapador de surcos con 2 discos ajustables y rueda compactadora.\nTolva para fertilizantes (230 kg)\nTanques laterales para fungicida (560L)\nBloqueo de horquillas traseras para mantener dirección\nPotencia recomendada: 150 - 180 HP",
@@ -415,7 +415,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Traube Engineering",
+      "sub_category": "Siembra caña 2 surcos",
       "title": "Sembradora de dos surcos",
       "summary": "Sembradora de Caña",
       "content": "Capacidad de 9 toneladas de semilla. Siembra a 1.50 m o 1.85 m entre surcos. Incluye cámara y monitor de operación. Acople de 3 puntos.  \n\nOpciones\nTapador de surcos con 2 discos ajustables y rueda compactadora.\nTolva para fertilizantes (230 kg)\nTanques laterales para fungicida (560L)\nBloqueo de horquillas traseras para mantener dirección\nPotencia recomendada: 160 - 190 HP",
@@ -428,7 +428,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Traube Engineering",
+      "sub_category": "Siembra caña 3 surcos",
       "title": "Sembradora de tres surcos",
       "summary": "Sembradora de Caña",
       "content": "Capacidad de 10 toneladas de semilla. Siembra a 1.77 m o 1.85 m entre surcos. Incluye cámara y monitor de operación. Acople de 3 puntos.  \n\nOpciones\nTapador de surcos con 2 discos ajustables y rueda compactadora.\nTolva para fertilizantes (230 kg)\nTanques laterales para fungicida (560L)\nBloqueo de horquillas traseras para mantener dirección\nPotencia recomendada > 230HP",
@@ -441,7 +441,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "AgXcel",
+      "sub_category": "Pulverizacón exacta",
       "title": "Sistemas especializados de Pulverización",
       "summary": "nan",
       "content": "nan",
@@ -884,9 +884,9 @@
     {
       "category": "Tecnología",
       "sub_category": "AgXcel",
-      "title": "Sistemas especializados de Pulverización",
+      "title": "Sistemas especializados de Pulverización de Precisión",
       "summary": "nan",
-      "content": "nan",
+      "content": "Nuestros Sistemas: Resultados Garantizados\n\nTodos los productos AgXcel están diseñados para ofrecer resultados inigualables. Nos enfocamos en la innovación y la precisión para asegurar que cada aspecto de sus necesidades agrícolas se satisfaga con eficiencia y confiabilidad. Nuestro enfoque integral incluye:\n\nIngeniería Avanzada: Nuestros sistemas están construidos con tecnología de punta para garantizar la máxima eficiencia y productividad en el campo.\n\nOpciones de Personalización: Ofrecemos soluciones flexibles que se adaptan a las necesidades específicas de su operación, ya sea grande o pequeña.\n\nDurabilidad y Confiabilidad: Fabricados con materiales de alta calidad, nuestros productos están diseñados para resistir las condiciones más exigentes, brindando un rendimiento duradero.\n\nInterfaces Fáciles de Usar: Los sistemas AgXcel están diseñados pensando en el usuario, con controles intuitivos que simplifican la operación y reducen el tiempo de inactividad.\n\nSoporte Integral: Ofrecemos un sólido soporte al cliente, desde la configuración inicial hasta el mantenimiento continuo, asegurando que sus sistemas sigan brindando resultados óptimos.\n\nCon nuestros productos y software avanzados, puede tener la seguridad de que cada detalle ha sido considerado para mejorar su productividad y brindarle los resultados que necesita.",
       "link": "#",
       "thumbnail": "https://picsum.photos/600/400",
       "button_text": "Ver Original [Español]",
