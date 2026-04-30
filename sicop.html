@@ -201,6 +201,8 @@
         <p class="fw-bold">Inicializando Panel de Monitoreo...</p>
     </div>
 
+    <div id="toast">ID Copiado al Portapapeles</div>
+
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold text-primary" href="index.html">
@@ -585,13 +587,20 @@
         }
 
         function postular(id) {
-            // Copiar al portapapeles como respaldo
+            // Copiar al portapapeles
             navigator.clipboard.writeText(id);
             
-            // Usar la estructura de URL completa que permite el acceso directo
+            // Mostrar Toast
+            const toast = document.getElementById("toast");
+            toast.className = "show";
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+            
+            // URL completa sin alerts bloqueantes
             const url = `https://www.sicop.go.cr/moduloOferta/search/EP_SEJ_COQ601.jsp?cartelTestYn=Y&cartelNm=&proceType=&cartelInstCd=&instNm=&regDtFrom=31/10/2025&regDtTo=29/04/2026&openbidDtFrom=31/10/2025&openbidDtTo=28/06/2026&instCartelNo=${id}&cartelNo=&stateSearch=Y&searchCartelStat=`;
             
-            window.open(url, '_blank');
+            setTimeout(() => {
+                window.open(url, '_blank');
+            }, 500); // Pequeño delay para que se vea el toast
         }
 
         // Buscador de servicios
