@@ -23,7 +23,7 @@
     }
   ],
   "categories_order": [
-    "Problemas  Soluciones",
+    "Problema a Solución",
     "Tecnología",
     "Consultoría",
     "Servicios",
@@ -53,7 +53,7 @@
   },
   "news": [
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Monitoreo agua suelo planta",
       "title": "Maher Sensors",
       "summary": "Medición en Agua, Suelos y Clima",
@@ -66,7 +66,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Telemetría y datos",
       "title": "Maher App",
       "summary": "Aplicación - Visualización y Control",
@@ -79,7 +79,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Control a Distancia desde la mano",
       "title": "Maher Ciclón",
       "summary": "Automatización y Controlde Equipos de Riego",
@@ -92,7 +92,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Infiltración Saturada",
       "title": "SoloFLux",
       "summary": "Permeámero Digital",
@@ -105,7 +105,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Fotosíntesis",
       "title": "ClorofiLOG",
       "summary": "Medidor de Clorofila",
@@ -118,7 +118,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Compactación a escala",
       "title": "SoloStar",
       "summary": "Medición automática de Compactación",
@@ -131,7 +131,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Compactación portátil",
       "title": "PenetroLOG",
       "summary": "Medición Manual de Compactación",
@@ -144,7 +144,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Muestreo de suelos",
       "title": "Muestreo de suelos, navegador, mapas",
       "summary": "Conjunto de Agricultura de Precisión",
@@ -157,7 +157,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Carga eléctrica del suelo",
       "title": "Terram",
       "summary": "Conductividad Eléctrica de Suelos",
@@ -170,7 +170,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "GIS Falker",
       "title": "FalkerMap",
       "summary": "Procesamiento GIS",
@@ -183,7 +183,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Navegador",
       "title": "FieldBox",
       "summary": "Navegador Falker",
@@ -196,7 +196,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Indice de Vegetación",
       "title": "Flexum",
       "summary": "Índice NVDI",
@@ -209,7 +209,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Humedad en suelo",
       "title": "HidroFarm",
       "summary": "Medidor de Humedad",
@@ -222,7 +222,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Muestreador de broca",
       "title": "SoloDrill",
       "summary": "Muestreador Hidráulico de Suelos",
@@ -235,7 +235,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Control de Gradiente Excavación",
       "title": "Ditch Assist DIG™",
       "summary": "Control de Excavaciones",
@@ -248,7 +248,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Nivelación GNSS 3D",
       "title": "Nivelación de suelos",
       "summary": "Manejo de Aguas",
@@ -261,7 +261,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Topografía y Diseños Nivelación",
       "title": "AgForm-3D Software",
       "summary": "Software de Diseño de Nivelación de Suelos",
@@ -274,7 +274,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Control de Dosis y Boquillas",
       "title": "Control de Pulverización",
       "summary": "DirectCommand L2",
@@ -287,7 +287,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Software AP Avanzado",
       "title": "SMS Software",
       "summary": "Software especializado en Agricultura de Precisión",
@@ -300,7 +300,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Descompactación",
       "title": "Yeomans Modelo SB6",
       "summary": "Arado descompactador no inversor del suelo",
@@ -313,7 +313,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Traílla 180 hp",
       "title": "Traílla hidráulica de empuje TH39",
       "summary": "Equipos de movimiento de suelos",
@@ -326,7 +326,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Traílla 200 hp",
       "title": "Traílla hidráulica de empuje TH42-BP",
       "summary": "Equipos de movimiento de suelos",
@@ -339,7 +339,7 @@
       "is_resumen": false
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Traílla 240 hp",
       "title": "Traílla hidráulica de empuje TH48-BP",
       "summary": "Equipos de movimiento de suelos",
@@ -352,7 +352,7 @@
       "is_resumen": false
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Traílla 280 hp",
       "title": "Traílla hidráulica de empuje TH51-BP",
       "summary": "Equipos de movimiento de suelos",
@@ -365,7 +365,7 @@
       "is_resumen": false
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Traílla 260 hp",
       "title": "Traílla hidráulica de empuje TH61-BP",
       "summary": "Equipos de movimiento de suelos",
@@ -378,7 +378,7 @@
       "is_resumen": false
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Refinadoras 140-180 hp",
       "title": "Refinadora cuello cisne 4000CC-4500CC-5000CC-6000CC",
       "summary": "Equipos de movimiento de suelos",
@@ -391,7 +391,7 @@
       "is_resumen": false
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Refinadoras 100-120 hp",
       "title": "Refinadora cuello cisne 2500CC-2750CC-3000CC",
       "summary": "Equipos de movimiento de suelos",
@@ -404,7 +404,7 @@
       "is_resumen": false
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Siembra caña 1 surco",
       "title": "Sembradora de un solo surco",
       "summary": "Sembradora de Caña",
@@ -417,7 +417,7 @@
       "is_resumen": false
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Siembra caña 2 surcos",
       "title": "Sembradora de dos surcos",
       "summary": "Sembradora de Caña",
@@ -430,7 +430,7 @@
       "is_resumen": false
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Siembra caña 3 surcos",
       "title": "Sembradora de tres surcos",
       "summary": "Sembradora de Caña",
@@ -443,7 +443,7 @@
       "is_resumen": false
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Pulverizacón exacta",
       "title": "Sistemas especializados de Pulverización",
       "summary": "nan",
@@ -456,7 +456,7 @@
       "is_resumen": false
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Cerea GPS",
       "title": "Sistema para Resiembra en Caña de Azúcar",
       "summary": "nan",
@@ -469,7 +469,7 @@
       "is_resumen": false
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Cerea GPS",
       "title": "Guiado Automático GNSS RTK",
       "summary": "Control de dirección automática",
@@ -482,7 +482,7 @@
       "is_resumen": false
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Cerea GPS",
       "title": "Tráfico Controlado",
       "summary": "Control de dirección automática",
@@ -495,7 +495,7 @@
       "is_resumen": false
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Imagenes Agricien",
       "title": "Imagen Agricien",
       "summary": "Imagen",
@@ -508,7 +508,7 @@
       "is_resumen": true
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Imagenes Agricien",
       "title": "Video Agricien",
       "summary": "Video",
@@ -521,7 +521,7 @@
       "is_resumen": false
     },
     {
-      "category": "Problemas  Soluciones",
+      "category": "Problema a Solución",
       "sub_category": "Imagenes Agricien",
       "title": "Imagen Agricien",
       "summary": "Imagen",
@@ -876,7 +876,7 @@
       "sub_category": "Ag Leader",
       "title": "Drenaje Subterráneo",
       "summary": "Intellislope",
-      "content": "La instalación de drenaje subterráneo en su explotación es posible gracias a Intellislope\n\nHÁGALO USTED MISMO Sistema de drenaje en solo 3 sencillos pasos",
+      "content": "La instalación de drenaje subterráneo en su explotación es posible gracias a Intellislope\n\nHÁGALO USTED MISMO Sistema de drenaje en solo 3 sencillos pasos:\n\nEstudio, recolecta una encuesta de la elevación de la superficie conduciendo sobre el camino ya sea antes de tiempo o durante la instalación\nPlanificar, ingrese parámetros para asegurar que el drenaje se coloque como se desa en el campo o importe el plan completo de drenaje desde SMS Advanced\nInstalar, elija el modo AutoTile para ajustes de profundidad automáticos o cambie al control manual de pendiente o inclinación cuando desee un manejo práctico\n\nControl de inclinación y pendiente sin preocupaciones \nCálculos de pendiente automatizados con AutoTile, realiza cálculos de pendiente basados en el estudio y la elevación objetivo, y ajusta automáticamente la profundidad del arado\nFlexibilidad para ajustar sobre la marcha, ajuste la configuración directamente desde la cabina y añada cambios de pendiente cuando necesite reducir la profundidad manteniendo la misma pendiente.\nControl de inclinación automatizado si se pierde la señal, este modo mantiene la inclinación deseada durante la pérdida de señal",
       "link": "https://www.agleader.com/es/intellislope/",
       "thumbnail": "https://www.agleader.com/wp-content/uploads/2025/08/Survey.png",
       "button_text": "Más detalles",
