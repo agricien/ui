@@ -181,7 +181,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Falker",
+      "sub_category": "Navegador",
       "title": "FieldBox",
       "summary": "Navegador Falker",
       "content": "FieldBox es una herramienta práctica y eficiente para guiar la recolección de datos. El equipamiento puede registrar todas las operaciones combinando una interfaz simple con un hardware potente. El GPS hecho para la agricultura de precisión.\nLa interfaz auto explicativa con opciones claras y directas permite que los usuarios logren la máxima productividad con el mínimo entrenamiento. Las configuraciones disponibles proporcionan flexibilidad para diferentes formas de trabajo\n \n- Creación de contornos y grillas.\n- Edición de grillas de muestreo.\n- Guía hasta los puntos.\n- Importación de grillas y contornos.\n- Registro del camino recorrido.",
@@ -194,8 +194,8 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Falker",
-      "title": "Felxum",
+      "sub_category": "Indices de Vegetación",
+      "title": "Flexum",
       "summary": "Índice NVDI",
       "content": "Mide el índice NDVI de forma continua, dinámica y eficaz. Con Flexum puede analizar el desarrollo de las condiciones nutricionales del campo en tiempo real, diagnosticando y ajustando el abonado rápidamente. Además, tiene mucha más practicidad ya que el equipamiento se puede instalar en diferentes vehículos.",
       "link": "https://www.falker.com.br/es/flexum",
@@ -207,7 +207,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Falker",
+      "sub_category": "Humedad en suelo",
       "title": "HidroFarm",
       "summary": "Medidor de Humedad",
       "content": "HidroFarm es el medidor y sensor digital de humedad del suelo de Falker. Es un equipamiento moderno, práctico y eficiente para controlar y dirigir el riego. HidroFarm mide con precisión la humedad volumétrica del suelo, ayudando a los agrónomos y productores rurales a determinar el momento cierto para irrigar el cultivo y la cantidad de agua adecuada a aplicar.",
@@ -220,7 +220,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Falker",
+      "sub_category": "Muestreador de broca",
       "title": "SoloDrill",
       "summary": "Muestreador Hidráulico de Suelos",
       "content": "SoloDrill es el muestreador de suelo de Falker, un dispositivo profesional de recogida de muestras de suelo para la agricultura de precisión. Conocido en el mercado hace más de 10 años, combina robustez y simplicidad de uso en el campo, garantizando un muestreo de calidad.\n\n \n \nDesarrollado para satisfacer las exigencias del muestreo a gran escala, dispone de un cortador de paja que evita la contaminación con paja y permite tomar muestras a más de una profundidad. ¡Ahora Falker ha ido más lejos! Hemos escuchado y respondido a los deseos de clientes y usuarios y hemos desarrollado una evolución de lo que ya era bueno, robusto y fácil de usar.",
@@ -233,7 +233,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Ditch Assist",
+      "sub_category": "Control de Gradiente Excavación",
       "title": "Ditch Assist DIG™",
       "summary": "Control de Excavaciones",
       "content": "Sistema de excavación de última generación. Deja de gastar el 30-60% de tu tiempo revisando pendientes y deshazte del láser. Operación con un solo hombre para optimizar al 100% tu sitio de trabajo.",
@@ -246,7 +246,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Topcon",
+      "sub_category": "Nivelación GNSS 3D",
       "title": "Nivelación de suelos",
       "summary": "Manejo de Aguas",
       "content": "Desde superficies básicas planas y de pendiente única hasta diseños avanzados de múltiples y variables pendientes, Topcon 3D Land Forming (formación de terreno por GNSS) ofrece un control de manejo de agua totalmente personalizable. Compuesta por tres fases clave: levantamiento, diseño y ejecución, la solución puede adaptarse a prácticamente cualquier operación agrícola, además de muchas aplicaciones específicas, como estanques, cimentaciones de edificios y caminos.",
@@ -259,7 +259,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Topcon",
+      "sub_category": "Topografía y Diseños Nivelación",
       "title": "AgForm-3D Software",
       "summary": "Software de Diseño de Nivelación de Suelos",
       "content": "nan",
@@ -272,7 +272,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Ag Leader",
+      "sub_category": "Control de Boquillas",
       "title": "Control de Pulverización",
       "summary": "DirectCommand L2",
       "content": "Aplicación precisa de líquidos, mayor eficiencia. \nDescubra por qué la gestión inteligente de líquidos comienza con DirectCommand L2.\n\nCaracterísticas de DirectCommand L2\nControl de secciones: Controle hasta 36 secciones de la barra de pulverización con aplicación de tasa variable.\n\nAmplia compatibilidad con múltiples aplicaciones: Desde controladores de líquidos hasta sembradoras, pulverizadores o aplicadores de NH3, controla todas sus máquinas de aplicación.\n\nSistema actualizable a RightSpot: Cuando esté listo para actualizar su sistema al control boquilla por boquilla, puede actualizar fácilmente de DirectCommand L2 a RightSpot.\n\nVisibilidad líder en la industria: Visibilidad dentro y fuera de la cabina y control durante todo el año con InCommand, que incluye monitoreo del tamaño de las gotas.",
@@ -285,7 +285,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Ag Leader",
+      "sub_category": "Software AP Avanzado",
       "title": "SMS Software",
       "summary": "Software especializado en Agricultura de Precisión",
       "content": "nan",
@@ -298,7 +298,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Yeomans arados",
+      "sub_category": "Descompactación",
       "title": "Yeomans Modelo SB6",
       "summary": "Arado descompactador no inversor del suelo",
       "content": "nan",
@@ -311,7 +311,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Agrotécnica Los Antonios",
+      "sub_category": "Traílla 180 hp",
       "title": "Traílla hidráulica de empuje TH39",
       "summary": "Equipos de movimiento de suelos",
       "content": "Ofrecemos una amplia gama de maquinaria agrícola diseñada para optimizar el rendimiento y la eficiencia en cada tarea del campo.\n\nLa Trailla Hidráulica de Empuje, modelo TH39, uenta con una capacidad de 6 a 6.5 m3 y un ancho de corte de 2.5-2.6 metros, están diseñadas para una potencia de 180-190 HP.\n\nOfrecemos asesoramiento especializado para ayudarte a elegir la maquinaria que mejor se ajuste a tu actividad. Con un servicio técnico eficiente y repuestos disponibles, garantizamos el mejor soporte postventa.\n\nOpcionales\nAnclaje Mástil-Hidroválvulas\nMástil Hidráulico\nVálvula de secuencia\nRipper fijo (5 brazos) «Modelo pequeño»\nAnclaje Ripper fijo con tuberías\nEnganche trasero, sin tuberías (sin ripper)\nEnganche trasero, con 4 tuberías\nEnganche trasero, con 6 tuberías\nAmortiguación\nRejilla Tajadera\nAutomatización (láser/GPS) con hidroválvula\nAutomatización (láser/GPS) distribuidor proporcional y filtro de presión",
@@ -324,7 +324,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Agrotécnica Los Antonios",
+      "sub_category": "Traílla 200 hp",
       "title": "Traílla hidráulica de empuje TH42-BP",
       "summary": "Equipos de movimiento de suelos",
       "content": "Ofrecemos una amplia gama de maquinaria agrícola diseñada para optimizar el rendimiento y la eficiencia en cada tarea del campo.\n\nLa Trailla Hidráulica de Empuje, modelo TH42-BP, cuenta con una capacidad de 6.5 a 8 m3 y un ancho de corte de 2.5-2.8 metros, están diseñadas para una potencia de 200-240 HP.\n\nOfrecemos asesoramiento especializado para ayudarte a elegir la maquinaria que mejor se ajuste a tu actividad. Con un servicio técnico eficiente y repuestos disponibles, garantizamos el mejor soporte postventa.\n\nOpcionales\nMástil hidráulico\nVálvula de secuencia\nRipper fijo (5 brazos) «Modelo pequeño»\nAnclaje ripper fijo con tuberías (sin ripper)\nEnganche trasero, sin tuberías\nEnganche trasero, con 4 tuberías\nEnganche trasero, con 6 tuberías\nConjunto pirulo atornillado\nConjunto pirulo para enganche trasero\nAmortiguación\nAutomatización (láser/GPS) con hidroválvula\nAutomatización (láser/GPS) distribuidor proporcional y filtro de presión",
@@ -337,7 +337,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Agrotécnica Los Antonios",
+      "sub_category": "Traílla 240 hp",
       "title": "Traílla hidráulica de empuje TH48-BP",
       "summary": "Equipos de movimiento de suelos",
       "content": "Ofrecemos una amplia gama de maquinaria agrícola diseñada para optimizar el rendimiento y la eficiencia en cada tarea del campo.\n\nLa Trailla Hidráulica de Empuje, modelo TH48-BP, cuenta con una capacidad de 8 a 9 m3 y un ancho de corte de 2.6-2.8 metros, están diseñadas para una potencia de 200-280 HP.\n\nOfrecemos asesoramiento especializado para ayudarte a elegir la maquinaria que mejor se ajuste a tu actividad. Con un servicio técnico eficiente y repuestos disponibles, garantizamos el mejor soporte postventa.\n\nOpcionales\nMástil hidráulico\nVálvula de secuencia\nRipper fijo\nAnclaje ripper fijo con tuberías (sin ripper)\nRipper con enganche rápido\nAnclaje ripper enganche rápido con tuberías (sin ripper)\nEnganche trasero, sin tuberías\nEnganche trasero, con 4 tuberías\nEnganche trasero, con 6 tuberías\nConjunto pirulo atornillado\nConjunto pirulo para enganche trasero\nAutomatización (láser/GPS) con hidroválvula\nAutomatización (láser/GPS) distribuidor proporcional y filtro de presión",
@@ -350,7 +350,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Agrotécnica Los Antonios",
+      "sub_category": "Traílla 280 hp",
       "title": "Traílla hidráulica de empuje TH51-BP",
       "summary": "Equipos de movimiento de suelos",
       "content": "Ofrecemos una amplia gama de maquinaria agrícola diseñada para optimizar el rendimiento y la eficiencia en cada tarea del campo.\n\nLa Trailla Hidráulica de Empuje, modelo TH51-BP, cuenta con una capacidad de 9.5 a 11 m3 y un ancho de corte de 2.7-3 metros, están diseñadas para una potencia de 280-320 HP.\n\nOfrecemos asesoramiento especializado para ayudarte a elegir la maquinaria que mejor se ajuste a tu actividad. Con un servicio técnico eficiente y repuestos disponibles, garantizamos el mejor soporte postventa.\n\nOpcionales\nMástil hidráulico\nVálvula de secuencia\nRipper fijo\nAnclaje ripper fijo con tuberías (sin ripper)\nRipper con enganche rápido\nAnclaje ripper enganche rápido con tuberías (sin ripper)\nEnganche trasero, sin tuberías\nEnganche trasero, con 4 tuberías\nEnganche trasero, con 6 tuberías\nConjunto pirulo atornillado\nConjunto pirulo para enganche trasero\nAutomatización (láser/GPS) con hidroválvula\nAutomatización (láser/GPS) distribuidor proporcional y filtro de presión",
@@ -363,7 +363,7 @@
     },
     {
       "category": "Solución a problemas",
-      "sub_category": "Agrotécnica Los Antonios",
+      "sub_category": "Traílla 260 hp",
       "title": "Traílla hidráulica de empuje TH61-BP",
       "summary": "Equipos de movimiento de suelos",
       "content": "Ofrecemos una amplia gama de maquinaria agrícola diseñada para optimizar el rendimiento y la eficiencia en cada tarea del campo.\n\nLa Trailla Hidráulica de Empuje, modelo TH61-BP, cuenta con una capacidad de 11 a 13 m3 y un ancho de corte de 2.8-3.2 metros, están diseñadas para una potencia de 320-420 HP.\n\nOfrecemos asesoramiento especializado para ayudarte a elegir la maquinaria que mejor se ajuste a tu actividad. Con un servicio técnico eficiente y repuestos disponibles, garantizamos el mejor soporte postventa.\n\nOpcionales\nMástil hidráulico\nVálvula de secuencia\nRipper fijo\nAnclaje ripper fijo con tuberías (sin ripper)\nRipper con enganche rápido\nAnclaje ripper enganche rápido con tuberías (sin ripper)\nEnganche trasero, sin tuberías\nEnganche trasero, con 4 tuberías\nEnganche trasero, con 6 tuberías\nConjunto pirulo atornillado\nConjunto pirulo para enganche trasero\nAutomatización (láser/GPS) con hidroválvula\nAutomatización (láser/GPS) distribuidor proporcional y filtro de presión",
@@ -897,14 +897,14 @@
     {
       "category": "Tecnología",
       "sub_category": "Cerea GPS",
-      "title": "Sistema para Resiembra en Caña de Azúcar",
-      "summary": "nan",
-      "content": "nan",
-      "link": "#",
-      "thumbnail": "https://picsum.photos/600/400",
-      "button_text": "Ver Original [Español]",
+      "title": "Sistema de Guiado Automático para Resiembra en Caña de Azúcar",
+      "summary": "Resiembra Automatizada en Caña de Azúcar",
+      "content": "Sencillo de manejar\nRealiza tus trabajos agrícolas de forma mucho más eficiente.\n\nCerea importa tus GAPS o Fallos de despoblación y los lleva a campo consiguiéndose una gran precisión durante el replanteo en campo. Cada Gaps será replanteado al mismo tiempo que mantienes la utomatización de dirección activada para garantizar colinealidad del surco con la resiembra.\n\nFunción de importación de GAPS y Surcos al mismo tiempo. Precisión en cada pasada.\n\nContacta para más detalles.",
+      "link": "https://cereagps.com/?page_id=10",
+      "thumbnail": "https://cereagps.com/wp-content/uploads/2026/02/IMG_9386-Photoroom2.png",
+      "button_text": "Más detalles",
       "published": "2026-04-29",
-      "lang": "Español",
+      "lang": "English",
       "is_resumen": false
     },
     {
@@ -1293,6 +1293,19 @@
       "link": "https://drive.google.com/drive/folders/1A-xO6pKMaPA-mMLh7LHgj-tWnw-Z0RuH?usp=sharing",
       "thumbnail": "https://media.licdn.com/dms/image/v2/D4E22AQHyqigUJPjang/feedshare-shrink_800/B4EZwQ6SgyKMAg-/0/1769810241961?e=1779321600&v=beta&t=065QYWLF_md5T0rGkuJ_QwkWcl2kQnsm3c0T3WgpJBY",
       "button_text": "Link de acceso",
+      "published": "2026-04-29",
+      "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Recursos",
+      "sub_category": "Videos",
+      "title": "Lanzamiento Cerea GPS en FIMA 2026",
+      "summary": "Novedades FIMA 2026",
+      "content": "Cerea T10R 3D/2D\n2026",
+      "link": "https://www.youtube.com/watch?v=Mol9bWyRUZ0",
+      "thumbnail": "https://yt3.googleusercontent.com/tEyCjviZs-l-sbn97WBDhwb9wJxBubV0tG3wSCHDepPfpH9b4GNfBOV91kmnGZimK8hKIuGGRA=s160-c-k-c0x00ffffff-no-rj",
+      "button_text": "Link video",
       "published": "2026-04-29",
       "lang": "English",
       "is_resumen": false
