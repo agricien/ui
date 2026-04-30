@@ -10,10 +10,13 @@ exit /b
 setlocal
 cd /d "%~dp0"
 
-:: 1. Sincronizar con OneDrive
+:: 1. Sincronizar imagenes desde Google Drive
+call .\sincronizar_imagenes.bat -hidden
+
+:: 2. Sincronizar datos desde OneDrive (Excel)
 python transform_content.py > nul 2>&1
 
-:: 2. Subiendo cambios a GitHub
+:: 3. Subiendo cambios a GitHub
 git add . > nul 2>&1
 git commit -m "Actualizacion automatica: %date% %time%" > nul 2>&1
 git push > nul 2>&1

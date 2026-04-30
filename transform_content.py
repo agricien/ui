@@ -3,6 +3,7 @@ import json
 import os
 import requests
 import io
+import urllib.parse
 from datetime import datetime
 
 # URL de descarga directa de OneDrive/SharePoint
@@ -92,10 +93,19 @@ def transform_excel_to_json(source, output_json):
             for _, row in banner_df.iterrows():
                 if pd.isna(row.get('Titulo')) or str(row.get('Titulo')).strip() == "":
                     continue
+                # Procesar URL de Foto (image) en el Banner
+                banner_photo = str(row.get('Foto', '')).strip()
+                if banner_photo == "" or banner_photo == "nan":
+                    banner_img_url = "https://picsum.photos/1200/600"
+                elif banner_photo.startswith("http"):
+                    banner_img_url = banner_photo
+                else:
+                    banner_img_url = "https://agricien.github.io/imagenes/" + urllib.parse.quote(banner_photo)
+
                 banner_data.append({
                     "title": str(row.get('Titulo', '')).strip(),
                     "subtitle": str(row.get('Sub titulo', '')).strip(),
-                    "image": str(row.get('Foto', '')).strip(),
+                    "image": banner_img_url,
                     "link": str(row.get('Original', '')).strip(),
                     "button_text": str(row.get('Boton', 'Saber Más')).strip()
                 })
@@ -134,6 +144,18 @@ def transform_excel_to_json(source, output_json):
                     lang = detect_language(row['Original'])
                     btn_text = f"Ver Original [{lang}]"
 
+                # Procesar URL de Foto (thumbnail)
+                photo_val = str(row['Foto']).strip()
+                if photo_val == "" or photo_val == "nan":
+                    photo_url = "https://picsum.photos/600/400"
+                elif photo_val.startswith("http"):
+                    photo_url = photo_val
+                else:
+                    # Es solo un nombre de archivo, construir URL de GitHub imagenes
+                    base_url = "https://agricien.github.io/imagenes/"
+                    # Codificar el nombre del archivo (ej: espacios -> %20)
+                    photo_url = base_url + urllib.parse.quote(photo_val)
+
                 item = {
                     "category": sheet_name,
                     "sub_category": str(row['SubTema']).strip(),
@@ -141,7 +163,7 @@ def transform_excel_to_json(source, output_json):
                     "summary": str(row['Sub titulo']).strip(),
                     "content": str(row['Spanish']).strip(),
                     "link": str(row['Original']).strip(),
-                    "thumbnail": str(row['Foto']).strip(),
+                    "thumbnail": photo_url,
                     "button_text": btn_text,
                     "published": today,
                     "lang": detect_language(row['Original']),
@@ -149,7 +171,6 @@ def transform_excel_to_json(source, output_json):
                 }
                 
                 if item['link'] == "nan": item['link'] = "#"
-                if item['thumbnail'] == "nan": item['thumbnail'] = "https://picsum.photos/600/400"
 
                 news_list.append(item)
             print(f"Éxito: Procesada hoja de tema: {sheet_name} ({len(df)} filas)")
