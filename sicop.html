@@ -585,13 +585,13 @@
         }
 
         function postular(id) {
-            // Copiar al portapapeles como respaldo
+            // Copiar al portapapeles como respaldo y método principal
             navigator.clipboard.writeText(id).then(() => {
-                console.log('ID copiado al portapapeles: ' + id);
+                alert('ID ' + id + ' copiado al portapapeles.\n\nAl cargar SICOP, pega este código en el campo "Número de procedimiento".');
             });
             
-            // Intentar pre-llenar vía URL (algunas sesiones de SICOP lo permiten)
-            const url = `https://www.sicop.go.cr/moduloOferta/search/EP_SEJ_COQ601.jsp?cartelTestYn=Y&instCartelNo=${id}&stateSearch=Y&searchCartelStat=02`;
+            // Usar la página de búsqueda estándar (COQ600) que es más estable
+            const url = `https://www.sicop.go.cr/moduloOferta/search/EP_SEJ_COQ600.jsp?stateSearch=Y`;
             
             window.open(url, '_blank');
         }
