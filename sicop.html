@@ -573,15 +573,27 @@
                                         <div class="small text-muted"><i class="far fa-calendar-alt me-1"></i> Cierre: <strong>${t.date}</strong></div>
                                         <div class="small fw-bold text-dark">${t.cat}</div>
                                     </div>
-                                    <a href="https://www.sicop.go.cr/app/module/bid/public/tenders" target="_blank" class="btn btn-primary w-100 rounded-pill fw-bold">
+                                    <button onclick="postular('${t.id}')" class="btn btn-primary w-100 rounded-pill fw-bold">
                                         <i class="fas fa-external-link-alt me-2"></i> Postular en SICOP
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 `;
             });
+        }
+
+        function postular(id) {
+            // Copiar al portapapeles como respaldo
+            navigator.clipboard.writeText(id).then(() => {
+                console.log('ID copiado al portapapeles: ' + id);
+            });
+            
+            // Intentar pre-llenar vía URL (algunas sesiones de SICOP lo permiten)
+            const url = `https://www.sicop.go.cr/moduloOferta/search/EP_SEJ_COQ601.jsp?cartelTestYn=Y&instCartelNo=${id}&stateSearch=Y&searchCartelStat=02`;
+            
+            window.open(url, '_blank');
         }
 
         // Buscador de servicios
