@@ -1,7 +1,7 @@
 {
   "header": {
     "title": "Agricultura Científica S.A.",
-    "subtitle": "Gestión Integral del Capital Hídrico y Regeneración Basada en Evidencia",
+    "subtitle": "Gestión Integral del Conocimiento, Tecnología, Capital Hídrico, Suelos, Cultivos y Prácticas Amigables con el Medio Ambiente para mayor Productividad",
     "brand_black": "AgriCien :",
     "brand_blue": "Visión 2026"
   },
@@ -42,7 +42,9 @@
       "Ag Leader": "https://www.agleader.com/wp-content/uploads/2024/04/Ag-Leader-Logo1-1.png",
       "Traube Engineering": "https://th.bing.com/th/id/OIP.8Jgip0tNCmNbmRQAbN6IiAHaEO?w=108&h=108&c=1&bgcl=8c7e09&r=0&o=7&dpr=1.5&pid=ImgRC&rm=3",
       "Los Antonios": "https://losantonios.com/wp-content/themes/losantonios/img/logo.svg",
-      "Yeomans arados": "https://tse3.mm.bing.net/th/id/OIP.O3-nRTZUF7wJ5X7855dC0AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+      "Yeomans arados": "https://tse3.mm.bing.net/th/id/OIP.O3-nRTZUF7wJ5X7855dC0AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "AgXcel": "https://agxcel.com/wp-content/uploads/2024/07/agxcel-logo.gif",
+      "Cerea GPS": "https://publicalt.xeria.es/agraria2023/es/Company/GetLogo/3029802"
     }
   },
   "news": [
@@ -434,6 +436,58 @@
       "button_text": "Más detalles",
       "published": "2026-04-29",
       "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
+      "sub_category": "AgXcel",
+      "title": "Sistemas especializados de Pulverización",
+      "summary": "nan",
+      "content": "nan",
+      "link": "#",
+      "thumbnail": "https://picsum.photos/600/400",
+      "button_text": "Ver Original [Español]",
+      "published": "2026-04-29",
+      "lang": "Español",
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
+      "sub_category": "Cerea GPS",
+      "title": "Sistema para Resiembra en Caña de Azúcar",
+      "summary": "nan",
+      "content": "nan",
+      "link": "#",
+      "thumbnail": "https://picsum.photos/600/400",
+      "button_text": "Ver Original [Español]",
+      "published": "2026-04-29",
+      "lang": "Español",
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
+      "sub_category": "Cerea GPS",
+      "title": "Guiado Automático GNSS RTK",
+      "summary": "Control de dirección automática",
+      "content": "Kit Autoguiado T10R GNSS RTK\nAutoguiado RTK, características:\n\nMonitor rugerizado (robusto) con módulo gps RTK integrado en él.\nAntena GNSS activa multiconstelación (GPS, Glonass, Galileo, Beidu, Qzss)\nRecepción de correcciones RTK rtcm3 vía internet mediante tarjeta SIM interna\nPosibilidad de recepción de correcciones RTK rtcm3 mediante una radio externa conectada a estación base propia.\nInclinómetro externo incluido.\nMarcación de puntos de guiado, centrado de pasada y acción del volante mediante botones incluidos en el volante.\nVolante eléctrico integrado de alto par motor y alta velocidad de giro, con adaptador de eje para la mayor parte de vehículos del mercado.\nSalida can-bus y rs485 para accionamiento de sistemas e implementos externos (corte de tramos) o antenas externas (Novatel, Hemisphere, etc.)",
+      "link": "https://cereagps.com/?page_id=10",
+      "thumbnail": "https://cereagps.com/wp-content/uploads/2026/02/IMG_9386-Photoroom2-1.png",
+      "button_text": "Más detalles",
+      "published": "2026-04-29",
+      "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
+      "sub_category": "Cerea GPS",
+      "title": "Tráfico Controlado",
+      "summary": "Control de dirección automática",
+      "content": "nan",
+      "link": "#",
+      "thumbnail": "https://picsum.photos/600/400",
+      "button_text": "Ver Original [Español]",
+      "published": "2026-04-29",
+      "lang": "Español",
       "is_resumen": false
     },
     {
