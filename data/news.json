@@ -809,12 +809,25 @@
     {
       "category": "Tecnología",
       "sub_category": "Ag Leader",
-      "title": "Receptores GPS",
+      "title": "Receptores GPS 7500",
+      "summary": "Receptor GPS",
+      "content": "Receptores GPS 7500 para todas sus operaciones. Ofrecen la flexibilidad de elegir la fuente de correcón que emjor de adpate a su explotación. Es compatible con todas las fuentes de correción. \n\nEs versátil, compatible con guiado manual, direcciópn asistida y sistemas de dirección integrados. Se puede mover fácilmente entre máquinas. \nEscalable, a medida que evolucionan sus necesidades \nUtilice correcciones WAAS/EGNOS/GLIDE, TerraStar y RTK. Consulte las correcciones diferenciales para obtener más detalles.\n\nEspecificaciones técnicas del GPS 7500\nCapacidad para rastrear múltiples constelaciones, incluyendo GPS, GLONASS, BeiDou, Galileo, QZSS\nReceptor de doble frecuencia en WAAS; Multiconstelación, multifrecuencia en RTK\nEmite una señal analógica de velocidad de radar para otros dispositivos en la cabina que solo requieran la velocidad de avance\nMayor tiempo de actividad al realizar una transición perfecta a la siguiente fuente de señal disponible cuando se pierde temporalmente la corrección",
+      "link": "https://www.agleader.com/es/gps-receiver-systems/",
+      "thumbnail": "https://www.agleader.com/wp-content/uploads/2025/08/StableLoc-graphic.jpg",
+      "button_text": "Más detalles",
+      "published": "2026-04-30",
+      "lang": "English",
+      "is_resumen": false
+    },
+    {
+      "category": "Tecnología",
+      "sub_category": "Ag Leader",
+      "title": "SteerCommand Z2",
       "summary": "nan",
       "content": "nan",
       "link": "#",
       "thumbnail": "https://picsum.photos/600/400",
-      "button_text": "Ver Original [Español]",
+      "button_text": "Más detalles",
       "published": "2026-04-30",
       "lang": "Español",
       "is_resumen": false
