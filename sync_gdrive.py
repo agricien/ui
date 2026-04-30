@@ -4,21 +4,27 @@ import os
 import sys
 from datetime import datetime
 
-# ==========================================
-# CONFIGURACION
-# ==========================================
+# ==============================================================================
+# CONFIGURACIÓN
+# ==============================================================================
+# FOLDER_ID: El identificador de la carpeta compartida en Google Drive.
+# OUTPUT_DIR: Carpeta local (o relativa) donde se descargarán las imágenes/videos.
 FOLDER_ID = "1Z1j6efSoIOpfDTrp97-TdzWocNjDlmFM"
 OUTPUT_DIR = "../imagenes"
 
 def get_file_list(folder_id):
-    """Obtiene la lista de archivos de una carpeta publica de Google Drive."""
+    """
+    Escanea la vista pública de una carpeta de Google Drive para extraer los IDs
+    y nombres de los archivos disponibles. 
+    Utiliza una expresión regular para parsear el HTML de la vista embebida.
+    """
     url = f"https://drive.google.com/embeddedfolderview?id={folder_id}"
     try:
         response = requests.get(url, timeout=15)
         response.raise_for_status()
         
-        # Buscar el ID y el nombre usando la estructura del HTML de la vista embebida
-        # Formato: id="entry-ID" ... flip-entry-title">Nombre</div>
+        # Patrón para encontrar el ID del archivo y su nombre en el HTML.
+        # Formato esperado: id="entry-ID" ... flip-entry-title">Nombre</div>
         matches = re.findall(r'id="entry-([\w-]+)".*?class="flip-entry-title">([^<]+)</div>', response.text, re.DOTALL)
         
         files = []
@@ -27,6 +33,7 @@ def get_file_list(folder_id):
             if fid not in seen:
                 name = name.strip()
                 ext = os.path.splitext(name)[1].lower()
+                # Filtrar solo archivos multimedia permitidos
                 if ext in ['.jpg', '.jpeg', '.jfif', '.png', '.webp', '.gif', '.mp4', '.mov', '.avi', '.webm']:
                     files.append((fid, name))
                     seen.add(fid)
@@ -37,7 +44,9 @@ def get_file_list(folder_id):
 
 
 def download_file(file_id, name, output_path):
-    """Descarga un archivo publico de Google Drive."""
+    """
+    Descarga un archivo individual usando el ID de descarga directa de Google Drive.
+    """
     url = f"https://drive.google.com/uc?export=download&id={file_id}"
     try:
         response = requests.get(url, stream=True, timeout=30)
@@ -53,6 +62,12 @@ def download_file(file_id, name, output_path):
         return False
 
 def sync():
+    """
+    Función principal de sincronización:
+    1. Obtiene la lista de archivos en Drive.
+    2. Descarga los nuevos archivos que no existen localmente.
+    3. Elimina los archivos locales que ya no están en la carpeta de Drive.
+    """
     print(f"Iniciando sincronizacion de Google Drive (ID: {FOLDER_ID})...")
     
     files = get_file_list(FOLDER_ID)
@@ -63,7 +78,7 @@ def sync():
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
 
-    # Lista de archivos actuales en la carpeta local para detectar borrados
+    # Obtener lista de archivos locales actuales (ignorando archivos de sistema de Git)
     local_files = set(os.listdir(OUTPUT_DIR))
     if ".git" in local_files: local_files.remove(".git")
     if "README.md" in local_files: local_files.remove("README.md")
@@ -74,15 +89,14 @@ def sync():
         remote_names.add(name)
         file_path = os.path.join(OUTPUT_DIR, name)
         
-        # Si el archivo ya existe, podriamos saltarlo (o comparar tamaños)
-        # Para simplificar, descargamos si no existe
+        # Solo descargar si el archivo no existe localmente
         if not os.path.exists(file_path):
             print(f"Descargando: {name}")
             download_file(fid, name, file_path)
         else:
             print(f"Ya existe: {name}")
 
-    # Borrar archivos locales que ya no estan en Drive
+    # Espejo (Mirroring): Borrar archivos locales que ya no existen en el origen (Drive)
     for local_name in local_files:
         if local_name not in remote_names:
             print(f"Borrando archivo eliminado en Drive: {local_name}")

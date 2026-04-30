@@ -539,12 +539,15 @@
             filterNews(window.lastCategory || 'Tecnología');
         }
 
+        /**
+         * Decide si mostrar una etiqueta <img> o <video> dependiendo de la extensión.
+         */
         function getMediaHtml(url, classes, extraAttributes = "") {
             const videoExtensions = ['.mp4', '.mov', '.webm', '.ogg'];
             const isVideo = videoExtensions.some(ext => url.toLowerCase().endsWith(ext));
             const isGif = url.toLowerCase().endsWith('.gif');
             
-            // Si es GIF o el usuario quiere ver todo completo, usamos contain
+            // Estilo dinámico: GIFs y videos verticales se ven completos (contain)
             const style = (isGif) ? 'object-fit: contain; background: #f0f0f0;' : 'object-fit: cover;';
 
             if (isVideo) {
@@ -649,7 +652,33 @@
             document.getElementById('category-filters').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        // Carga inicial
+        /**
+         * Función inicial que carga los datos desde el archivo JSON.
+         */
+        async function loadNews() {
+            try {
+                const timestamp = new Date().getTime();
+                const response = await fetch(`data/news.json?t=${timestamp}`);
+                const data = await response.json();
+                
+                allNews = data.news;
+                mainTheme = data.company.main_theme || 'Resumen';
+                categoriesOrder = data.categories_order || [];
+                window.subthemeLogos = data.subtheme_logos || {};
+
+                renderBanner(data.banner);
+                renderCategories(categoriesOrder);
+                
+                // Carga la primera categoría disponible por defecto
+                const firstCat = (categoriesOrder.length > 0) ? categoriesOrder[0] : mainTheme;
+                filterNews(firstCat);
+
+            } catch (error) {
+                console.error("Error cargando noticias:", error);
+                document.getElementById('news-container').innerHTML = '<p class="text-center">Error cargando contenido.</p>';
+            }
+        }
+
         loadNews();
     </script>
 </body>

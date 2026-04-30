@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Administración - AgriCien</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #007bff;
+            --secondary: #6c757d;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --success: #28a745;
+            --warning: #ffc107;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--light);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+
+        h1 { color: var(--primary); font-weight: 600; margin-bottom: 10px; }
+        h2 { color: var(--primary); border-left: 5px solid var(--primary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--dark); margin-top: 25px; }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            background: var(--light);
+            padding: 20px;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .step:hover { transform: translateY(-5px); }
+
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .alert {
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .alert-info { background: #e7f3ff; border-left: 5px solid var(--primary); }
+        .alert-warning { background: #fff3cd; border-left: 5px solid var(--warning); }
+
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th { background: var(--light); }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--secondary);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Guía de Administración AgriCien</h1>
+        <p>Manual paso a paso para actualizar contenido, imágenes y vídeos.</p>
+    </header>
+
+    <div class="alert alert-info">
+        <strong>¡Bienvenido!</strong> Este sistema está diseñado para ser automático. Solo necesitas gestionar tus archivos en la nube y ejecutar un comando.
+    </div>
+
+    <h2>1. Gestión de Imágenes y Vídeos</h2>
+    <p>Todas las fotos y vídeos que quieras usar en el blog deben estar en la carpeta compartida de <strong>Google Drive</strong>.</p>
+    
+    <div class="step">
+        <div class="step-number">1</div>
+        <div>
+            <h3>Sube tus archivos a Google Drive</h3>
+            <p>Asegúrate de que los archivos tengan nombres claros (sin caracteres especiales raros de preferencia). Formatos permitidos: <code>.jpg</code>, <code>.png</code>, <code>.jfif</code>, <code>.gif</code>, <code>.mp4</code>, <code>.mov</code>.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-number">2</div>
+        <div>
+            <h3>Copia el nombre exacto</h3>
+            <p>Necesitarás el nombre del archivo (ej: <code>mi_foto.jpg</code>) para ponerlo luego en el Excel.</p>
+        </div>
+    </div>
+
+    <h2>2. Actualización de Contenido (Excel)</h2>
+    <p>El "cerebro" del sitio es el archivo Excel en <strong>OneDrive</strong>.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Columna</th>
+                <th>Qué poner</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Foto</strong></td>
+                <td>Nombre del archivo en Drive (ej: <code>giphy.gif</code>) o una URL completa.</td>
+            </tr>
+            <tr>
+                <td><strong>Resumen</strong></td>
+                <td>Pon un <code>1</code> si quieres que esta noticia aparezca en la pantalla de inicio.</td>
+            </tr>
+            <tr>
+                <td><strong>SubTema</strong></td>
+                <td>Agrupa tus noticias. Si el SubTema coincide con la Categoría, se verá como una lista plana.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="alert alert-warning">
+        <strong>Logos de Subtemas:</strong> Si creas un SubTema nuevo, ve a la hoja <code>Logos</code> y asigna qué imagen quieres que represente a ese grupo.
+    </div>
+
+    <h2>3. Publicar Cambios</h2>
+    <p>Una vez que hayas actualizado Drive y el Excel, sigue estos pasos en tu computadora:</p>
+
+    <div class="step">
+        <div class="step-number">1</div>
+        <div>
+            <h3>Ejecuta el script</h3>
+            <p>Haz doble clic en el archivo <code>actualizar_blog.bat</code> en tu carpeta de trabajo.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-number">2</div>
+        <div>
+            <h3>Espera la magia</h3>
+            <p>El script se ejecutará en segundo plano (no verás ventanas negras). En unos segundos, descargará las fotos nuevas, procesará el Excel y subirá todo a GitHub.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-number">3</div>
+        <div>
+            <h3>Verifica el sitio</h3>
+            <p>Entra a tu web y presiona <code>Ctrl + F5</code> para forzar la actualización de la memoria del navegador. ¡Listo!</p>
+        </div>
+    </div>
+
+    <h2>Preguntas Frecuentes</h2>
+    <h3>¿Por qué no veo mi imagen nueva?</h3>
+    <p>Asegúrate de que el nombre en el Excel coincida exactamente con el de Google Drive y de que hayas ejecutado el archivo <code>.bat</code>.</p>
+    
+    <h3>¿Puedo subir vídeos pesados?</h3>
+    <p>Sí, el sistema los soporta, pero recuerda que si son muy grandes (>50MB), GitHub podría tardar más en procesarlos.</p>
+
+    <footer>
+        &copy; 2026 AgriCien - Sistema de Gestión de Contenidos Automatizado
+    </footer>
+</div>
+
+</body>
+</html>
