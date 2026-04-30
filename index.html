@@ -542,11 +542,15 @@
         function getMediaHtml(url, classes, extraAttributes = "") {
             const videoExtensions = ['.mp4', '.mov', '.webm', '.ogg'];
             const isVideo = videoExtensions.some(ext => url.toLowerCase().endsWith(ext));
+            const isGif = url.toLowerCase().endsWith('.gif');
             
+            // Si es GIF o el usuario quiere ver todo completo, usamos contain
+            const style = (isGif) ? 'object-fit: contain; background: #f0f0f0;' : 'object-fit: cover;';
+
             if (isVideo) {
-                return `<video src="${url}" class="${classes}" ${extraAttributes} loop muted playsinline onmouseover="this.play()" onmouseout="this.pause()" style="object-fit: cover;"></video>`;
+                return `<video src="${url}" class="${classes}" ${extraAttributes} loop muted playsinline onmouseover="this.play()" onmouseout="this.pause()" style="${style}"></video>`;
             } else {
-                return `<img src="${url}" class="${classes}" ${extraAttributes} alt="Media" onerror="this.src='https://picsum.photos/400/250'">`;
+                return `<img src="${url}" class="${classes}" ${extraAttributes} alt="Media" onerror="this.src='https://picsum.photos/400/250'" style="${style}">`;
             }
         }
 
