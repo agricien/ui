@@ -79,10 +79,17 @@ def transform_excel_to_json(source, output_json):
             for _, row in logos_df.iterrows():
                 t = str(row.get('Tema', '')).strip()
                 s = str(row.get('SubTema', '')).strip()
-                l = str(row.get('Logo', '')).strip()
-                if t and s and l:
+                logo_val = str(row.get('Logo', '')).strip()
+                if logo_val and t and s:
+                    if logo_val == "" or logo_val == "nan":
+                        logo_url = ""
+                    elif logo_val.startswith("http"):
+                        logo_url = logo_val
+                    else:
+                        logo_url = "https://agricien.github.io/imagenes/" + urllib.parse.quote(logo_val)
+                    
                     if t not in logos_data: logos_data[t] = {}
-                    logos_data[t][s] = l
+                    logos_data[t][s] = logo_url
             print(f"Éxito: Leídos {len(logos_df)} registros de Logos.")
 
         # Procesar Banner
@@ -156,6 +163,10 @@ def transform_excel_to_json(source, output_json):
                     # Codificar el nombre del archivo (ej: espacios -> %20)
                     photo_url = base_url + urllib.parse.quote(photo_val)
 
+                # Detección robusta de Resumen (acepta 1, 1.0, "1", "1.0")
+                resumen_val = str(row['Resumen']).strip().lower()
+                is_resumen = resumen_val == "1" or resumen_val == "1.0" or resumen_val == "true"
+
                 item = {
                     "category": sheet_name,
                     "sub_category": str(row['SubTema']).strip(),
@@ -167,7 +178,7 @@ def transform_excel_to_json(source, output_json):
                     "button_text": btn_text,
                     "published": today,
                     "lang": detect_language(row['Original']),
-                    "is_resumen": str(row['Resumen']).strip() == "1"
+                    "is_resumen": is_resumen
                 }
                 
                 if item['link'] == "nan": item['link'] = "#"
