@@ -27,7 +27,7 @@ def get_file_list(folder_id):
             if fid not in seen:
                 name = name.strip()
                 ext = os.path.splitext(name)[1].lower()
-                if ext in ['.jpg', '.jpeg', '.png', '.mp4', '.mov', '.avi']:
+                if ext in ['.jpg', '.jpeg', '.jfif', '.png', '.webp', '.gif', '.mp4', '.mov', '.avi', '.webm']:
                     files.append((fid, name))
                     seen.add(fid)
         return files
