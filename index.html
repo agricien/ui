@@ -652,33 +652,6 @@
             document.getElementById('category-filters').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        /**
-         * Función inicial que carga los datos desde el archivo JSON.
-         */
-        async function loadNews() {
-            try {
-                const timestamp = new Date().getTime();
-                const response = await fetch(`data/news.json?t=${timestamp}`);
-                const data = await response.json();
-                
-                allNews = data.news;
-                mainTheme = data.company.main_theme || 'Resumen';
-                categoriesOrder = data.categories_order || [];
-                window.subthemeLogos = data.subtheme_logos || {};
-
-                renderBanner(data.banner);
-                renderCategories(categoriesOrder);
-                
-                // Carga la primera categoría disponible por defecto
-                const firstCat = (categoriesOrder.length > 0) ? categoriesOrder[0] : mainTheme;
-                filterNews(firstCat);
-
-            } catch (error) {
-                console.error("Error cargando noticias:", error);
-                document.getElementById('news-container').innerHTML = '<p class="text-center">Error cargando contenido.</p>';
-            }
-        }
-
         loadNews();
     </script>
 </body>
