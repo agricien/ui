@@ -595,9 +595,14 @@
             
             // Mostrar Toast mejorado
             const toast = document.getElementById("toast");
-            toast.innerHTML = `<i class="fas fa-check-circle me-2"></i> ID <strong>${id}</strong> Copiado.<br><small>Pégalo en el campo 'Número de procedimiento' de SICOP.</small>`;
+            toast.innerHTML = `<i class="fas fa-check-circle me-2"></i> ID <strong>${id}</strong> Copiado.<br><small>Abriendo SICOP... Pégalo en 'Número de procedimiento'.</small>`;
             toast.className = "show";
             setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 4000);
+
+            // Abrir el portal de búsqueda seguro (donde no da error)
+            setTimeout(() => {
+                window.open('https://www.sicop.go.cr/moduloOferta/search/EP_SEJ_COQ600.jsp?stateSearch=Y', '_blank');
+            }, 600);
         }
 
         // Buscador de servicios
