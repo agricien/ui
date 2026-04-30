@@ -68,7 +68,7 @@
     {
       "category": "Problema a Solución",
       "sub_category": "Telemetría y datos",
-      "title": "Maher App",
+      "title": "Cotizar ClorofiLOG",
       "summary": "Aplicación - Visualización y Control",
       "content": "APLICACIÓN PARA EL CONTROL DEL RIEGO A DISTANCIA, MAHER App\nAhorra tiempo y gana en productividad\n\nAutomatiza los riegos y supervísalos desde tu móvil, PC o tablet. Con Maher App podrás parar o iniciar un programa de riego sin necesidad de desplazarte a la finca.\nDedica tu trabajo a otras labores ahorrando así en costes de producción y mejorando la rentabilidad de tus cultivos.\nMás datos, mayor control\n\nVisualiza desde cualquier lugar gráficas de sensores, historiales de riego, anomalías detectadas durante el riego…\nSeguridad en tus riegos, recibe mensajes vía SMS o emails sobre anomalías registradas, inicios y fin de riegos.",
       "link": "https://www.maherelectronica.com/control-de-distancia/control-remoto-programadores-riego/",
@@ -99,7 +99,7 @@
       "content": "SoloFlux es un permeámetro digital automatizado, la herramienta ideal para medir la conductividad hidráulica y comprender la dinámica del agua en el suelo.\n\nEl equipo es innovador porque mide el flujo de agua en el suelo de forma digital y automática, lo que hace que la recogida de datos sea mucho más práctica y la evaluación más intuitiva. Lo que antes era un trabajo laborioso que requería la supervisión in situ de un técnico cualificado, ahora es más rápido con SoloFlux y la recogida y registro automáticos de datos.",
       "link": "https://www.falker.com.br/es/soloflux",
       "thumbnail": "https://www.falker.com.br/images/products/soloflux/Site-parceria-embrapa-es.webp",
-      "button_text": "Original Falker",
+      "button_text": "Cotizar SoloFlux",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": true
@@ -708,9 +708,9 @@
       "title": "SoloDrill",
       "summary": "Muestreador Hidráulico de Suelos",
       "content": "SoloDrill es el muestreador de suelo de Falker, un dispositivo profesional de recogida de muestras de suelo para la agricultura de precisión. Conocido en el mercado hace más de 10 años, combina robustez y simplicidad de uso en el campo, garantizando un muestreo de calidad.\n\n \n \nDesarrollado para satisfacer las exigencias del muestreo a gran escala, dispone de un cortador de paja que evita la contaminación con paja y permite tomar muestras a más de una profundidad. ¡Ahora Falker ha ido más lejos! Hemos escuchado y respondido a los deseos de clientes y usuarios y hemos desarrollado una evolución de lo que ya era bueno, robusto y fácil de usar.",
-      "link": "https://www.falker.com.br/es/solodrill",
+      "link": "https://agricien.github.io/ui/contacto.html",
       "thumbnail": "https://media.licdn.com/dms/image/v2/D4E22AQGhhj0EojKdew/feedshare-shrink_800/B4EZbqYLXxGcAg-/0/1747688929961?e=1779321600&v=beta&t=t41gFRnP8sQS39oXri8xaJZ-4Ym_D0Xsr_cST-cLJH4",
-      "button_text": "Visita el sitio",
+      "button_text": "Cotizar SoloDrill",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": false
