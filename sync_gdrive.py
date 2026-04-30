@@ -8,7 +8,7 @@ from datetime import datetime
 # CONFIGURACION
 # ==========================================
 FOLDER_ID = "1Z1j6efSoIOpfDTrp97-TdzWocNjDlmFM"
-OUTPUT_DIR = "imagenes"
+OUTPUT_DIR = "../imagenes"
 
 def get_file_list(folder_id):
     """Obtiene la lista de archivos de una carpeta publica de Google Drive."""

@@ -13,7 +13,7 @@ cd /d "%~dp0"
 :: ==========================================
 :: CONFIGURACION
 :: ==========================================
-set "REPO_DIR=imagenes"
+set "REPO_DIR=..\imagenes"
 set "REMOTE_REPO=https://github.com/agricien/imagenes.git"
 
 :: 1. Inicializar repositorio si no existe
