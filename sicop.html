@@ -248,7 +248,10 @@
     </head        <!-- Active Tenders Section -->
         <section class="mb-5">
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="h3 fw-bold">Oportunidades de Negocio Detectadas</h2>
+                <div>
+                    <h2 class="h3 fw-bold mb-1">Oportunidades de Negocio Detectadas</h2>
+                    <p class="text-muted small">Haz clic en el botón azul para copiar el ID y luego búscalo en <a href="https://www.sicop.go.cr/moduloOferta/search/EP_SEJ_COQ600.jsp?stateSearch=Y" target="_blank" class="fw-bold">SICOP</a>.</p>
+                </div>
                 <span class="text-muted small">Última sincronización SICOP: Hace instantes</span>
             </div>
             <div class="row g-4" id="tenders-display">
@@ -576,7 +579,7 @@
                                         <div class="small fw-bold text-dark">${t.cat}</div>
                                     </div>
                                     <button onclick="postular('${t.id}')" class="btn btn-primary w-100 rounded-pill fw-bold">
-                                        <i class="fas fa-external-link-alt me-2"></i> Postular en SICOP
+                                        <i class="fas fa-copy me-2"></i> Copiar #Procedimiento para consultar SICOP
                                     </button>
                                 </div>
                             </div>
@@ -590,17 +593,11 @@
             // Copiar al portapapeles
             navigator.clipboard.writeText(id);
             
-            // Mostrar Toast
+            // Mostrar Toast mejorado
             const toast = document.getElementById("toast");
+            toast.innerHTML = `<i class="fas fa-check-circle me-2"></i> ID <strong>${id}</strong> Copiado.<br><small>Pégalo en el campo 'Número de procedimiento' de SICOP.</small>`;
             toast.className = "show";
-            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
-            
-            // URL completa sin alerts bloqueantes
-            const url = `https://www.sicop.go.cr/moduloOferta/search/EP_SEJ_COQ601.jsp?cartelTestYn=Y&cartelNm=&proceType=&cartelInstCd=&instNm=&regDtFrom=31/10/2025&regDtTo=29/04/2026&openbidDtFrom=31/10/2025&openbidDtTo=28/06/2026&instCartelNo=${id}&cartelNo=&stateSearch=Y&searchCartelStat=`;
-            
-            setTimeout(() => {
-                window.open(url, '_blank');
-            }, 500); // Pequeño delay para que se vea el toast
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 4000);
         }
 
         // Buscador de servicios
