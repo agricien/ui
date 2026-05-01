@@ -62,7 +62,8 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Mensaje</label>
-                    <textarea required name="entry.540142033" id="mensajeArea" class="form-control" rows="5" placeholder="Contanos el contexto y el objetivo..."></textarea>
+                    <textarea required id="mensajeAreaVisible" class="form-control" rows="5" placeholder="Contanos el contexto y el objetivo..."></textarea>
+                    <input type="hidden" name="entry.540142033" id="mensajeAreaOculto">
                 </div>
                 <div class="d-flex align-items-center mt-4">
                     <button type="submit" id="submitBtn" class="btn btn-primary rounded-pill px-4">Enviar</button>
@@ -77,18 +78,28 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Guardamos la ruta en una variable global para usarla en el submit
+        let rutaTrazabilidad = "";
+        
         document.addEventListener("DOMContentLoaded", () => {
             const params = new URLSearchParams(window.location.search);
             const mensaje = params.get('mensaje');
             if (mensaje) {
-                const textarea = document.getElementById('mensajeArea');
-                if (textarea) {
-                    textarea.value = mensaje;
-                }
+                rutaTrazabilidad = mensaje;
             }
         });
 
         function googleFormSubmit(e) {
+            // Concatenar ruta + mensaje antes de enviar
+            const visibleText = document.getElementById("mensajeAreaVisible").value;
+            const hiddenInput = document.getElementById("mensajeAreaOculto");
+            
+            if (rutaTrazabilidad) {
+                hiddenInput.value = rutaTrazabilidad + "\n\n" + visibleText;
+            } else {
+                hiddenInput.value = visibleText;
+            }
+
             const btn = document.getElementById("submitBtn");
             const msg = document.getElementById("formMsg");
             if (btn) {
