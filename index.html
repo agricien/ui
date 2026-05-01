@@ -575,7 +575,7 @@
 
                 mosaicHtml += `
                     <div class="subtheme-card shadow-sm" onclick="showSubthemeDetails('${sub.replace(/'/g, "\\'")}', '${cat}')">
-                        <img src="${logoUrl}" alt="${sub}" onerror="this.src='https://picsum.photos/400/250'">
+                        <img src="${logoUrl}" alt="${sub}" onerror="this.src='https://picsum.photos/400/250'" referrerpolicy="no-referrer">
                         <div class="card-body">
                             <h4 class="card-title">${sub}</h4>
                             <p class="card-subtitle">${subItems.length} Elementos</p>
@@ -631,7 +631,7 @@
             if (isVideo) {
                 return `<video src="${url}" class="${classes}" ${extraAttributes} loop muted playsinline onmouseover="this.play()" onmouseout="this.pause()" style="${style}"></video>`;
             } else {
-                return `<img src="${url}" class="${classes}" ${extraAttributes} alt="Media" onerror="this.src='https://picsum.photos/400/250'" style="${style}">`;
+                return `<img src="${url}" class="${classes}" ${extraAttributes} alt="Media" onerror="this.src='https://picsum.photos/400/250'" referrerpolicy="no-referrer" style="${style}">`;
             }
         }
 
@@ -671,7 +671,7 @@
             const isVideo = videoExtensions.some(ext => item.thumbnail.toLowerCase().endsWith(ext));
             const mediaModalHtml = isVideo 
                 ? `<video src="${item.thumbnail}" class="img-fluid rounded shadow" controls style="max-height: 450px; width: 100%; background: #000;"></video>`
-                : `<img src="${item.thumbnail}" class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;" onerror="this.src='https://picsum.photos/600/400'">`;
+                : `<img src="${item.thumbnail}" class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;" onerror="this.src='https://picsum.photos/600/400'" referrerpolicy="no-referrer">`;
 
             const bodyEl = document.getElementById('articleModalBody');
             if (bodyEl) {
