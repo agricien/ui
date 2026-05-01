@@ -627,12 +627,12 @@
     {
       "category": "Tecnología",
       "sub_category": "Falker",
-      "title": "Cotizar Kit AP",
+      "title": "Kit AP",
       "summary": "Conjunto de Agricultura de Precisión",
       "content": "Uno de los grandes diferenciales de Falker es ofrecer una solución completa e integrada para principiantes en el uso de la agricultura de precisión o para clientes que necesitan recopilar y procesar gran cantidad de datos.\n\nEquipamento robusto e dimensionado para uso no campo, o Kit Agricultura de Precisión da Falker disponibiliza tudo o que você precisa para a coleta de dados em um único fornecedor de tecnologia.",
       "link": "https://www.falker.com.br/es/kit_ap",
       "thumbnail": "https://www.falker.com.br/images/products/kit-ap/kit-ap-solodrill-img.webp",
-      "button_text": "Cotizar",
+      "button_text": "Cotizar Kit AP",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": false
@@ -645,7 +645,7 @@
       "content": "Terram tiene una operación simple para medir la conductividad eléctrica a través de discos en contacto con el suelo.\n\nAlta densidad: Terram realiza mediciones segundo a segundo para generar datos capaces de crear mapas de variabilidad de alta definición.\n\nCompacto: Terram fue desarrollado en un tamaño compacto para facilitar el transporte, pudiendo ser transportado en pequeñas camionetas.\n\nVersátil: Se puede utilizar con diversos tipos de vehículos, como ATVs y UTVs, pickups y tractores pequeños o grandes.\n\nCompatibilidad: Los datos guardados en FieldBox en formato Shape proporcionan el procesamiento en diversas plataformas.\n\nFacilidad: El equipamiento es fácil de instalar y tiene una operación simple a través del FieldBox.",
       "link": "https://www.falker.com.br/es/terram",
       "thumbnail": "https://www.falker.com.br/images/products/terram/carro.webp",
-      "button_text": "Original Falker",
+      "button_text": "Cotizar Terram",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": false
@@ -658,7 +658,7 @@
       "content": "FalkerMap es un sistema online desarrollado para crear fácilmente mapas de fertilidad y de recomendación de tasa variable.\nTodas las funciones son fácilmente accesibles gracias a la interfaz simplificada, mejorando el rendimiento en la generación de mapas y recomendaciones a través del exclusivo sistema gráfico de edición de fórmulas agronómicas.",
       "link": "https://www.falker.com.br/es/falkermap",
       "thumbnail": "https://www.falker.com.br/images/products/falkermap/multi-screen.webp",
-      "button_text": "Original Falker",
+      "button_text": "Cotizar FalkerMap",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": false
@@ -671,7 +671,7 @@
       "content": "FieldBox es una herramienta práctica y eficiente para guiar la recolección de datos. El equipamiento puede registrar todas las operaciones combinando una interfaz simple con un hardware potente. El GPS hecho para la agricultura de precisión.\nLa interfaz auto explicativa con opciones claras y directas permite que los usuarios logren la máxima productividad con el mínimo entrenamiento. Las configuraciones disponibles proporcionan flexibilidad para diferentes formas de trabajo\n \n- Creación de contornos y grillas.\n- Edición de grillas de muestreo.\n- Guía hasta los puntos.\n- Importación de grillas y contornos.\n- Registro del camino recorrido.",
       "link": "https://www.falker.com.br/es/fieldbox",
       "thumbnail": "https://www.falker.com.br/images/products/fieldbox/fieldbox-grids.webp",
-      "button_text": "Original Falker",
+      "button_text": "Cotizar FieldBox",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": false
@@ -684,7 +684,7 @@
       "content": "Mide el índice NDVI de forma continua, dinámica y eficaz. Con Flexum puede analizar el desarrollo de las condiciones nutricionales del campo en tiempo real, diagnosticando y ajustando el abonado rápidamente. Además, tiene mucha más practicidad ya que el equipamiento se puede instalar en diferentes vehículos.",
       "link": "https://www.falker.com.br/es/flexum",
       "thumbnail": "https://www.falker.com.br/images/products/flexum/operation.webp",
-      "button_text": "Original Falker",
+      "button_text": "Cotizar Flexum",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": false
@@ -723,7 +723,7 @@
       "content": "Sistema de excavación de última generación. Deja de gastar el 30-60% de tu tiempo revisando pendientes y deshazte del láser. Operación con un solo hombre para optimizar al 100% tu sitio de trabajo.",
       "link": "https://www.ditchassist.com/about_ditch_assist_dig/",
       "thumbnail": "https://cdn.ditchassist.com/wp-content/uploads/2025/04/dig-schematic-png.webp",
-      "button_text": "Sitio Fabricante",
+      "button_text": "Cotizar DIG",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": false
@@ -736,7 +736,7 @@
       "content": "Desde superficies básicas planas y de pendiente única hasta diseños avanzados de múltiples y variables pendientes, Topcon 3D Land Forming (formación de terreno por GNSS) ofrece un control de manejo de agua totalmente personalizable. Compuesta por tres fases clave: levantamiento, diseño y ejecución, la solución puede adaptarse a prácticamente cualquier operación agrícola, además de muchas aplicaciones específicas, como estanques, cimentaciones de edificios y caminos.",
       "link": "https://www.topconpositioning.com/solutions/technology/agriculture-products/landforming",
       "thumbnail": "https://www.topconpositioning.com/content/topconpositioning/global/en/solutions/agriculture/soil-preparation/_jcr_content/root/container/container/container_416579458/columns/node0/teaser_copy_copy_cop.coreimg.85.1600.jpeg/1749001850139/landforming-f-20220928-0005-web-teaser.jpeg",
-      "button_text": "Sitio Fabricante",
+      "button_text": "Cotizar Topcon Nivelación GNSS",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": false
@@ -749,7 +749,7 @@
       "content": "nan",
       "link": "#",
       "thumbnail": "https://picsum.photos/600/400",
-      "button_text": "Más detalles",
+      "button_text": "Cotizar AgForm-3D",
       "published": "2026-04-30",
       "lang": "Español",
       "is_resumen": false
@@ -757,12 +757,12 @@
     {
       "category": "Tecnología",
       "sub_category": "Ag Leader",
-      "title": "Control de Pulverización",
+      "title": "DirectCommand",
       "summary": "DirectCommand L2",
       "content": "Aplicación precisa de líquidos, mayor eficiencia. \nDescubra por qué la gestión inteligente de líquidos comienza con DirectCommand L2.\n\nCaracterísticas de DirectCommand L2\nControl de secciones: Controle hasta 36 secciones de la barra de pulverización con aplicación de tasa variable.\n\nAmplia compatibilidad con múltiples aplicaciones: Desde controladores de líquidos hasta sembradoras, pulverizadores o aplicadores de NH3, controla todas sus máquinas de aplicación.\n\nSistema actualizable a RightSpot: Cuando esté listo para actualizar su sistema al control boquilla por boquilla, puede actualizar fácilmente de DirectCommand L2 a RightSpot.\n\nVisibilidad líder en la industria: Visibilidad dentro y fuera de la cabina y control durante todo el año con InCommand, que incluye monitoreo del tamaño de las gotas.",
       "link": "https://www.agleader.com/directcommand-l2/",
       "thumbnail": "https://www.agleader.com/wp-content/uploads/2024/11/L2-4.png",
-      "button_text": "Más detalles",
+      "button_text": "Cotizar DirectCommand",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": false
@@ -775,7 +775,7 @@
       "content": "SMS - Software de agricultura de precisión fácil de usar para la toma de decisiones durante todo el año.\n\nUna solución de software para cada operación: Preapración de suelos, siembra, tratamientos líquidos y sólidos y cosecha.\n\nLa agricultura de precisión se trata de responder preguntas que le permitan aumentar la rentabilidad de todas sus actividades agrícolas. El software SMS es una herramienta de toma de decisiones fácil de usar que le ayuda a sacar el máximo provecho de cada hectárea.",
       "link": "https://www.agleader.com/sms-software/",
       "thumbnail": "https://www.agleader.com/wp-content/uploads/2024/07/SMS_144x75.png",
-      "button_text": "Más detalles",
+      "button_text": "Cotizar SMS",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": false
@@ -788,7 +788,7 @@
       "content": "TODOS sus mapas, de todas sus pantallas, en un solo lugar.\n\nVisualizar mapas de pantallas de 3 terceros\n¿Opera una flota mixta y desea tener sus mapas en un lugar conveniente? Ahora puede cargar y visualizar mapas e informes de muchas de las pantallas de terceros más recientes instantáneamente en AgFiniti.\n\nConectar con otras plataformas digitales\nAgFiniti se conecta con otras plataformas digitales permitiéndole mapear, elaborar informes y analizar sin problemas toda su información en un solo lugar, en cualquier momento, en cualquier lugar y en cualquier dispositivo.",
       "link": "https://www.agleader.com/es/agfiniti/",
       "thumbnail": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/81/29/27/8129274e-896f-a8d5-dafe-f34b3806bc3d/AppIcons-0-0-1x_U007emarketing-0-7-0-0-85-220.png/1200x630wa.png",
-      "button_text": "Más detalles",
+      "button_text": "Cotizar AgFiniti",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": false
@@ -801,7 +801,7 @@
       "content": "Visibilidad y control sin igual desde una sola pantalla con InCommand Go. Ve tus campos como nunca antes. \n\nMonitorea fácilmente la información en tiempo real sin perder de vista tu mapa para toar decisiones informadas sobre la marcha desde la vista de pantalla todo en uno.\n\nSal al campo y listo, temporada tras temporada. La pantalla durante todo el año funciona en todas las temporadas, permitiendo gestionar todo a través de una sola interfaz. Transfiere fácilmente una pantalla entre máquina o conecta múltiples pantallas Incomand Go con DisplayCast.\n\nCaracterísticas de InCommand Go\nFuncionalidad durante todo el año, desde la siembra hasta la cosecha\nMás mapa, área de visualización más grande permite que toda la información sea visible desde la pantalla del mapa sin necesidad de cambiar entre pantallas  \nTiles dinámicos, accede a todas las herramientas e información esenciales sin esfuerzo. \nConectividad fácil, conecta y sincroniza fácilmente tus mapas e información en todas tus pantallas y dispositivos con Wi-Fi incorporado o el nuevo módem celular robusto.",
       "link": "https://www.agleader.com/es/incommand/",
       "thumbnail": "https://www.agleader.com/wp-content/uploads/2024/10/InCommand-Go-HotSpot.png",
-      "button_text": "Más detalles",
+      "button_text": "Cotizar InCommand Go",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": false
@@ -814,7 +814,7 @@
       "content": "Receptores GPS 7500 para todas sus operaciones. Ofrecen la flexibilidad de elegir la fuente de correcón que emjor de adpate a su explotación. Es compatible con todas las fuentes de correción. \n\nEs versátil, compatible con guiado manual, direcciópn asistida y sistemas de dirección integrados. Se puede mover fácilmente entre máquinas. \nEscalable, a medida que evolucionan sus necesidades \nUtilice correcciones WAAS/EGNOS/GLIDE, TerraStar y RTK. Consulte las correcciones diferenciales para obtener más detalles.\n\nEspecificaciones técnicas del GPS 7500\nCapacidad para rastrear múltiples constelaciones, incluyendo GPS, GLONASS, BeiDou, Galileo, QZSS\nReceptor de doble frecuencia en WAAS; Multiconstelación, multifrecuencia en RTK\nEmite una señal analógica de velocidad de radar para otros dispositivos en la cabina que solo requieran la velocidad de avance\nMayor tiempo de actividad al realizar una transición perfecta a la siguiente fuente de señal disponible cuando se pierde temporalmente la corrección",
       "link": "https://www.agleader.com/es/gps-receiver-systems/",
       "thumbnail": "https://www.agleader.com/wp-content/uploads/2025/08/StableLoc-graphic.jpg",
-      "button_text": "Más detalles",
+      "button_text": "Cotizar GPS7500",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": false
@@ -827,7 +827,7 @@
       "content": "Control durante todo el año y dirección de alta precisión en un paquete completo\n\nEspecificaciones técnicas \nDirección integrada. Proporciona dirección hidráulica integrada directamente al bus CAN del vehículo o a la válvula hidráulica\nCalibrado y ajuste. Calibración paso a paso por el usuario, puesta a punto sencilla desde la pantalla de ejecución directamente desde el monitor InCommand\nGPSCompatibilidad. Se empareja con los receptores Ag Leader GPS 7500 y opciones de fuente de corrección para igualar la precisión necesaria para cualquier operación, desde WAAS hasta RTK\nApto para la mayoría de vehículos. Compatible con prácticamente cualquier marca de equipo capaz de ser operado con un sistema de dirección automatizado.",
       "link": "https://www.agleader.com/es/steercommand-z2/",
       "thumbnail": "https://www.agleader.com/wp-content/uploads/2024/07/new-web-image-sizingZ2.png",
-      "button_text": "Más detalles",
+      "button_text": "Cotizar SteerCommand Z2",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": false
@@ -892,7 +892,7 @@
       "content": "nan",
       "link": "#",
       "thumbnail": "https://picsum.photos/600/400",
-      "button_text": "Más detalles",
+      "button_text": "Cotizar Yeomans SB6",
       "published": "2026-04-30",
       "lang": "Español",
       "is_resumen": false
@@ -905,7 +905,7 @@
       "content": "Ofrecemos una amplia gama de maquinaria agrícola diseñada para optimizar el rendimiento y la eficiencia en cada tarea del campo.\n\nLa Trailla Hidráulica de Empuje, modelo TH39, uenta con una capacidad de 6 a 6.5 m3 y un ancho de corte de 2.5-2.6 metros, están diseñadas para una potencia de 180-190 HP.\n\nOfrecemos asesoramiento especializado para ayudarte a elegir la maquinaria que mejor se ajuste a tu actividad. Con un servicio técnico eficiente y repuestos disponibles, garantizamos el mejor soporte postventa.\n\nOpcionales\nAnclaje Mástil-Hidroválvulas\nMástil Hidráulico\nVálvula de secuencia\nRipper fijo (5 brazos) «Modelo pequeño»\nAnclaje Ripper fijo con tuberías\nEnganche trasero, sin tuberías (sin ripper)\nEnganche trasero, con 4 tuberías\nEnganche trasero, con 6 tuberías\nAmortiguación\nRejilla Tajadera\nAutomatización (láser/GPS) con hidroválvula\nAutomatización (láser/GPS) distribuidor proporcional y filtro de presión",
       "link": "https://losantonios.com/es/traillas/traillas-hidraulicas-de-empuje/th39/",
       "thumbnail": "https://losantonios.com/wp-content/uploads/2020/10/trailla-th-39.png",
-      "button_text": "Más detalles",
+      "button_text": "Cotizar Traílla TH39",
       "published": "2026-04-30",
       "lang": "English",
       "is_resumen": false
