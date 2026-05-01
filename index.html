@@ -612,6 +612,16 @@
             filterNews(window.lastCategory || mainTheme);
         }
 
+        function getActionLink(item) {
+            let link = item.link || '#';
+            if (link.includes('contacto.html')) {
+                let route = `Ruta: ${item.category} > ${item.sub_category || ''} > ${item.title}\n\nMensaje: `;
+                let sep = link.includes('?') ? '&' : '?';
+                return `${link}${sep}mensaje=${encodeURIComponent(route)}`;
+            }
+            return link;
+        }
+
         function getMediaHtml(url, classes, extraAttributes = "") {
             const videoExtensions = ['.mp4', '.mov', '.webm', '.ogg'];
             const isVideo = videoExtensions.some(ext => url.toLowerCase().endsWith(ext));
@@ -637,7 +647,7 @@
                             <p class="card-text text-muted small">${item.summary}</p>
                             <div class="d-flex justify-content-between align-items-center mt-3">
                                 <span class="timestamp">${item.published}</span>
-                                <a href="${item.link || '#'}" target="_blank" onclick="event.stopPropagation();" class="btn btn-outline-primary btn-sm">
+                                <a href="${getActionLink(item)}" target="_blank" onclick="event.stopPropagation();" class="btn btn-outline-primary btn-sm">
                                     ${item.button_text || 'Ver Original'}
                                 </a>
                             </div>
@@ -675,7 +685,7 @@
                         ${formattedContent}
                     </div>
                     <div class="mt-4 text-center">
-                        <a href="${item.link}" target="_blank" class="btn btn-primary px-4 rounded-pill">${item.button_text}</a>
+                        <a href="${getActionLink(item)}" target="_blank" class="btn btn-primary px-4 rounded-pill">${item.button_text}</a>
                     </div>
                 `;
             }
