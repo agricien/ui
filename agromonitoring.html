@@ -3,31 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoreo Agronómico - Zarcero</title>
+    <title>AgroDashboard - Zarcero Pro</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
-        body { margin: 0; font-family: sans-serif; }
-        #map { height: 100vh; width: 100%; }
-        .panel-datos {
-            position: absolute;
-            top: 20px;
-            left: 50px;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-            min-width: 200px;
-        }
-        .valor { font-weight: bold; color: #2c3e50; font-size: 1.2em; }
-        h3 { margin-top: 0; font-size: 16px; color: #27ae60; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; }
+        #map { height: 100vh; flex-grow: 1; }
+        #sidebar { width: 320px; height: 100vh; background: #2c3e50; color: white; overflow-y: auto; padding: 20px; box-sizing: border-box; box-shadow: 2px 0 10px rgba(0,0,0,0.5); z-index: 1001; }
+        h2 { color: #27ae60; border-bottom: 1px solid #7f8c8d; padding-bottom: 10px; margin-top: 0; }
+        .card { background: #34495e; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #27ae60; }
+        .label { font-size: 0.85em; color: #bdc3c7; display: block; }
+        .valor { font-size: 1.2em; font-weight: bold; }
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; background: #27ae60; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
-<div class="panel-datos">
-    <h3>Datos de Suelo (API)</h3>
-    <div id="info">Cargando datos...</div>
+<div id="sidebar">
+    <h2>AgroMonitor Pro</h2>
+    <div class="badge">Zarcero - 1070m</div>
+    
+    <div id="status">Cargando datos...</div>
+
+    <div class="card">
+        <span class="label">Temperatura Suelo (10cm)</span>
+        <div id="soil_temp" class="valor">--</div>
+    </div>
+
+    <div class="card">
+        <span class="label">Humedad del Suelo</span>
+        <div id="soil_moisture" class="valor">--</div>
+    </div>
+
+    <div class="card">
+        <span class="label">Clima Actual</span>
+        <div id="weather_desc" class="valor">--</div>
+        <span id="weather_det" class="label">Presión: -- | Viento: --</span>
+    </div>
+
+    <div class="card">
+        <span class="label">Último Satélite (Sentinel-2)</span>
+        <div id="sat_date" class="valor">--</div>
+        <span id="sat_clouds" class="label">Nubes: --</span>
+    </div>
 </div>
 
 <div id="map"></div>
@@ -35,49 +52,53 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
     const API_KEY = '8d45d228e8aa012acddb000a8f6c7a26';
-    // Coordenadas del área (Zarcero)
-    const lat1 = 10.0873463, lon1 = -84.5131217;
-    const lat2 = 10.0768042, lon2 = -84.504485;
-    const centro = [(lat1 + lat2) / 2, (lon1 + lon2) / 2];
-
+    const POLY_ID = '69f6c1ff1be1fb0008fa6ce9'; // ID de tu imagen
+    
     // 1. Inicializar Mapa
-    const map = L.map('map').setView(centro, 15);
-    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Esri &mdash; AgroMonitoring API'
+    const map = L.map('map').setView([10.082, -84.508], 15);
+    const baseLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Esri & AgroMonitoring'
     }).addTo(map);
 
-    // Dibujar el AOI
-    L.rectangle([[lat1, lon1], [lat2, lon2]], {color: "#00ff00", weight: 1, fillOpacity: 0.1}).addTo(map);
-
-    // 2. Lógica de la API
-    async function obtenerDatos() {
+    async function updateDashboard() {
         try {
-            // Primero obtenemos el polígono registrado con tu API Key
-            const resPoly = await fetch(`https://api.agromonitoring.com/agro/1.0/polygons?appid=${API_KEY}`);
-            const poligonos = await resPoly.json();
+            // A. Obtener Datos de Suelo
+            const resSoil = await fetch(`https://api.agromonitoring.com/agro/1.0/soil?polyid=${POLY_ID}&appid=${API_KEY}`);
+            const soil = await resSoil.json();
+            document.getElementById('soil_temp').innerText = `${(soil.t0 - 273.15).toFixed(2)} °C`;
+            document.getElementById('soil_moisture').innerText = `${(soil.moisture * 100).toFixed(2)} %`;
 
-            if (poligonos.length > 0) {
-                const polyId = poligonos[0].id; // Tomamos el primer polígono registrado
+            // B. Obtener Clima Actual
+            const resWeather = await fetch(`https://api.agromonitoring.com/agro/1.0/weather?polyid=${POLY_ID}&appid=${API_KEY}`);
+            const weather = await resWeather.json();
+            document.getElementById('weather_desc').innerText = weather.weather[0].description.toUpperCase();
+            document.getElementById('weather_det').innerText = `P: ${weather.main.pressure} hPa | V: ${weather.wind.speed} m/s`;
+
+            // C. Buscar Imágenes Satelitales (Últimas 2 semanas)
+            const end = Math.floor(Date.now() / 1000);
+            const start = end - (14 * 24 * 3600);
+            const resSat = await fetch(`https://api.agromonitoring.com/agro/1.0/image/search?polyid=${POLY_ID}&start=${start}&end=${end}&appid=${API_KEY}`);
+            const satData = await resSat.json();
+
+            if (satData.length > 0) {
+                const latest = satData[0];
+                const date = new Date(latest.dt * 1000).toLocaleDateString();
+                document.getElementById('sat_date').innerText = date;
+                document.getElementById('sat_clouds').innerText = `Cobertura nubes: ${latest.clouds}%`;
+
+                // Agregar Capa NDVI al mapa automáticamente
+                L.tileLayer(latest.tile.ndvi, { opacity: 0.8 }).addTo(map);
                 
-                // Consultamos datos de suelo
-                const resSoil = await fetch(`https://api.agromonitoring.com/agro/1.0/soil?polyid=${polyId}&appid=${API_KEY}`);
-                const soil = await resSoil.json();
-
-                document.getElementById('info').innerHTML = `
-                    <p>Temp. Suelo: <span class="valor">${(soil.t0 - 273.15).toFixed(2)} °C</span></p>
-                    <p>Humedad: <span class="valor">${(soil.moisture * 100).toFixed(2)} %</span></p>
-                    <small>ID: ${polyId}</small>
-                `;
-            } else {
-                document.getElementById('info').innerHTML = "No hay polígonos registrados. Ejecuta primero el script de creación.";
+                document.getElementById('status').innerHTML = "🟢 Monitoreo Activo";
             }
-        } catch (error) {
-            document.getElementById('info').innerHTML = "Error al conectar con la API.";
-            console.error(error);
+
+        } catch (e) {
+            document.getElementById('status').innerText = "🔴 Error al conectar API";
+            console.error(e);
         }
     }
 
-    obtenerDatos();
+    updateDashboard();
 </script>
 </body>
 </html>
