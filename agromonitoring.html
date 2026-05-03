@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoreo Agronómico - Zarcero</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body { margin: 0; font-family: sans-serif; }
+        #map { height: 100vh; width: 100%; }
+        .panel-datos {
+            position: absolute;
+            top: 20px;
+            left: 50px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            min-width: 200px;
+        }
+        .valor { font-weight: bold; color: #2c3e50; font-size: 1.2em; }
+        h3 { margin-top: 0; font-size: 16px; color: #27ae60; }
+    </style>
+</head>
+<body>
+
+<div class="panel-datos">
+    <h3>Datos de Suelo (API)</h3>
+    <div id="info">Cargando datos...</div>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    const API_KEY = '8d45d228e8aa012acddb000a8f6c7a26';
+    // Coordenadas del área (Zarcero)
+    const lat1 = 10.0873463, lon1 = -84.5131217;
+    const lat2 = 10.0768042, lon2 = -84.504485;
+    const centro = [(lat1 + lat2) / 2, (lon1 + lon2) / 2];
+
+    // 1. Inicializar Mapa
+    const map = L.map('map').setView(centro, 15);
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Esri &mdash; AgroMonitoring API'
+    }).addTo(map);
+
+    // Dibujar el AOI
+    L.rectangle([[lat1, lon1], [lat2, lon2]], {color: "#00ff00", weight: 1, fillOpacity: 0.1}).addTo(map);
+
+    // 2. Lógica de la API
+    async function obtenerDatos() {
+        try {
+            // Primero obtenemos el polígono registrado con tu API Key
+            const resPoly = await fetch(`https://api.agromonitoring.com/agro/1.0/polygons?appid=${API_KEY}`);
+            const poligonos = await resPoly.json();
+
+            if (poligonos.length > 0) {
+                const polyId = poligonos[0].id; // Tomamos el primer polígono registrado
+                
+                // Consultamos datos de suelo
+                const resSoil = await fetch(`https://api.agromonitoring.com/agro/1.0/soil?polyid=${polyId}&appid=${API_KEY}`);
+                const soil = await resSoil.json();
+
+                document.getElementById('info').innerHTML = `
+                    <p>Temp. Suelo: <span class="valor">${(soil.t0 - 273.15).toFixed(2)} °C</span></p>
+                    <p>Humedad: <span class="valor">${(soil.moisture * 100).toFixed(2)} %</span></p>
+                    <small>ID: ${polyId}</small>
+                `;
+            } else {
+                document.getElementById('info').innerHTML = "No hay polígonos registrados. Ejecuta primero el script de creación.";
+            }
+        } catch (error) {
+            document.getElementById('info').innerHTML = "Error al conectar con la API.";
+            console.error(error);
+        }
+    }
+
+    obtenerDatos();
+</script>
+</body>
+</html>
